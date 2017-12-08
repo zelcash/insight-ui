@@ -14,7 +14,20 @@ angular.module('insight.currency').controller('CurrencyController',
       value = value * 1; // Convert to number
 
       if (!isNaN(value) && typeof value !== 'undefined' && value !== null) {
-        if (value === 0.00000000) return '0 ' + this.symbol; // fix value to show
+
+        var resSymbol;
+
+        if (this.symbol === 'USD') {
+          resSymbol = 'USD';
+        } else if (this.symbol === 'mBTC') {
+          resSymbol = 'm' + this.realSymbol;
+        } else if (this.symbol === 'bits') {
+          resSymbol = 'bits';
+        } else {
+          resSymbol = this.realSymbol;
+        }
+
+        if (value === 0.00000000) return '0 ' + resSymbol; // fix value to show
 
         var response;
 
@@ -33,7 +46,7 @@ angular.module('insight.currency').controller('CurrencyController',
         // prevent sci notation
         if (response < 1e-7) response=response.toFixed(8);
 
-        return response + ' ' + this.symbol;
+        return response + ' ' + resSymbol;
       }
 
       return 'value error';
@@ -45,7 +58,8 @@ angular.module('insight.currency').controller('CurrencyController',
 
       if (currency === 'USD') {
         Currency.get({}, function(res) {
-          $rootScope.currency.factor = $rootScope.currency.bitstamp = res.data.bitstamp;
+          $rootScope.currency.factor = res.data.rate;
+          $rootScope.currency.realSymbol = res.data.short;
         });
       } else if (currency === 'mBTC') {
         $rootScope.currency.factor = 1000;
@@ -58,7 +72,8 @@ angular.module('insight.currency').controller('CurrencyController',
 
     // Get initial value
     Currency.get({}, function(res) {
-      $rootScope.currency.factor = $rootScope.currency.bitstamp = res.data.bitstamp;
+      $rootScope.currency.factor = res.data.rate;
+      $rootScope.currency.realSymbol = res.data.short;
     });
 
   });
