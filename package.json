@@ -25,6 +25,9 @@
       "email": "bechilandia@gmail.com"
     }
   ],
+  "scripts": {
+    "build": "bower install && grunt compile"
+  },
   "bugs": {
     "url": "https://github.com/bitpay/insight-ui/issues"
   },
@@ -39,19 +42,18 @@
     "front-end"
   ],
   "bitcoreNode": "bitcore-node",
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
-    "bower": "~1.2.8",
-    "grunt": "~0.4.2",
-    "grunt-cli": "~0.1.11",
-    "grunt-contrib-jshint": "~0.8.0",
-    "grunt-contrib-concat": "~0.3.0",
-    "grunt-contrib-uglify": "~0.3.2",
+    "bower": "1.8.2",
+    "grunt": "0.4.2",
+    "grunt-cli": "0.1.11",
+    "grunt-contrib-jshint": "0.8.0",
+    "grunt-contrib-concat": "0.3.0",
+    "grunt-contrib-uglify": "0.3.2",
     "grunt-contrib-watch": "*",
     "grunt-macreload": "*",
-    "grunt-css": "~0.5.4",
-    "grunt-markdown": "~0.5.0",
-    "grunt-angular-gettext": "^0.2.15"
+    "grunt-css": "0.5.4",
+    "grunt-markdown": "0.5.0",
+    "grunt-angular-gettext": "0.2.15"
   }
 }
