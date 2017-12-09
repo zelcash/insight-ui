@@ -1,5 +1,9 @@
 <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-  {{currency.symbol}} <span class="caret"></span>
+  <span ng-if="currency.symbol == 'USD'">USD</span>
+  <span ng-if="currency.symbol == 'BTC'">{{currency.realSymbol}}</span>
+  <span ng-if="currency.symbol == 'mBTC'">m{{currency.realSymbol}}</span>
+  <span ng-if="currency.symbol == 'bits'">bits</span>
+  <span class="caret"></span>
 </a>
 <ul class="dropdown-menu">
   <li>
