@@ -106,7 +106,7 @@ margin-left: 0;
   background-color: #F0F7E2;
 }
 .navbar { min-height: 64px; }
-.navbar-default .navbar-toggle { 
+.navbar-default .navbar-toggle {
   border-color: #fff;
   margin-top: 15px;
 }
@@ -569,7 +569,7 @@ margin-left: 0;
   text-align: center;
 }
 
-.tx-id span { 
+.tx-id span {
   font-size: 40px;
   margin: 30px 0;
 }
@@ -613,7 +613,7 @@ margin-left: 0;
   float: left;
   height: 45px;
 }
-#powered a.bitcore {
+#powered a.ravencore {
   background-image: url('../img/logo.svg');
   background-size: 80px;
   width: 30%;
@@ -717,7 +717,7 @@ a.v_highlight_more {
 @media (max-width: 991px) {
   .status {
     display: none;
-  } 
+  }
   .navbar-form {
     width: auto;
   }
@@ -768,7 +768,7 @@ a.v_highlight_more {
   }
   .status {
     display: none;
-  } 
+  }
   #wrap>.container {
     padding: 50px 15px 0;
   }
@@ -849,4 +849,3 @@ a.v_highlight_more {
     width: 350px;
   }
 }
-

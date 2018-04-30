@@ -23,7 +23,7 @@
           </tr>
           <tr>
             <td translate>Current Sync Status</td>
-            <td class="text-right"> 
+            <td class="text-right">
             <span  data-ng-show="!sync.error">{{sync.status}}</span>
             <span class="text-danger" data-ng-show="sync.error">
               <span  class="glyphicon glyphicon-warning-sign"></span>
@@ -63,7 +63,7 @@
         <thead data-ng-include src="'views/includes/infoStatus.html'"></thead>
         <tbody>
           <tr>
-            <td translate>Last Block Hash (Bitcoind)</td>
+            <td translate>Last Block Hash (Ravend)</td>
             <td class="text-right ellipsis"><a href="block/{{lastblockhash}}">{{lastblockhash}}</a></td>
           </tr>
           <tr>
@@ -76,7 +76,7 @@
     </div> <!-- END OF COL-8 -->
 
     <div class="col-xs-12 col-md-4 col-gray">
-      <h2 translate>Bitcoin node information</h2>
+      <h2 translate>Ravencoin node information</h2>
       <table class="table" data-ng-controller="StatusController" data-ng-init="getStatus('Info')">
         <thead  data-ng-include src="'views/includes/infoStatus.html'"></thead>
         <tbody>
@@ -121,4 +121,3 @@
     </div> <!-- END OF COL-GRAY -->
   </div>
 </section>
-

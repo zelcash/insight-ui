@@ -1,22 +1,22 @@
 # Insight UI
 
-A Bitcoin blockchain explorer web application service for [Bitcore Node](https://github.com/bitpay/bitcore-node) using the [Insight API](https://github.com/bitpay/insight-api).
+A Ravencoin blockchain explorer web application service for [Ravencore Node](https://github.com/underdarkskies/ravencore-node) using the [Insight API](https://github.com/underdarkskies/insight-api).
 
 ## Quick Start
 
-Please see the guide at [https://bitcore.io/guides/full-node](https://bitcore.io/guides/full-node) for information about getting a block explorer running. This is only the front-end component of the block explorer, and is packaged together with all of the necessary components in [Bitcore](https://github.com/bitpay/bitcore).
+Please see the guide at [https://bitcore.io/guides/full-node](https://bitcore.io/guides/full-node) for information about getting a block explorer running. This is only the front-end component of the block explorer, and is packaged together with all of the necessary components in [Ravencore](https://github.com/underdarkskies/ravencore).
 
 ## Getting Started
 
 To manually install all of the necessary components, you can run these commands:
 
 ```bash
-npm install -g bitcore-node
-bitcore-node create mynode
+npm install -g ravencore-node
+ravencore-node create mynode
 cd mynode
-bitcore-node install insight-api
-bitcore-node install insight-ui
-bitcore-node start
+ravencore-node install insight-api
+ravencore-node install insight-ui
+ravencore-node start
 ```
 
 Open a web browser to `http://localhost:3001/insight/`
@@ -70,11 +70,11 @@ compile***.
 
 ## Note
 
-For more details about the [Insight API](https://github.com/bitpay/insight-api) configuration and end-points, go to [Insight API GitHub repository](https://github.com/bitpay/insight-api).
+For more details about the [Insight API](https://github.com/underdarkskies/insight-api) configuration and end-points, go to [Insight API GitHub repository](https://github.com/underdarkskies/insight-api).
 
 ## Contribute
 
-Contributions and suggestions are welcomed at the [Insight UI GitHub repository](https://github.com/bitpay/insight-ui).
+Contributions and suggestions are welcomed at the [Insight UI GitHub repository](https://github.com/underdarkskies/insight-ui).
 
 
 ## License
