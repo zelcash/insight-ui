@@ -6,8 +6,8 @@ angular.module('insight.system').controller('HeaderController',
 
     $rootScope.currency = {
       factor: 1,
-      symbol: 'BTC',
-      realSymbol: 'BTC'
+      symbol: 'RVN',
+      realSymbol: 'RVN'
     };
 
     $scope.menu = [{
