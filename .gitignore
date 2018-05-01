@@ -27,7 +27,6 @@ npm-debug.log
 .nodemonignore
 
 .DS_Store
-public/lib/*
 db/txs/*
 db/txs
 db/testnet/txs/*
