@@ -120,7 +120,7 @@
     </div>
   </div>
   <div data-ng-if="block.hash" data-ng-controller="transactionsController" data-ng-init="load('block')">
-    <h3 translate>Transactions</h3>
+    <h2 class="text-left" translate>Transactions</h2>
     <div data-ng-include src="'views/transaction/list.html'" when-scrolled="loadMore()"></div>
   </div>
 
