@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.6.8\n"
+"X-Generator: Poedit 2.0.7\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: public/views/transaction/tx.html
@@ -20,38 +20,7 @@ msgstr "(Entrada sin confirmar)"
 msgid "404 Page not found :("
 msgstr "404 Página no encontrada :("
 
-#: public/views/index.html
-msgid ""
-"<strong>insight</strong>  is an <a href=\"http://live.insight.is/\" target="
-"\"_blank\">open-source Ravencoin blockchain explorer</a> with complete REST "
-"and websocket APIs that can be used for writing web wallets and other apps  "
-"that need more advanced blockchain queries than provided by ravend RPC.  "
-"Check out the <a href=\"https://github.com/underdarkskies/insight-ui\" target=\"_blank"
-"\">source code</a>."
-msgstr ""
-"<strong>insight</strong>  es un <a href=\"http://live.insight.is/\" target="
-"\"_blank\">explorador de bloques de Ravencoin open-source</a> con un completo "
-"conjunto de REST y APIs de websockets que pueden ser usadas para escribir "
-"monederos de Ravencoins y otras aplicaciones que requieran consultar un "
-"explorador de bloques.  Obtén el código en <a href=\"http://github.com/"
-"underdarkskies/insight\" target=\"_blank\">el repositorio abierto de Github</a>."
-
-#: public/views/index.html
-msgid ""
-"<strong>insight</strong> is still in development, so be sure to report any "
-"bugs and provide feedback for improvement at our <a href=\"https://github."
-"com/underdarkskies/insight/issues\" target=\"_blank\">github issue tracker</a>."
-msgstr ""
-"<strong>insight</strong> esta en desarrollo aún, por ello agradecemos que "
-"nos reporten errores o sugerencias para mejorar el software. <a href="
-"\"https://github.com/underdarkskies/insight-ui/issues\" target=\"_blank\">Github issue "
-"tracker</a>."
-
-#: public/views/index.html
-msgid "About"
-msgstr "Acerca de"
-
-#: public/views/address.html
+#: public/views/address.html public/views/messages_verify.html
 msgid "Address"
 msgstr "Dirección"
 
@@ -59,17 +28,21 @@ msgstr "Dirección"
 msgid "Age"
 msgstr "Edad"
 
+#: public/views/messages_verify.html
+msgid "An error occured in the verification process."
+msgstr "Se ha producido un error en el proceso de verificación."
+
+#: public/views/transaction_sendraw.html
+msgid "An error occured:<br>{{error}}"
+msgstr "Se ha producido un error: <br> {{error}}"
+
 #: public/views/status.html
 msgid "Application Status"
 msgstr "Estado de la Aplicación"
 
-#: public/views/status.html
-msgid "Best Block"
-msgstr "Mejor Bloque"
-
-#: public/views/status.html
-msgid "Ravencoin node information"
-msgstr "Información del nodo Ravencoin"
+#: public/views/index.html
+msgid "are very much appreciated: RD7yadeCvSDs4fCbEPuHstU3GHbiS7ao9q"
+msgstr "se aprecian mucho: RD7yadeCvSDs4fCbEPuHstU3GHbiS7ao9q"
 
 #: public/views/block.html
 msgid "Block"
@@ -84,17 +57,15 @@ msgstr "Bloque Recompensa"
 msgid "Blocks"
 msgstr "Bloques"
 
-#: public/views/status.html
-msgid "Bytes Serialized"
-msgstr "Bytes Serializados"
+#: public/views/transaction_sendraw.html
+#, fuzzy
+#| msgid "Latest Transactions"
+msgid "Broadcast Raw Transaction"
+msgstr "Últimas Transacciones"
 
-#: public/views/includes/connection.html
-msgid ""
-"Can't connect to ravend to get live updates from the p2p network. (Tried "
-"connecting to ravend at {{host}}:{{port}} and failed.)"
-msgstr ""
-"No se pudo conectar a ravend para obtener actualizaciones en vivo de la "
-"red p2p. (Se intentó conectar a ravend de {{host}}:{{port}} y falló.)"
+#: public/views/block_list.html
+msgid "by date."
+msgstr "por fecha."
 
 #: public/views/includes/connection.html
 msgid "Can't connect to insight server. Attempting to reconnect..."
@@ -103,6 +74,14 @@ msgstr "No se pudo conectar al servidor insight. Intentando re-conectar..."
 #: public/views/includes/connection.html
 msgid "Can't connect to internet. Please, check your connection."
 msgstr "No se pudo conectar a Internet. Por favor, verifique su conexión."
+
+#: public/views/includes/connection.html
+msgid ""
+"Can't connect to ravend to get live updates from the p2p network. (Tried "
+"connecting to ravend at {{host}}:{{port}} and failed.)"
+msgstr ""
+"No se pudo conectar a ravend para obtener actualizaciones en vivo de la red "
+"p2p. (Se intentó conectar a ravend de {{host}}:{{port}} y falló.)"
 
 #: public/views/status.html
 msgid "Complete"
@@ -136,9 +115,19 @@ msgstr "Detalles"
 msgid "Difficulty"
 msgstr "Dificultad"
 
+#: public/views/index.html
+#, fuzzy
+#| msgid "Confirmations"
+msgid "Donations"
+msgstr "Confirmaciones"
+
 #: public/views/transaction/tx.html
 msgid "Double spent attempt detected. From tx:"
 msgstr "Intento de doble gasto detectado. De la transacción:"
+
+#: public/views/messages_verify.html
+msgid "Error message:"
+msgstr "Mensaje de error:"
 
 #: public/views/includes/connection.html
 msgid "Error!"
@@ -148,6 +137,10 @@ msgstr "¡Error!"
 msgid "Fee"
 msgstr "Tasa"
 
+#: public/views/transaction.html
+msgid "Fee Rate"
+msgstr "Tarifa"
+
 #: public/views/address.html
 msgid "Final Balance"
 msgstr "Balance Final"
@@ -156,19 +149,26 @@ msgstr "Balance Final"
 msgid "Finish Date"
 msgstr "Fecha Final"
 
+#: public/views/transaction/tx.html
+msgid "first seen at"
+msgstr "visto a"
+
+#: public/views/index.html
+msgid "Follow the guide"
+msgstr "Siga la guía"
+
 #: public/views/404.html
 msgid "Go to home"
 msgstr "Volver al Inicio"
 
-#: public/views/status.html
-msgid "Hash Serialized"
-msgstr "Hash Serializado"
-
-#: public/views/block.html public/views/block_list.html
-#: public/views/index.html public/views/status.html
+#: public/views/block.html public/views/block_list.html public/views/index.html
 #: public/views/includes/header.html
 msgid "Height"
 msgstr "Altura"
+
+#: public/views/index.html
+msgid "here"
+msgstr "aquí"
 
 #: public/views/transaction.html public/views/transaction/tx.html
 msgid "Included in Block"
@@ -182,6 +182,12 @@ msgstr "Detectada una incoherencia en levelDB:"
 msgid "Info Errors"
 msgstr "Errores de Información"
 
+#: public/views/index.html
+#, fuzzy
+#| msgid "Confirmations"
+msgid "Information"
+msgstr "Confirmaciones"
+
 #: public/views/status.html
 msgid "Initial Block Chain Height"
 msgstr "Altura de la Cadena en Bloque Inicial"
@@ -190,13 +196,17 @@ msgstr "Altura de la Cadena en Bloque Inicial"
 msgid "Input"
 msgstr "Entrada"
 
+#: public/views/index.html
+msgid "is still in development, check out the source code"
+msgstr "todavía está en desarrollo, mira el código fuente"
+
 #: public/views/status.html
 msgid "Last Block"
 msgstr "Último Bloque"
 
 #: public/views/status.html
-msgid "Last Block Hash (Ravencoind)"
-msgstr "Último Bloque Hash (Ravencoind)"
+msgid "Last Block Hash (Ravend)"
+msgstr "Último Bloque Hash (Ravend)"
 
 #: public/views/index.html
 msgid "Latest Blocks"
@@ -226,36 +236,52 @@ msgstr "Cargando Detalles de la Transacción"
 msgid "Loading Transactions..."
 msgstr "Cargando Transacciones..."
 
+#: public/views/messages_verify.html public/views/transaction_sendraw.html
 #: public/views/includes/infoStatus.html
 msgid "Loading..."
 msgstr "Cargando..."
+
+#: public/views/messages_verify.html
+msgid "Message"
+msgstr "Mensaje"
+
+#: public/views/transaction/tx.html
+msgid "mined"
+msgstr "minado"
+
+#: public/views/block.html public/views/block_list.html public/views/index.html
+msgid "Mined by"
+msgstr "Minado por"
+
+#: public/views/block_list.html
+msgid "mined on:"
+msgstr "minado el:"
 
 #: public/views/transaction.html
 msgid "Mined Time"
 msgstr "Hora de Minado"
 
-#: public/views/block.html public/views/block_list.html
-#: public/views/index.html
-msgid "Mined by"
-msgstr "Minado por"
-
 #: public/views/status.html
 msgid "Mining Difficulty"
 msgstr "Dificultad de Minado"
+
+#: public/views/status.html
+msgid "Network"
+msgstr "Red"
 
 #: public/views/block.html
 msgid "Next Block"
 msgstr "Próximo Bloque"
 
-#: public/views/transaction/tx.html
-msgid "No Inputs (Newly Generated Coins)"
-msgstr "Sin Entradas (Monedas Recién Generadas)"
-
 #: public/views/block_list.html
 msgid "No blocks yet."
 msgstr "No hay bloques aún."
 
-#: public/views/includes/header.html public/views/includes/search.html
+#: public/views/transaction/tx.html
+msgid "No Inputs (Newly Generated Coins)"
+msgstr "Sin Entradas (Monedas Recién Generadas)"
+
+#: public/views/includes/search.html
 msgid "No matching records found!"
 msgstr "¡No se encontraron registros coincidentes!"
 
@@ -271,10 +297,6 @@ msgstr "Número de Transacciones"
 msgid "Output"
 msgstr "Salida"
 
-#: public/views/index.html
-msgid "Powered by"
-msgstr "Funciona con"
-
 #: public/views/block.html
 msgid "Previous Block"
 msgstr "Bloque Anterior"
@@ -287,6 +309,37 @@ msgstr "Versión del protocolo"
 msgid "Proxy setting"
 msgstr "Opción de proxy"
 
+#: public/views/index.html
+msgid "PSA for Pool Operators:"
+msgstr "Anuncio de servicio público para operadores de pools:"
+
+#: public/views/messages_verify.html
+msgid "Ravencoin comes with a way of signing arbitrary messages."
+msgstr "Ravencoin viene con una manera de firmar mensajes arbitrarios."
+
+#: public/views/index.html
+msgid "Ravencoin Community"
+msgstr "Comunidad Ravencoin"
+
+#: public/views/status.html
+msgid "Ravencoin node information"
+msgstr "Información de node Ravencoin"
+
+#: public/views/index.html
+msgid "Ravencore"
+msgstr "Ravencore"
+
+#: public/views/transaction_sendraw.html
+#, fuzzy
+#| msgid "Show Transaction Output data"
+msgid "Raw transaction data"
+msgstr "Mostrar dato de Salida de la Transacción"
+
+#: public/views/transaction_sendraw.html
+msgid "Raw transaction data must be a valid hexadecimal string."
+msgstr ""
+"Los datos de transacciones RAW deben ser una cadena hexadecimal válida."
+
 #: public/views/transaction.html
 msgid "Received Time"
 msgstr "Hora de Recibido"
@@ -295,7 +348,7 @@ msgstr "Hora de Recibido"
 msgid "Redirecting..."
 msgstr "Redireccionando..."
 
-#: public/views/includes/header.html
+#: public/views/includes/search.html
 msgid "Search for block, transaction or address"
 msgstr "Buscar bloques, transacciones o direcciones"
 
@@ -303,9 +356,11 @@ msgstr "Buscar bloques, transacciones o direcciones"
 msgid "See all blocks"
 msgstr "Ver todos los bloques"
 
-#: public/views/status.html
-msgid "Show Transaction Output data"
-msgstr "Mostrar dato de Salida de la Transacción"
+#: public/views/transaction_sendraw.html
+#, fuzzy
+#| msgid "Transaction"
+msgid "Send transaction"
+msgstr "Transacción"
 
 #: public/views/transaction/tx.html
 msgid "Show all"
@@ -322,6 +377,10 @@ msgstr "Ver menos"
 #: public/views/transaction/tx.html
 msgid "Show more"
 msgstr "Ver más"
+
+#: public/views/messages_verify.html
+msgid "Signature"
+msgstr "Firma"
 
 #: public/views/block_list.html public/views/index.html
 #: public/views/transaction.html
@@ -368,29 +427,45 @@ msgstr "Tipo de Sincronización"
 msgid "Synced Blocks"
 msgstr "Bloques Sincornizados"
 
-#: public/views/status.html
-msgid "Testnet"
-msgstr "Red de prueba"
+#: public/views/messages_verify.html
+msgid "The message failed to verify."
+msgstr "El mensaje no se pudo comprobar."
+
+#: public/views/messages_verify.html
+msgid "The message is verifiably from {{verification.address}}."
+msgstr "El mensaje es verificable desde {{Verification. Address}}."
 
 #: public/views/transaction/list.html
 msgid "There are no transactions involving this address."
-msgstr "No hay transacciones para esta dirección"
+msgstr "No hay transacciones para esta dirección."
+
+#: public/views/transaction_sendraw.html
+msgid ""
+"This form can be used to broadcast a raw transaction in hex format over\n"
+"        the Ravencoin network."
+msgstr ""
+"Este formulario se puede utilizar para emitir una transacción RAW en format\n"
+"        hexadecimal a través de la red Ravencoin."
+
+#: public/views/messages_verify.html
+msgid ""
+"This form can be used to verify that a message comes from\n"
+"        a specific Ravencoin address."
+msgstr ""
+"Este formulario se puede utilizar para comprobar que un mensaje\n"
+"        proviene de una dirección Ravencoin específica."
 
 #: public/views/status.html
 msgid "Time Offset"
 msgstr "Desplazamiento de hora"
 
-#: public/views/block.html
+#: public/views/block.html public/views/block_list.html
 msgid "Timestamp"
 msgstr "Fecha y hora"
 
 #: public/views/block_list.html
 msgid "Today"
 msgstr "Hoy"
-
-#: public/views/status.html
-msgid "Total Amount"
-msgstr "Cantidad Total"
 
 #: public/views/address.html
 msgid "Total Received"
@@ -404,17 +479,12 @@ msgstr "Total Enviado"
 msgid "Transaction"
 msgstr "Transacción"
 
-#: public/views/status.html
-msgid "Transaction Output Set Information"
-msgstr "Información del Conjunto de Salida de la Transacción"
-
-#: public/views/status.html
-msgid "Transaction Outputs"
-msgstr "Salidas de la Transacción"
+#: public/views/transaction_sendraw.html
+msgid "Transaction succesfully broadcast.<br>Transaction id: {{txid}}"
+msgstr "Transacción exitosamente difundida.<br>ID de transacción: {{txid}}"
 
 #: public/views/address.html public/views/block.html
 #: public/views/block_list.html public/views/index.html
-#: public/views/status.html
 msgid "Transactions"
 msgstr "Transacciones"
 
@@ -438,6 +508,14 @@ msgstr "Balance sin confirmar"
 msgid "Value Out"
 msgstr "Valor de Salida"
 
+#: public/views/messages_verify.html
+msgid "Verify"
+msgstr "Verificar"
+
+#: public/views/messages_verify.html
+msgid "Verify signed message"
+msgstr "Verificar mensaje firmado"
+
 #: public/views/block.html public/views/status.html
 msgid "Version"
 msgstr "Versión"
@@ -450,21 +528,59 @@ msgstr "Esperando bloques..."
 msgid "Waiting for transactions..."
 msgstr "Esperando transacciones..."
 
-#: public/views/block_list.html
-msgid "by date."
-msgstr "por fecha."
+#~ msgid ""
+#~ "<strong>insight</strong>  is an <a href=\"http://live.insight.is/\" "
+#~ "target=\"_blank\">open-source Ravencoin blockchain explorer</a> with "
+#~ "complete REST and websocket APIs that can be used for writing web wallets "
+#~ "and other apps  that need more advanced blockchain queries than provided "
+#~ "by ravend RPC.  Check out the <a href=\"https://github.com/underdarkskies/"
+#~ "insight-ui\" target=\"_blank\">source code</a>."
+#~ msgstr ""
+#~ "<strong>insight</strong>  es un <a href=\"http://live.insight.is/\" "
+#~ "target=\"_blank\">explorador de bloques de Ravencoin open-source</a> con "
+#~ "un completo conjunto de REST y APIs de websockets que pueden ser usadas "
+#~ "para escribir monederos de Ravencoins y otras aplicaciones que requieran "
+#~ "consultar un explorador de bloques.  Obtén el código en <a href=\"http://"
+#~ "github.com/underdarkskies/insight\" target=\"_blank\">el repositorio "
+#~ "abierto de Github</a>."
 
-#: public/views/transaction/tx.html
-msgid "first seen at"
-msgstr "Visto a"
+#~ msgid ""
+#~ "<strong>insight</strong> is still in development, so be sure to report "
+#~ "any bugs and provide feedback for improvement at our <a href=\"https://"
+#~ "github.com/underdarkskies/insight/issues\" target=\"_blank\">github issue "
+#~ "tracker</a>."
+#~ msgstr ""
+#~ "<strong>insight</strong> esta en desarrollo aún, por ello agradecemos que "
+#~ "nos reporten errores o sugerencias para mejorar el software. <a href="
+#~ "\"https://github.com/underdarkskies/insight-ui/issues\" target=\"_blank"
+#~ "\">Github issue tracker</a>."
 
-#: public/views/transaction/tx.html
-msgid "mined"
-msgstr "minado"
+#~ msgid "About"
+#~ msgstr "Acerca de"
 
-#: public/views/block_list.html
-msgid "mined on:"
-msgstr "minado el:"
+#~ msgid "Best Block"
+#~ msgstr "Mejor Bloque"
+
+#~ msgid "Bytes Serialized"
+#~ msgstr "Bytes Serializados"
+
+#~ msgid "Hash Serialized"
+#~ msgstr "Hash Serializado"
+
+#~ msgid "Powered by"
+#~ msgstr "Funciona con"
+
+#~ msgid "Testnet"
+#~ msgstr "Red de prueba"
+
+#~ msgid "Total Amount"
+#~ msgstr "Cantidad Total"
+
+#~ msgid "Transaction Output Set Information"
+#~ msgstr "Información del Conjunto de Salida de la Transacción"
+
+#~ msgid "Transaction Outputs"
+#~ msgstr "Salidas de la Transacción"
 
 #~ msgid "Waiting for blocks"
 #~ msgstr "Esperando bloques"

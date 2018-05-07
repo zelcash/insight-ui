@@ -1,592 +1,523 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Insight\n"
-"POT-Creation-Date: \n"
-"PO-Revision-Date: \n"
-"Last-Translator: Sascha Dückers <s.dueckers@gmail.com>\n"
-"Language-Team: \n"
-"Language: de_DE\n"
-"MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
 "X-Generator: Poedit 2.0.7\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Last-Translator: \n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Language: ru\n"
 
 #: public/views/transaction/tx.html
 msgid "(Input unconfirmed)"
-msgstr "(Eingabe unbestätigt)"
+msgstr "(Вход неподтвержденный)"
 
 #: public/views/404.html
 msgid "404 Page not found :("
-msgstr "404 Seite nicht gefunden :("
+msgstr "404 Страница не найдена :("
 
 #: public/views/address.html public/views/messages_verify.html
 msgid "Address"
-msgstr "Adresse"
+msgstr "Адрес"
 
 #: public/views/index.html
 msgid "Age"
-msgstr "Alter"
+msgstr "Возраст"
 
 #: public/views/messages_verify.html
 msgid "An error occured in the verification process."
-msgstr "Beim Verifizierungsprozess ist ein Fehler aufgetreten."
+msgstr "В процессе проверки произошла ошибка."
 
 #: public/views/transaction_sendraw.html
 msgid "An error occured:<br>{{error}}"
-msgstr "Ein Fehler ist aufgetreten: <br> {{error}}"
+msgstr "Произошла ошибка:<br>{{error}}"
 
 #: public/views/status.html
 msgid "Application Status"
-msgstr "Programmstatus"
+msgstr "Статус приложения"
 
 #: public/views/index.html
 msgid "are very much appreciated: RD7yadeCvSDs4fCbEPuHstU3GHbiS7ao9q"
-msgstr "werden sehr geschätzt: RD7yadeCvSDs4fCbePuHstU3GHbiS7ao9q"
+msgstr "очень ценятся: RD7yadeCvSDs4fCbEPuHstU3GHbiS7ao9q"
 
 #: public/views/block.html
 msgid "Block"
-msgstr "Block"
+msgstr "блок"
 
 #: public/views/block.html
 msgid "Block Reward"
-msgstr "Belohnung"
+msgstr "Награда за блок"
 
 #: public/views/block_list.html public/views/dummy-translations.html
 #: public/views/status.html
 msgid "Blocks"
-msgstr "Blöcke"
+msgstr "Блоки"
 
 #: public/views/transaction_sendraw.html
-#, fuzzy
-#| msgid "Latest Transactions"
 msgid "Broadcast Raw Transaction"
-msgstr "Letzte Transaktionen"
+msgstr "Трансляция исходной транзакции"
 
 #: public/views/block_list.html
 msgid "by date."
-msgstr "nach Datum."
+msgstr "по дате."
 
 #: public/views/includes/connection.html
 msgid "Can't connect to insight server. Attempting to reconnect..."
 msgstr ""
-"Keine Verbindung zum insight-Server möglich. Es wird versucht die Verbindung "
-"neu aufzubauen..."
+"Не удается подключиться к серверу insight. Попытка повторного подключения ..."
 
 #: public/views/includes/connection.html
 msgid "Can't connect to internet. Please, check your connection."
-msgstr "Keine Verbindung zum Internet möglich, bitte Zugangsdaten prüfen."
+msgstr "Не удается подключиться к Интернету. Проверьте подключение."
 
 #: public/views/includes/connection.html
 msgid ""
 "Can't connect to ravend to get live updates from the p2p network. (Tried "
 "connecting to ravend at {{host}}:{{port}} and failed.)"
 msgstr ""
-"Es ist nicht möglich mit Ravencoind zu verbinden um live Aktualisierungen "
-"vom P2P Netzwerk zu erhalten. (Verbindungsversuch zu ravend an {{host}}:"
-"{{port}} ist fehlgeschlagen.)"
+"Невозможно подключиться к ravend для получения живых обновлений из сети p2p. "
+"(Пробовал подключиться к ravend на {{host}}: {{port}} и не удалось.)"
 
 #: public/views/status.html
 msgid "Complete"
-msgstr "Vollständig"
+msgstr "полный"
 
 #: public/views/transaction.html public/views/transaction/tx.html
 msgid "Confirmations"
-msgstr "Bestätigungen"
+msgstr "Подтверждения"
 
 #: public/views/includes/header.html
 msgid "Conn"
-msgstr "Verbindungen"
+msgstr "соединение"
 
 #: public/views/status.html
 msgid "Connections to other nodes"
-msgstr "Verbindungen zu Nodes"
+msgstr "Соединения с другими узлами"
 
 #: public/views/status.html
 msgid "Current Blockchain Tip (insight)"
-msgstr "Aktueller Blockchain Tip (insight)"
+msgstr "Текущий бит-цепочка (insight)"
 
 #: public/views/status.html
 msgid "Current Sync Status"
-msgstr "Aktueller Status"
+msgstr "Текущий статус синхронизации"
 
 #: public/views/transaction.html
 msgid "Details"
-msgstr "Details"
+msgstr "Детали"
 
 #: public/views/block.html
 msgid "Difficulty"
-msgstr "Schwierigkeit"
+msgstr "трудность"
 
 #: public/views/index.html
-#, fuzzy
-#| msgid "Confirmations"
 msgid "Donations"
-msgstr "Bestätigungen"
+msgstr "Пожертвования"
 
 #: public/views/transaction/tx.html
 msgid "Double spent attempt detected. From tx:"
-msgstr "Es wurde ein \"double Spend\" Versuch erkannt.Von tx:"
+msgstr "Обнаружена обнаруженная двойная попытка. Из tx:"
 
 #: public/views/messages_verify.html
 msgid "Error message:"
-msgstr "Fehlermeldung:"
+msgstr "Сообщение об ошибке:"
 
 #: public/views/includes/connection.html
 msgid "Error!"
-msgstr "Fehler!"
+msgstr "Ошибка!"
 
 #: public/views/transaction/tx.html
 msgid "Fee"
-msgstr "Gebühr"
+msgstr "плата"
 
 #: public/views/transaction.html
 msgid "Fee Rate"
-msgstr "Gebührentarif"
+msgstr "Плата за проезд"
 
 #: public/views/address.html
 msgid "Final Balance"
-msgstr "Schlussbilanz"
+msgstr "Итоговый баланс"
 
 #: public/views/status.html
 msgid "Finish Date"
-msgstr "Fertigstellung"
+msgstr "Дата окончания"
 
 #: public/views/transaction/tx.html
 msgid "first seen at"
-msgstr "zuerst gesehen am"
+msgstr "впервые увиденный"
 
 #: public/views/index.html
 msgid "Follow the guide"
-msgstr "Lesen Sie das Handbuch"
+msgstr "Следуйте указаниям"
 
 #: public/views/404.html
 msgid "Go to home"
-msgstr "Zur Startseite"
+msgstr "Иди домой"
 
 #: public/views/block.html public/views/block_list.html public/views/index.html
 #: public/views/includes/header.html
 msgid "Height"
-msgstr "Höhe"
+msgstr "Высота"
 
 #: public/views/index.html
 msgid "here"
-msgstr "hier"
+msgstr "Вот"
 
 #: public/views/transaction.html public/views/transaction/tx.html
 msgid "Included in Block"
-msgstr "Eingefügt in Block"
+msgstr "Включено в блок"
 
 #: public/views/transaction/tx.html
 msgid "Incoherence in levelDB detected:"
-msgstr "Es wurde eine Zusammenhangslosigkeit in der LevelDB festgestellt:"
+msgstr "Несоответствие в levelDB обнаружено:"
 
 #: public/views/status.html
 msgid "Info Errors"
-msgstr "Fehlerbeschreibung"
+msgstr "Ошибки информации"
 
 #: public/views/index.html
-#, fuzzy
-#| msgid "Confirmations"
 msgid "Information"
-msgstr "Bestätigungen"
+msgstr "Информация"
 
 #: public/views/status.html
 msgid "Initial Block Chain Height"
-msgstr "Ursprüngliche Blockchain Höhe"
+msgstr "Начальная высота цепочки блоков"
 
 #: public/views/transaction.html
 msgid "Input"
-msgstr "Eingänge"
+msgstr "входные данные"
 
 #: public/views/index.html
 msgid "is still in development, check out the source code"
-msgstr "ist noch in der Entwicklung, überprüfen Sie den Quellcode"
+msgstr "все еще находится в разработке, проверьте исходный код"
 
 #: public/views/status.html
 msgid "Last Block"
-msgstr "Letzter Block"
+msgstr "Последний блок"
 
 #: public/views/status.html
-#, fuzzy
-#| msgid "Last Block Hash (Ravencoind)"
 msgid "Last Block Hash (Ravend)"
-msgstr "Letzter Hash (Ravencoind)"
+msgstr "Хранение последнего блока (Ravend)"
 
 #: public/views/index.html
 msgid "Latest Blocks"
-msgstr "Letzte Blöcke"
+msgstr "Последние блоки"
 
 #: public/views/index.html
 msgid "Latest Transactions"
-msgstr "Letzte Transaktionen"
+msgstr "Последние транзакции"
 
 #: public/views/address.html
 msgid "Loading Address Information"
-msgstr "Lade Adressinformationen"
+msgstr "Загрузка адресной информации"
 
 #: public/views/block.html
 msgid "Loading Block Information"
-msgstr "Lade Blockinformation"
+msgstr "Загрузка информации о блоке"
 
 #: public/views/block_list.html
 msgid "Loading Selected Date..."
-msgstr "Lade gewähltes Datum..."
+msgstr "Загрузка выбранной даты ..."
 
 #: public/views/transaction.html
 msgid "Loading Transaction Details"
-msgstr "Lade Transaktionsdetails"
+msgstr "Загрузка информации о транзакции"
 
 #: public/views/transaction/list.html
 msgid "Loading Transactions..."
-msgstr "Lade Transaktionen..."
+msgstr "Загрузка транзакций ..."
 
 #: public/views/messages_verify.html public/views/transaction_sendraw.html
 #: public/views/includes/infoStatus.html
 msgid "Loading..."
-msgstr "Lade..."
+msgstr "Загружается..."
 
 #: public/views/messages_verify.html
 msgid "Message"
-msgstr "Botschaft"
+msgstr "Сообщение"
 
 #: public/views/transaction/tx.html
 msgid "mined"
-msgstr "gefunden"
+msgstr "заминированный"
 
 #: public/views/block.html public/views/block_list.html public/views/index.html
 msgid "Mined by"
-msgstr "Gefunden von"
+msgstr "Подготовлено"
 
 #: public/views/block_list.html
 msgid "mined on:"
-msgstr "vom:"
+msgstr "заминирован:"
 
 #: public/views/transaction.html
 msgid "Mined Time"
-msgstr "Block gefunden (Mining)"
+msgstr "Время простоя"
 
 #: public/views/status.html
 msgid "Mining Difficulty"
-msgstr "Schwierigkeitgrad"
+msgstr "Трудность добычи"
 
 #: public/views/status.html
 msgid "Network"
-msgstr "Netzwerk"
+msgstr "сеть"
 
 #: public/views/block.html
 msgid "Next Block"
-msgstr "Nächster Block"
+msgstr "Следующий блок"
 
 #: public/views/block_list.html
 msgid "No blocks yet."
-msgstr "Keine Blöcke bisher."
+msgstr "Пока нет блоков."
 
 #: public/views/transaction/tx.html
 msgid "No Inputs (Newly Generated Coins)"
-msgstr "Keine Eingänge (Neu generierte Coins)"
+msgstr "Нет входных данных (новые монеты)"
 
 #: public/views/includes/search.html
 msgid "No matching records found!"
-msgstr "Keine passenden Einträge gefunden!"
+msgstr "Совпадающих записей не найдено!"
 
 #: public/views/address.html
 msgid "No. Transactions"
-msgstr "Anzahl Transaktionen"
+msgstr "Количество транзакций"
 
 #: public/views/block.html
 msgid "Number Of Transactions"
-msgstr "Anzahl der Transaktionen"
+msgstr "Количество транзакций"
 
 #: public/views/transaction.html
 msgid "Output"
-msgstr "Ausgänge"
+msgstr "Вывод"
 
 #: public/views/block.html
 msgid "Previous Block"
-msgstr "Letzter Block"
+msgstr "Предыдущий блок"
 
 #: public/views/status.html
 msgid "Protocol version"
-msgstr "Protokollversion"
+msgstr "Версия протокола"
 
 #: public/views/status.html
 msgid "Proxy setting"
-msgstr "Proxyeinstellung"
+msgstr "Настройка прокси"
 
 #: public/views/index.html
 msgid "PSA for Pool Operators:"
-msgstr "Öffentliche Bekanntmachung für Poolbetreiber:"
+msgstr "Объявление о публикации для операторов пула:"
 
 #: public/views/messages_verify.html
 msgid "Ravencoin comes with a way of signing arbitrary messages."
-msgstr "Ravencoin bietet eine Möglichkeit, beliebige Nachrichten zu signieren."
+msgstr "Ravencoin имеет способ подписания произвольных сообщений."
 
 #: public/views/index.html
 msgid "Ravencoin Community"
-msgstr "Ravencoin Gemeinschaft"
+msgstr "Сообщество Ravencoin"
 
 #: public/views/status.html
 msgid "Ravencoin node information"
-msgstr "Ravencoin-Node Info"
+msgstr "Информация о узле Ravencoin"
 
 #: public/views/index.html
 msgid "Ravencore"
 msgstr "Ravencore"
 
 #: public/views/transaction_sendraw.html
-#, fuzzy
-#| msgid "Show Transaction Output data"
 msgid "Raw transaction data"
-msgstr "Zeige Abgänge"
+msgstr "Необработанные данные транзакции"
 
 #: public/views/transaction_sendraw.html
 msgid "Raw transaction data must be a valid hexadecimal string."
 msgstr ""
-"Raw-Transaktionsdaten müssen eine gültige hexadezimale Zeichenfolge sein."
+"Необработанные данные транзакции должны быть допустимой шестнадцатеричной "
+"строкой."
 
 #: public/views/transaction.html
 msgid "Received Time"
-msgstr "Eingangszeitpunkt"
+msgstr "Полученное время"
 
 #: public/views/redirect.html
 msgid "Redirecting..."
-msgstr "Umleitung..."
+msgstr "Перенаправление ..."
 
 #: public/views/includes/search.html
 msgid "Search for block, transaction or address"
-msgstr "Suche Block, Transaktion oder Adresse"
+msgstr "Поиск блока, транзакции или адреса"
 
 #: public/views/index.html
 msgid "See all blocks"
-msgstr "Alle Blöcke anzeigen"
+msgstr "Просмотреть все блоки"
 
 #: public/views/transaction_sendraw.html
-#, fuzzy
-#| msgid "Transaction"
 msgid "Send transaction"
-msgstr "Transaktion"
+msgstr "Отправить транзакцию"
 
 #: public/views/transaction/tx.html
 msgid "Show all"
-msgstr "Zeige Alles"
+msgstr "Показать все"
 
 #: public/views/transaction/tx.html
 msgid "Show input"
-msgstr "Zeige Eingänge"
+msgstr "Показать ввод"
 
 #: public/views/transaction/tx.html
 msgid "Show less"
-msgstr "Weniger anzeigen"
+msgstr "Показывай меньше"
 
 #: public/views/transaction/tx.html
 msgid "Show more"
-msgstr "Mehr anzeigen"
+msgstr "Показать больше"
 
 #: public/views/messages_verify.html
 msgid "Signature"
-msgstr "Unterschrift"
+msgstr "Подпись"
 
 #: public/views/block_list.html public/views/index.html
 #: public/views/transaction.html
 msgid "Size"
-msgstr "Größe"
+msgstr "Размер"
 
 #: public/views/block.html
 msgid "Size (bytes)"
-msgstr "Größe (bytes)"
+msgstr "Размер (bytes)"
 
 #: public/views/status.html
 msgid "Skipped Blocks (previously synced)"
-msgstr "Verworfene Blöcke (bereits syncronisiert)"
+msgstr "Пропущенные блоки (ранее синхронизированные)"
 
 #: public/views/status.html
 msgid "Start Date"
-msgstr "Startdatum"
+msgstr "Дата начала"
 
 #: public/views/dummy-translations.html
 msgid "Status"
-msgstr "Status"
+msgstr "статус"
 
 #: public/views/block.html public/views/transaction.html
 msgid "Summary"
-msgstr "Zusammenfassung"
+msgstr "краткое изложение"
 
 #: public/views/address.html
 msgid "Summary <small>confirmed</small>"
-msgstr "Zusammenfassung <small>bestätigt</small>"
+msgstr "краткое изложение <small>подтвердил</small>"
 
 #: public/views/status.html
 msgid "Sync Progress"
-msgstr "Fortschritt"
+msgstr "Синхронизация"
 
 #: public/views/status.html
 msgid "Sync Status"
-msgstr "Syncronisation"
+msgstr "Статус синхронизации"
 
 #: public/views/status.html
 msgid "Sync Type"
-msgstr "Art der Syncronisation"
+msgstr "Тип синхронизации"
 
 #: public/views/status.html
 msgid "Synced Blocks"
-msgstr "Syncronisierte Blöcke"
+msgstr "Синхронизированные блоки"
 
 #: public/views/messages_verify.html
 msgid "The message failed to verify."
-msgstr "Die Nachricht konnte nicht überprüft werden."
+msgstr "Сообщение не удалось проверить."
 
 #: public/views/messages_verify.html
 msgid "The message is verifiably from {{verification.address}}."
-msgstr "Die Nachricht stammt nachweislich von {{verification.address}}."
+msgstr "Сообщение проверяется с {{verify.address}}."
 
 #: public/views/transaction/list.html
 msgid "There are no transactions involving this address."
-msgstr "Es gibt keine Transaktionen zu dieser Adressse."
+msgstr "С этим адресом нет транзакций."
 
 #: public/views/transaction_sendraw.html
 msgid ""
 "This form can be used to broadcast a raw transaction in hex format over\n"
 "        the Ravencoin network."
 msgstr ""
-"Dieses Formular kann verwendet werden, um eine unbearbeitete Transaktion\n"
-"        im Hex-Format zu übertragen das Ravencoin-Netzwerk."
+"Эта форма может использоваться для трансляции исходной транзакции\n"
+"        в шестнадцатеричном формате сети Ravencoin."
 
 #: public/views/messages_verify.html
 msgid ""
 "This form can be used to verify that a message comes from\n"
 "        a specific Ravencoin address."
 msgstr ""
-"Dieses Formular kann verwendet werden, um zu überprüfen, ob\n"
-"        eine Nachricht stammt eine spezifische Ravencoin-Adresse."
+"Эта форма может использоваться для проверки того, что\n"
+"        сообщение поступает из конкретный адрес Равенкойна."
 
 #: public/views/status.html
 msgid "Time Offset"
-msgstr "Zeitoffset zu UTC"
+msgstr "Смещение времени"
 
 #: public/views/block.html public/views/block_list.html
 msgid "Timestamp"
-msgstr "Zeitstempel"
+msgstr "Отметка"
 
 #: public/views/block_list.html
 msgid "Today"
-msgstr "Heute"
+msgstr "Cегодня"
 
 #: public/views/address.html
 msgid "Total Received"
-msgstr "Insgesamt empfangen"
+msgstr "Всего получено"
 
 #: public/views/address.html
 msgid "Total Sent"
-msgstr "Insgesamt gesendet"
+msgstr "Всего отправлено"
 
 #: public/views/transaction.html
 msgid "Transaction"
-msgstr "Transaktion"
+msgstr "Сделка"
 
 #: public/views/transaction_sendraw.html
 msgid "Transaction succesfully broadcast.<br>Transaction id: {{txid}}"
-msgstr "Transaktion erfolgreich gesendet.<br>Transaktions-ID: {{txid}}"
+msgstr ""
+"Транзакция успешно транслируется.<br>Идентификатор транзакции: {{txid}}"
 
 #: public/views/address.html public/views/block.html
 #: public/views/block_list.html public/views/index.html
 msgid "Transactions"
-msgstr "Transaktionen"
+msgstr "операции"
 
 #: public/views/transaction/tx.html
 msgid "Type"
-msgstr "Typ"
+msgstr "Тип"
 
 #: public/views/address.html
 msgid "Unconfirmed"
-msgstr "Unbestätigt"
+msgstr "неподтвержденный"
 
 #: public/views/transaction.html public/views/transaction/tx.html
 msgid "Unconfirmed Transaction!"
-msgstr "Unbestätigte Transaktion!"
+msgstr "Неподтвержденная сделка!"
 
 #: public/views/address.html
 msgid "Unconfirmed Txs Balance"
-msgstr "Unbestätigtes Guthaben"
+msgstr "Неподтвержденный баланс Txs"
 
 #: public/views/index.html
 msgid "Value Out"
-msgstr "Wert"
+msgstr "Значение выход"
 
 #: public/views/messages_verify.html
 msgid "Verify"
-msgstr "Überprüfen"
+msgstr "проверить"
 
 #: public/views/messages_verify.html
 msgid "Verify signed message"
-msgstr "Überprüfen Sie die signierte Nachricht"
+msgstr "Подтвердить подписанное сообщение"
 
 #: public/views/block.html public/views/status.html
 msgid "Version"
-msgstr "Version"
+msgstr "Версия"
 
 #: public/views/block_list.html public/views/index.html
 msgid "Waiting for blocks..."
-msgstr "Warte auf Blöcke..."
+msgstr "Ожидание блоков ..."
 
 #: public/views/index.html
 msgid "Waiting for transactions..."
-msgstr "Warte auf Transaktionen..."
-
-#~ msgid ""
-#~ "<strong>insight</strong>  is an <a href=\"http://live.insight.is/\" "
-#~ "target=\"_blank\">open-source Ravencoin blockchain explorer</a> with "
-#~ "complete REST and websocket APIs that can be used for writing web wallets "
-#~ "and other apps  that need more advanced blockchain queries than provided "
-#~ "by ravend RPC.  Check out the <a href=\"https://github.com/underdarkskies/"
-#~ "insight-ui\" target=\"_blank\">source code</a>."
-#~ msgstr ""
-#~ "<strong>insight</strong> ist ein <a href=\"http://live.insight.is/\" "
-#~ "target=\"_blank\">Open Source Ravencoin Blockchain Explorer</a> mit "
-#~ "vollständigen REST und Websocket APIs um eigene Wallets oder "
-#~ "Applikationen zu implementieren. Hierbei werden fortschrittlichere "
-#~ "Abfragen der Blockchain ermöglicht, bei denen die RPC des Ravencoind "
-#~ "nicht mehr ausreichen. Der aktuelle <a href=\"https://github.com/"
-#~ "underdarkskies/insight-ui\" target=\"_blank\">Quellcode</a> ist auf "
-#~ "Github zu finden."
-
-#~ msgid ""
-#~ "<strong>insight</strong> is still in development, so be sure to report "
-#~ "any bugs and provide feedback for improvement at our <a href=\"https://"
-#~ "github.com/underdarkskies/insight/issues\" target=\"_blank\">github issue "
-#~ "tracker</a>."
-#~ msgstr ""
-#~ "<strong>insight</strong> befindet sich aktuell noch in der Entwicklung. "
-#~ "Bitte sende alle gefundenen Fehler (Bugs) und Feedback zur weiteren "
-#~ "Verbesserung an unseren <a href=\"https://github.com/underdarkskies/"
-#~ "insight-ui/issues\" target=\"_blank\">Github Issue Tracker</a>."
-
-#~ msgid "About"
-#~ msgstr "Über insight"
-
-#~ msgid "Best Block"
-#~ msgstr "Bester Block"
-
-#~ msgid "Bytes Serialized"
-#~ msgstr "Serialisierte Bytes"
-
-#~ msgid "Hash Serialized"
-#~ msgstr "Hash Serialisiert"
-
-#~ msgid "Powered by"
-#~ msgstr "Powered by"
-
-#~ msgid "Testnet"
-#~ msgstr "Testnet aktiv"
-
-#~ msgid "Total Amount"
-#~ msgstr "Gesamtsumme"
-
-#~ msgid "Transaction Output Set Information"
-#~ msgstr "Transaktions Abgänge"
-
-#~ msgid "Transaction Outputs"
-#~ msgstr "Abgänge"
-
-#~ msgid "Waiting for blocks"
-#~ msgstr "Warte auf Blöcke"
+msgstr "Ожидание транзакций ..."

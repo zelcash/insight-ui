@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.5.4\n"
+"X-Generator: Poedit 2.0.7\n"
 
 #: public/views/transaction/tx.html
 msgid "(Input unconfirmed)"
@@ -18,36 +18,6 @@ msgstr "(入力は未検証です)"
 #: public/views/404.html
 msgid "404 Page not found :("
 msgstr "404 ページがみつかりません (´・ω・`)"
-
-#: public/views/index.html
-msgid ""
-"<strong>insight</strong>  is an <a href=\"http://live.insight.is/\" target="
-"\"_blank\">open-source Ravencoin blockchain explorer</a> with complete REST "
-"and websocket APIs that can be used for writing web wallets and other apps  "
-"that need more advanced blockchain queries than provided by ravend RPC.  "
-"Check out the <a href=\"https://github.com/underdarkskies/insight-ui\" target=\"_blank"
-"\">source code</a>."
-msgstr ""
-"<strong>insight</strong>は、ravend RPCの提供するものよりも詳細なブロック"
-"チェインへの問い合わせを必要とするウェブウォレットやその他のアプリを書くのに"
-"使える、完全なRESTおよびwebsocket APIを備えた<a href=\"http://live.insight."
-"is/\" target=\"_blank\">オープンソースのビットコインブロックエクスプローラ</"
-"a>です。<a href=\"https://github.com/underdarkskies/insight-ui\" target=\"_blank\">ソース"
-"コード</a>を確認"
-
-#: public/views/index.html
-msgid ""
-"<strong>insight</strong> is still in development, so be sure to report any "
-"bugs and provide feedback for improvement at our <a href=\"https://github."
-"com/underdarkskies/insight/issues\" target=\"_blank\">github issue tracker</a>."
-msgstr ""
-"<strong>insight</strong>は現在開発中です。<a href=\"https://github.com/"
-"underdarkskies/insight/issues\" target=\"_blank\">githubのissueトラッカ</a>にてバグの"
-"報告や改善案の提案をお願いします。"
-
-#: public/views/index.html
-msgid "About"
-msgstr "はじめに"
 
 #: public/views/address.html public/views/messages_verify.html
 msgid "Address"
@@ -69,17 +39,9 @@ msgstr "エラーが発生しました:<br>{{error}}"
 msgid "Application Status"
 msgstr "アプリケーションの状態"
 
-#: public/views/status.html
-msgid "Best Block"
-msgstr "最良ブロック"
-
-#: public/views/messages_verify.html
-msgid "Ravencoin comes with a way of signing arbitrary messages."
-msgstr "Ravencoinには任意のメッセージを署名する昨日が備わっています。"
-
-#: public/views/status.html
-msgid "Ravencoin node information"
-msgstr "Ravencoinノード情報"
+#: public/views/index.html
+msgid "are very much appreciated: RD7yadeCvSDs4fCbEPuHstU3GHbiS7ao9q"
+msgstr "非常に感謝しています：RD7yadeCvSDs4fCbEPuHstU3GHbiS7ao9q"
 
 #: public/views/block.html
 msgid "Block"
@@ -98,17 +60,9 @@ msgstr "ブロック"
 msgid "Broadcast Raw Transaction"
 msgstr "生のトランザクションを配信"
 
-#: public/views/status.html
-msgid "Bytes Serialized"
-msgstr "シリアライズ後の容量 (バイト)"
-
-#: public/views/includes/connection.html
-msgid ""
-"Can't connect to ravend to get live updates from the p2p network. (Tried "
-"connecting to ravend at {{host}}:{{port}} and failed.)"
-msgstr ""
-"P2Pネットワークからライブ情報を取得するためにravendへ接続することができませ"
-"んでした。({{host}}:{{port}} への接続を試みましたが、失敗しました。)"
+#: public/views/block_list.html
+msgid "by date."
+msgstr "日毎。"
 
 #: public/views/includes/connection.html
 msgid "Can't connect to insight server. Attempting to reconnect..."
@@ -117,6 +71,14 @@ msgstr "insight サーバに接続できません。再接続しています..."
 #: public/views/includes/connection.html
 msgid "Can't connect to internet. Please, check your connection."
 msgstr "インターネットに接続できません。コネクションを確認してください。"
+
+#: public/views/includes/connection.html
+msgid ""
+"Can't connect to ravend to get live updates from the p2p network. (Tried "
+"connecting to ravend at {{host}}:{{port}} and failed.)"
+msgstr ""
+"P2Pネットワークからライブ情報を取得するためにravendへ接続することができません"
+"でした。({{host}}:{{port}} への接続を試みましたが、失敗しました。)"
 
 #: public/views/status.html
 msgid "Complete"
@@ -150,6 +112,12 @@ msgstr "詳細"
 msgid "Difficulty"
 msgstr "難易度"
 
+#: public/views/index.html
+#, fuzzy
+#| msgid "Confirmations"
+msgid "Donations"
+msgstr "検証数"
+
 #: public/views/transaction/tx.html
 msgid "Double spent attempt detected. From tx:"
 msgstr "二重支払い攻撃をこのトランザクションから検知しました："
@@ -166,6 +134,10 @@ msgstr "エラー！"
 msgid "Fee"
 msgstr "手数料"
 
+#: public/views/transaction.html
+msgid "Fee Rate"
+msgstr "手数料率"
+
 #: public/views/address.html
 msgid "Final Balance"
 msgstr "最終残高"
@@ -174,19 +146,26 @@ msgstr "最終残高"
 msgid "Finish Date"
 msgstr "終了日時"
 
+#: public/views/transaction/tx.html
+msgid "first seen at"
+msgstr "最初に発見された日時"
+
+#: public/views/index.html
+msgid "Follow the guide"
+msgstr "ガイドに従ってください"
+
 #: public/views/404.html
 msgid "Go to home"
 msgstr "ホームへ"
 
-#: public/views/status.html
-msgid "Hash Serialized"
-msgstr "シリアライズデータのハッシュ値"
-
-#: public/views/block.html public/views/block_list.html
-#: public/views/index.html public/views/status.html
+#: public/views/block.html public/views/block_list.html public/views/index.html
 #: public/views/includes/header.html
 msgid "Height"
 msgstr "ブロック高"
+
+#: public/views/index.html
+msgid "here"
+msgstr "ここに"
 
 #: public/views/transaction.html public/views/transaction/tx.html
 msgid "Included in Block"
@@ -200,6 +179,12 @@ msgstr "levelDBの破損を検知しました:"
 msgid "Info Errors"
 msgstr "エラー情報"
 
+#: public/views/index.html
+#, fuzzy
+#| msgid "Confirmations"
+msgid "Information"
+msgstr "検証数"
+
 #: public/views/status.html
 msgid "Initial Block Chain Height"
 msgstr "起動時のブロック高"
@@ -208,12 +193,18 @@ msgstr "起動時のブロック高"
 msgid "Input"
 msgstr "入力"
 
+#: public/views/index.html
+msgid "is still in development, check out the source code"
+msgstr "はまだ開発中で、ソースコードをチェックしています"
+
 #: public/views/status.html
 msgid "Last Block"
 msgstr "直前のブロック"
 
 #: public/views/status.html
-msgid "Last Block Hash (Ravencoind)"
+#, fuzzy
+#| msgid "Last Block Hash (Ravencoind)"
+msgid "Last Block Hash (Ravend)"
 msgstr "直前のブロックのハッシュ値 (Ravencoind)"
 
 #: public/views/index.html
@@ -253,30 +244,41 @@ msgstr "ロード中..."
 msgid "Message"
 msgstr "メッセージ"
 
+#: public/views/transaction/tx.html
+msgid "mined"
+msgstr "採掘された"
+
+#: public/views/block.html public/views/block_list.html public/views/index.html
+msgid "Mined by"
+msgstr "採掘者"
+
+#: public/views/block_list.html
+msgid "mined on:"
+msgstr "採掘日時:"
+
 #: public/views/transaction.html
 msgid "Mined Time"
 msgstr "採掘時刻"
-
-#: public/views/block.html public/views/block_list.html
-#: public/views/index.html
-msgid "Mined by"
-msgstr "採掘者"
 
 #: public/views/status.html
 msgid "Mining Difficulty"
 msgstr "採掘難易度"
 
+#: public/views/status.html
+msgid "Network"
+msgstr "ネットワーク"
+
 #: public/views/block.html
 msgid "Next Block"
 msgstr "次のブロック"
 
-#: public/views/transaction/tx.html
-msgid "No Inputs (Newly Generated Coins)"
-msgstr "入力なし (新しく生成されたコイン)"
-
 #: public/views/block_list.html
 msgid "No blocks yet."
 msgstr "ブロックはありません。"
+
+#: public/views/transaction/tx.html
+msgid "No Inputs (Newly Generated Coins)"
+msgstr "入力なし (新しく生成されたコイン)"
 
 #: public/views/includes/search.html
 msgid "No matching records found!"
@@ -294,10 +296,6 @@ msgstr "トランザクション数"
 msgid "Output"
 msgstr "出力"
 
-#: public/views/index.html
-msgid "Powered by"
-msgstr "Powered by"
-
 #: public/views/block.html
 msgid "Previous Block"
 msgstr "前のブロック"
@@ -309,6 +307,26 @@ msgstr "プロトコルバージョン"
 #: public/views/status.html
 msgid "Proxy setting"
 msgstr "プロキシ設定"
+
+#: public/views/index.html
+msgid "PSA for Pool Operators:"
+msgstr "プール運営者のための公共サービスアナウンス："
+
+#: public/views/messages_verify.html
+msgid "Ravencoin comes with a way of signing arbitrary messages."
+msgstr "Ravencoinには任意のメッセージを署名する昨日が備わっています。"
+
+#: public/views/index.html
+msgid "Ravencoin Community"
+msgstr "Ravencoinコミュニティ"
+
+#: public/views/status.html
+msgid "Ravencoin node information"
+msgstr "Ravencoinノード情報"
+
+#: public/views/index.html
+msgid "Ravencore"
+msgstr "Ravencore"
 
 #: public/views/transaction_sendraw.html
 msgid "Raw transaction data"
@@ -337,10 +355,6 @@ msgstr "すべてのブロックをみる"
 #: public/views/transaction_sendraw.html
 msgid "Send transaction"
 msgstr "トランザクションを送信"
-
-#: public/views/status.html
-msgid "Show Transaction Output data"
-msgstr "トランザクションの出力データをみる"
 
 #: public/views/transaction/tx.html
 msgid "Show all"
@@ -407,10 +421,6 @@ msgstr "同期タイプ"
 msgid "Synced Blocks"
 msgstr "同期されたブロック数"
 
-#: public/views/status.html
-msgid "Testnet"
-msgstr "テストネット"
-
 #: public/views/messages_verify.html
 msgid "The message failed to verify."
 msgstr "メッセージの検証に失敗しました。"
@@ -428,16 +438,16 @@ msgid ""
 "This form can be used to broadcast a raw transaction in hex format over\n"
 "        the Ravencoin network."
 msgstr ""
-"このフォームでは、16進数フォーマットの生のトランザクションをRavencoinネットワー"
-"ク上に配信することができます。"
+"このフォームでは、16進数フォーマットの生のトランザクションをRavencoinネット"
+"ワーク上に配信することができます。"
 
 #: public/views/messages_verify.html
 msgid ""
 "This form can be used to verify that a message comes from\n"
 "        a specific Ravencoin address."
 msgstr ""
-"このフォームでは、メッセージが特定のRavencoinアドレスから来たかどうかを検証する"
-"ことができます。"
+"このフォームでは、メッセージが特定のRavencoinアドレスから来たかどうかを検証す"
+"ることができます。"
 
 #: public/views/status.html
 msgid "Time Offset"
@@ -451,10 +461,6 @@ msgstr "タイムスタンプ"
 msgid "Today"
 msgstr "今日"
 
-#: public/views/status.html
-msgid "Total Amount"
-msgstr "Ravencoin総量"
-
 #: public/views/address.html
 msgid "Total Received"
 msgstr "総入金額"
@@ -467,21 +473,12 @@ msgstr "総送金額"
 msgid "Transaction"
 msgstr "トランザクション"
 
-#: public/views/status.html
-msgid "Transaction Output Set Information"
-msgstr "トランザクションの出力セット情報"
-
-#: public/views/status.html
-msgid "Transaction Outputs"
-msgstr "トランザクションの出力"
-
 #: public/views/transaction_sendraw.html
 msgid "Transaction succesfully broadcast.<br>Transaction id: {{txid}}"
 msgstr "トランザクションの配信に成功しました。<br>トランザクションID: {{txid}}"
 
 #: public/views/address.html public/views/block.html
 #: public/views/block_list.html public/views/index.html
-#: public/views/status.html
 msgid "Transactions"
 msgstr "トランザクション"
 
@@ -525,21 +522,60 @@ msgstr "ブロックを待っています..."
 msgid "Waiting for transactions..."
 msgstr "トランザクションを待っています..."
 
-#: public/views/block_list.html
-msgid "by date."
-msgstr "日毎。"
+#~ msgid ""
+#~ "<strong>insight</strong>  is an <a href=\"http://live.insight.is/\" "
+#~ "target=\"_blank\">open-source Ravencoin blockchain explorer</a> with "
+#~ "complete REST and websocket APIs that can be used for writing web wallets "
+#~ "and other apps  that need more advanced blockchain queries than provided "
+#~ "by ravend RPC.  Check out the <a href=\"https://github.com/underdarkskies/"
+#~ "insight-ui\" target=\"_blank\">source code</a>."
+#~ msgstr ""
+#~ "<strong>insight</strong>は、ravend RPCの提供するものよりも詳細なブロック"
+#~ "チェインへの問い合わせを必要とするウェブウォレットやその他のアプリを書くの"
+#~ "に使える、完全なRESTおよびwebsocket APIを備えた<a href=\"http://live."
+#~ "insight.is/\" target=\"_blank\">オープンソースのビットコインブロックエクス"
+#~ "プローラ</a>です。<a href=\"https://github.com/underdarkskies/insight-ui"
+#~ "\" target=\"_blank\">ソースコード</a>を確認"
 
-#: public/views/transaction/tx.html
-msgid "first seen at"
-msgstr "最初に発見された日時"
+#~ msgid ""
+#~ "<strong>insight</strong> is still in development, so be sure to report "
+#~ "any bugs and provide feedback for improvement at our <a href=\"https://"
+#~ "github.com/underdarkskies/insight/issues\" target=\"_blank\">github issue "
+#~ "tracker</a>."
+#~ msgstr ""
+#~ "<strong>insight</strong>は現在開発中です。<a href=\"https://github.com/"
+#~ "underdarkskies/insight/issues\" target=\"_blank\">githubのissueトラッカ</"
+#~ "a>にてバグの報告や改善案の提案をお願いします。"
 
-#: public/views/transaction/tx.html
-msgid "mined"
-msgstr "採掘された"
+#~ msgid "About"
+#~ msgstr "はじめに"
 
-#: public/views/block_list.html
-msgid "mined on:"
-msgstr "採掘日時:"
+#~ msgid "Best Block"
+#~ msgstr "最良ブロック"
+
+#~ msgid "Bytes Serialized"
+#~ msgstr "シリアライズ後の容量 (バイト)"
+
+#~ msgid "Hash Serialized"
+#~ msgstr "シリアライズデータのハッシュ値"
+
+#~ msgid "Powered by"
+#~ msgstr "Powered by"
+
+#~ msgid "Show Transaction Output data"
+#~ msgstr "トランザクションの出力データをみる"
+
+#~ msgid "Testnet"
+#~ msgstr "テストネット"
+
+#~ msgid "Total Amount"
+#~ msgstr "Ravencoin総量"
+
+#~ msgid "Transaction Output Set Information"
+#~ msgstr "トランザクションの出力セット情報"
+
+#~ msgid "Transaction Outputs"
+#~ msgstr "トランザクションの出力"
 
 #~ msgid "(Mainchain)"
 #~ msgstr "(メインチェーン)"
