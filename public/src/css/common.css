@@ -518,7 +518,7 @@ a.bg-danger:hover {
 .page-header {
     margin: 40px 0 20px;
     padding-bottom: 9px;
-    border-bottom: 1px solid #eee
+    /* border-bottom: 1px solid #eee */
 }
 
 dl,ol,ul {
@@ -707,10 +707,7 @@ pre code {
 .col-xs-1,.col-xs-10,.col-xs-11,.col-xs-12,.col-xs-2,.col-xs-3,.col-xs-4,.col-xs-5,.col-xs-6,.col-xs-7,.col-xs-8,.col-xs-9 {
     float: left
 }
-.col-md-8,.col-md-9 {
-    padding:14px;
-    background-color: #eaeef6e6
-}
+
 .col-xs-12 {
     width: 100%
 }
@@ -919,10 +916,7 @@ pre code {
     .col-sm-1,.col-sm-10,.col-sm-11,.col-sm-12,.col-sm-2,.col-sm-3,.col-sm-4,.col-sm-5,.col-sm-6,.col-sm-7,.col-sm-8,.col-sm-9 {
         float:left
     }
-    .col-md-8,.col-md-9 {
-        padding:14px;
-        background-color: #eaeef6e6
-    }
+
     .col-sm-12 {
         width: 100%
     }
@@ -6603,12 +6597,12 @@ body,html {
 .page-header {
     margin-top: 0;
     width: 100%;
-    padding: 14px;
+    padding: 0px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
     z-index: 2;
-    position: relative
+    position: relative;
 }
 
 #home .btn-more,#powered .powered-text {
