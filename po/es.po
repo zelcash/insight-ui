@@ -58,10 +58,8 @@ msgid "Blocks"
 msgstr "Bloques"
 
 #: public/views/transaction_sendraw.html
-#, fuzzy
-#| msgid "Latest Transactions"
 msgid "Broadcast Raw Transaction"
-msgstr "Últimas Transacciones"
+msgstr "Transmita la transacción sin procesar"
 
 #: public/views/block_list.html
 msgid "by date."
@@ -116,10 +114,8 @@ msgid "Difficulty"
 msgstr "Dificultad"
 
 #: public/views/index.html
-#, fuzzy
-#| msgid "Confirmations"
 msgid "Donations"
-msgstr "Confirmaciones"
+msgstr "Donaciones"
 
 #: public/views/transaction/tx.html
 msgid "Double spent attempt detected. From tx:"
@@ -183,10 +179,8 @@ msgid "Info Errors"
 msgstr "Errores de Información"
 
 #: public/views/index.html
-#, fuzzy
-#| msgid "Confirmations"
 msgid "Information"
-msgstr "Confirmaciones"
+msgstr "Información"
 
 #: public/views/status.html
 msgid "Initial Block Chain Height"
@@ -330,10 +324,8 @@ msgid "Ravencore"
 msgstr "Ravencore"
 
 #: public/views/transaction_sendraw.html
-#, fuzzy
-#| msgid "Show Transaction Output data"
 msgid "Raw transaction data"
-msgstr "Mostrar dato de Salida de la Transacción"
+msgstr "Datos de transacción sin procesar"
 
 #: public/views/transaction_sendraw.html
 msgid "Raw transaction data must be a valid hexadecimal string."
@@ -357,10 +349,8 @@ msgid "See all blocks"
 msgstr "Ver todos los bloques"
 
 #: public/views/transaction_sendraw.html
-#, fuzzy
-#| msgid "Transaction"
 msgid "Send transaction"
-msgstr "Transacción"
+msgstr "Enviar transacción"
 
 #: public/views/transaction/tx.html
 msgid "Show all"

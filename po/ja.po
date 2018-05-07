@@ -113,10 +113,8 @@ msgid "Difficulty"
 msgstr "難易度"
 
 #: public/views/index.html
-#, fuzzy
-#| msgid "Confirmations"
 msgid "Donations"
-msgstr "検証数"
+msgstr "寄付"
 
 #: public/views/transaction/tx.html
 msgid "Double spent attempt detected. From tx:"
@@ -180,10 +178,8 @@ msgid "Info Errors"
 msgstr "エラー情報"
 
 #: public/views/index.html
-#, fuzzy
-#| msgid "Confirmations"
 msgid "Information"
-msgstr "検証数"
+msgstr "情報"
 
 #: public/views/status.html
 msgid "Initial Block Chain Height"
@@ -202,10 +198,8 @@ msgid "Last Block"
 msgstr "直前のブロック"
 
 #: public/views/status.html
-#, fuzzy
-#| msgid "Last Block Hash (Ravencoind)"
 msgid "Last Block Hash (Ravend)"
-msgstr "直前のブロックのハッシュ値 (Ravencoind)"
+msgstr "直前のブロックのハッシュ値 (Ravend)"
 
 #: public/views/index.html
 msgid "Latest Blocks"
