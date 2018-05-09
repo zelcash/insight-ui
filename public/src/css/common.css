@@ -518,7 +518,7 @@ a.bg-danger:hover {
 .page-header {
     margin: 40px 0 20px;
     padding-bottom: 9px;
-    /* border-bottom: 1px solid #eee */
+    border-bottom: 0px solid #eee !important;
 }
 
 dl,ol,ul {

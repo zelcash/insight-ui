@@ -62,7 +62,7 @@ angular.module('insight.system').controller('ScannerController',
         canvas,
         $video,
         context,
-        stream;
+        localMediaStream;
 
     var _scan = function(evt) {
       if ($scope.isMobile) {
@@ -97,7 +97,7 @@ angular.module('insight.system').controller('ScannerController',
           reader.readAsDataURL(file);
         }
       } else {
-        if (MediaStream.active) {
+        if (localMediaStream) {
           context.drawImage(video, 0, 0, 300, 225);
 
           try {
@@ -112,8 +112,7 @@ angular.module('insight.system').controller('ScannerController',
     };
 
     var _successCallback = function(stream) {
-      var video = document.getElementById('qrcode-scanner-video');
-      var $video = angular.element(video);
+      localMediaStream = stream;
 	  video.srcObject = stream;
       video.play();
 	  setTimeout(_scan, 1000);
@@ -123,27 +122,20 @@ angular.module('insight.system').controller('ScannerController',
       $scope.scannerLoading = false;
       $modalInstance.close();
       if (!$scope.isMobile) {
-		var video = document.getElementById('qrcode-scanner-video');
 		var qrstream = video.srcObject;
 		var tracks = qrstream.getTracks();
 		tracks.forEach(function(track) {
 		  track.stop();
 		});
         video.srcObject = null;
+		localMediaStream = null;
       }
     };
 
     var _videoError = function(err) {
       console.log('Video Error: ' + JSON.stringify(err));
-	  errorMsg('getUserMedia error: ' + error.name, error);
-      _scanStop();
+	  _scanStop();
     };
-
-	function errorMsg(msg, error) {
-	  if (typeof error !== 'undefined') {
-		console.error(error);
-	  }
-	}
 
 	qrcode.callback = function(data) {
       _scanStop();
@@ -172,7 +164,9 @@ angular.module('insight.system').controller('ScannerController',
           cameraInput = document.getElementById('qrcode-camera');
           cameraInput.addEventListener('change', _scan, false);
         } else {
-          canvas.width = 300;
+          video = document.getElementById('qrcode-scanner-video');
+          $video = angular.element(video);
+		  canvas.width = 300;
           canvas.height = 225;
           context.clearRect(0, 0, 300, 225);
 
