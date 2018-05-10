@@ -24,6 +24,7 @@ angular.module('insight',[
   'insight.currency',
   'insight.messages',
   'ngclipboard'
+   
 ]);
 
 angular.module('insight.system', []);
