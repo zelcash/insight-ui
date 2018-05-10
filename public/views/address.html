@@ -4,7 +4,8 @@
     <div class="container" data-ng-if="!hideSNavbar">
       <div class="col-md-8 text-left">
           <h3 translate>Address</h3> {{address.addrStr}}
-          <span class="btn-copy" clip-copy="address.addrStr"></span>
+		  <span class="btn-copy" ngclipboard data-clipboard-text="{{address.addrStr}}"><img class="clippy" width="13" src="../img/clippy.svg" alt="Copy to clipboard"></span>
+		  </button>
       </div>
       <div class="col-md-4">
         <span class="txvalues txvalues-primary"><strong translate>Final Balance</strong> {{$root.currency.getConvertion(address.balance) || address.balance + ' RVN' }}</span>
@@ -25,11 +26,11 @@
     <div class="well well-sm ellipsis">
       <strong translate>Address</strong>
       <span class="text-muted">{{address.addrStr}}</span>
-      <span class="btn-copy" clip-copy="address.addrStr"></span>
+      <span class="btn-copy" ngclipboard data-clipboard-text="{{address.addrStr}}"><img class="clippy" width="13" src="../img/clippy.svg" alt="Copy to clipboard"></span>
     </div>
     <h2 translate>Summary <small>confirmed</small></h2>
     <div class="row" data-ng-hide="!address.addrStr">
-      <div class="col-md-10">
+      <div class="col-md-13">
         <table class="table">
           <tbody>
           <tr>

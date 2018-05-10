@@ -42,7 +42,9 @@
     "front-end"
   ],
   "ravencoreNode": "ravencore-node",
-  "dependencies": {},
+  "dependencies": {
+    "ngclipboard": "^2.0.0"
+  },
   "devDependencies": {
     "bower": "1.8.2",
     "grunt": "0.4.2",

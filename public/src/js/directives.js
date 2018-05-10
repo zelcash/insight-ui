@@ -1,7 +1,5 @@
 'use strict';
 
-var ZeroClipboard = window.ZeroClipboard;
-
 angular.module('insight')
   .directive('scroll', function ($window) {
     return function(scope, element, attrs) {
@@ -40,39 +38,32 @@ angular.module('insight')
       }
     };
   })
-  .directive('clipCopy', function() {
-    ZeroClipboard.config({
-      moviePath: '/lib/zeroclipboard/ZeroClipboard.swf',
-      trustedDomains: ['*'],
-      allowScriptAccess: 'always',
-      forceHandCursor: true
-    });
-
+  .directive('dataClipboardText', function() {
     return {
       restric: 'A',
-      scope: { clipCopy: '=clipCopy' },
-      template: '<div class="tooltip fade right in"><div class="tooltip-arrow"></div><div class="tooltip-inner">Copied!</div></div>',
+      scope: { dataClipboardText: '=dataClipboardText' },
       link: function(scope, elm) {
-        var clip = new ZeroClipboard(elm);
-
-        clip.on('load', function(client) {
-          var onMousedown = function(client) {
-            client.setText(scope.clipCopy);
-          };
-
-          client.on('mousedown', onMousedown);
-
-          scope.$on('$destroy', function() {
-            client.off('mousedown', onMousedown);
-          });
+        var clipboardDemos = new ClipboardJS(elm);
+        
+        clipboardDemos.on('success', function(e) {
+            e.clearSelection();
+        
+            console.info('Action:', e.action);
+            console.info('Text:', e.text);
+            console.info('Trigger:', e.trigger);
+        
+            showTooltip(e.trigger, 'Copied!');
         });
-
-        clip.on('noFlash wrongflash', function() {
-          return elm.remove();
+        
+        clipboardDemos.on('error', function(e) {
+            console.error('Action:', e.action);
+            console.error('Trigger:', e.trigger);
+        
+            showTooltip(e.trigger, fallbackMessage(e.action));
         });
       }
     };
-  })
+  })  
   .directive('focus', function ($timeout) {
     return {
       scope: {
