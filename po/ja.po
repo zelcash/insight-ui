@@ -80,6 +80,10 @@ msgstr ""
 "P2Pネットワークからライブ情報を取得するためにravendへ接続することができません"
 "でした。({{host}}:{{port}} への接続を試みましたが、失敗しました。)"
 
+#: public/views/charts.html
+msgid "Charts"
+msgstr "チャート"
+
 #: public/views/status.html
 msgid "Complete"
 msgstr "完了"
@@ -217,6 +221,10 @@ msgstr "アドレス情報を読み込んでいます"
 msgid "Loading Block Information"
 msgstr "ブロック情報を読み込んでいます"
 
+#: public/views/charts.html
+msgid "Loading chart..."
+msgstr "チャートを読み込んでいます..."
+
 #: public/views/block_list.html
 msgid "Loading Selected Date..."
 msgstr "選択されたデータを読み込んでいます..."
@@ -345,6 +353,10 @@ msgstr "ブロック、トランザクション、アドレスを検索"
 #: public/views/index.html
 msgid "See all blocks"
 msgstr "すべてのブロックをみる"
+
+#: public/views/charts.html
+msgid "Select a Chart"
+msgstr "チャートを選択"
 
 #: public/views/transaction_sendraw.html
 msgid "Send transaction"

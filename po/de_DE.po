@@ -84,6 +84,10 @@ msgstr ""
 "vom P2P Netzwerk zu erhalten. (Verbindungsversuch zu ravend an {{host}}:"
 "{{port}} ist fehlgeschlagen.)"
 
+#: public/views/charts.html
+msgid "Charts"
+msgstr "Diagramme"
+
 #: public/views/status.html
 msgid "Complete"
 msgstr "Vollständig"
@@ -221,6 +225,10 @@ msgstr "Lade Adressinformationen"
 msgid "Loading Block Information"
 msgstr "Lade Blockinformation"
 
+#: public/views/charts.html
+msgid "Loading chart..."
+msgstr "Lade diagramm..."
+
 #: public/views/block_list.html
 msgid "Loading Selected Date..."
 msgstr "Lade gewähltes Datum..."
@@ -350,6 +358,10 @@ msgstr "Suche Block, Transaktion oder Adresse"
 #: public/views/index.html
 msgid "See all blocks"
 msgstr "Alle Blöcke anzeigen"
+
+#: public/views/charts.html
+msgid "Select a Chart"
+msgstr "Auswählen eines Diagramms"
 
 #: public/views/transaction_sendraw.html
 msgid "Send transaction"

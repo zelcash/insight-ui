@@ -81,6 +81,10 @@ msgstr ""
 "No se pudo conectar a ravend para obtener actualizaciones en vivo de la red "
 "p2p. (Se intentó conectar a ravend de {{host}}:{{port}} y falló.)"
 
+#: public/views/charts.html
+msgid "Charts"
+msgstr "Gráficas"
+
 #: public/views/status.html
 msgid "Complete"
 msgstr "Completado"
@@ -218,6 +222,10 @@ msgstr "Cargando Información de la Dirección"
 msgid "Loading Block Information"
 msgstr "Cargando Información del Bloque"
 
+#: public/views/charts.html
+msgid "Loading chart..."
+msgstr "Cargando Gráficas..."
+
 #: public/views/block_list.html
 msgid "Loading Selected Date..."
 msgstr "Cargando Fecha Seleccionada..."
@@ -347,6 +355,10 @@ msgstr "Buscar bloques, transacciones o direcciones"
 #: public/views/index.html
 msgid "See all blocks"
 msgstr "Ver todos los bloques"
+
+#: public/views/charts.html
+msgid "Select a Chart"
+msgstr "Seleccione una Gráfica"
 
 #: public/views/transaction_sendraw.html
 msgid "Send transaction"
