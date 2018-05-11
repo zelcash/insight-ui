@@ -19,6 +19,7 @@ angular.module('insight',[
   'insight.transactions',
   'insight.address',
   'insight.search',
+  'insight.charts',
   'insight.status',
   'insight.connection',
   'insight.currency',
@@ -33,6 +34,7 @@ angular.module('insight.blocks', []);
 angular.module('insight.transactions', []);
 angular.module('insight.address', []);
 angular.module('insight.search', []);
+angular.module('insight.charts', []);
 angular.module('insight.status', []);
 angular.module('insight.connection', []);
 angular.module('insight.currency', []);

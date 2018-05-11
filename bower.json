@@ -14,6 +14,7 @@
     "angular-ui-utils": "~0.1.1",
     "angular-gettext": "~1.1.0",
     "angular-moment": "~0.8.0",
-    "ngclipboard": "^2.0.0"
+    "ngclipboard": "^2.0.0",
+	"c3": "~0.4.11"
   }
 }

@@ -57,6 +57,10 @@
         </tr>
         </tbody>
       </table>
+	  <div data-ng-if="pagination.more">
+        <a class="btn btn-primary" href="blocks-date/{{pagination.current}}" data-ng-show="before">Lastest block from date</a>
+        <a class="btn btn-primary" href="blocks-date/{{pagination.current}}/{{pagination.moreTs}}">Older blocks from this date</a>
+      </div>
     </div>
   </div>
   <h2 class="text-center text-muted" data-ng-show="!blocks.length && !loading"

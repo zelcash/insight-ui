@@ -35,6 +35,10 @@ angular.module('insight').config(function($routeProvider) {
       templateUrl: 'views/address.html',
       title: 'Ravencoin Address '
     }).
+	when('/charts/:chartType?', {
+      templateUrl: 'views/charts.html',
+      title: 'Charts'
+    }).
     when('/status', {
       templateUrl: 'views/status.html',
       title: 'Status'

@@ -700,6 +700,17 @@ pre code {
     padding-left: 15px
 }
 
+.col-md-9 {
+    padding: 14px;
+    border: 1px solid #5d2e97;
+    webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    background-color: #eaeef6e6;
+    width: 60%;
+    margin: auto
+}
+
 .col-md-2 {
     padding: 14px;
     border: 1px solid #5d2e97;
@@ -1347,7 +1358,7 @@ pre code {
     }
 
     .col-md-offset-3 {
-        margin-left: 30%
+        margin-left: 26%;
     }
 
     .col-md-offset-2 {
@@ -3867,7 +3878,7 @@ select[multiple].input-group-sm>.form-control,select[multiple].input-group-sm>.i
     }
 
     .navbar>.container .navbar-brand,.navbar>.container-fluid .navbar-brand {
-        margin-left: -15px
+        margin-left: -47px;
     }
 }
 
