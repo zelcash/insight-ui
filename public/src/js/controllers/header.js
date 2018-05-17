@@ -17,6 +17,9 @@ angular.module('insight.system').controller('HeaderController',
       'title': 'Charts',
       'link': 'charts'
 	}, {
+	  'title': 'Rich List',
+      'link': 'rich-list'
+	}, {
       'title': 'Status',
       'link': 'status'
     }];
