@@ -6256,7 +6256,7 @@ body,html {
 
 .col-gray-fixed {
     position: fixed;
-    z-index: 1;
+    z-index: 3;
     width: 250px;
     margin-top: 15px;
     border: 1px solid #5d2e97;
