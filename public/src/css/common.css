@@ -727,7 +727,10 @@ pre code {
 }
 
 .col-xs-12 {
-    width: 100%
+    width: 100%;
+	background-color: #eaeef6e6;
+	padding: 14px;
+	border-radius: 5px;
 }
 
 .col-xs-11 {
@@ -3871,6 +3874,7 @@ select[multiple].input-group-sm>.form-control,select[multiple].input-group-sm>.i
     .container-fluid>.navbar-collapse,.container-fluid>.navbar-header,.container>.navbar-collapse,.container>.navbar-header {
         margin-right:0;
         margin-left: 0
+       
     }
 
     .navbar-fixed-bottom,.navbar-fixed-top,.navbar-static-top {
@@ -3878,7 +3882,22 @@ select[multiple].input-group-sm>.form-control,select[multiple].input-group-sm>.i
     }
 
     .navbar>.container .navbar-brand,.navbar>.container-fluid .navbar-brand {
-        margin-left: -47px;
+        margin-left: -65px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container-fluid>.navbar-collapse,.container-fluid>.navbar-header,.container>.navbar-collapse,.container>.navbar-header {
+        margin-right:0;
+        margin-left: 0
+    }
+
+    .navbar-fixed-bottom,.navbar-fixed-top,.navbar-static-top {
+        border-radius: 0
+    }
+
+    .navbar>.container .navbar-brand,.navbar>.container-fluid .navbar-brand {
+        margin-left: 0px;
     }
 }
 
@@ -6128,7 +6147,7 @@ body,html {
 .navbar-default {
     border-color: #e7e7e7;
     background-color: #012d88f7;
-    z-index: 3;
+    z-index: 4;
     position: fixed
 }
 
