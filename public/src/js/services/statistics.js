@@ -45,13 +45,7 @@ angular.module('insight.statistics')
 			days: '@days'
 		});
 	})
-	.factory('StatisticsByDaysStakes', function($resource, $window) {
-
-		return $resource($window.apiPrefix + '/statistics/stake', {
-			days: '@days'
-		});
-	})
-    .factory('StatisticsByDaysSupply', function($resource, $window) {
+  .factory('StatisticsByDaysSupply', function($resource, $window) {
 
         return $resource($window.apiPrefix + '/statistics/supply', {
             days: '@days'

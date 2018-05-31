@@ -1,7 +1,7 @@
 'use strict';
 
 
-angular.module('insight.charts').controller('ChartsController', function($scope, $routeParams, BigNumber, StatisticsBalanceIntervals, StatisticsByDaysSupply, StatisticsRicherThan, MarketsInfo, getSocket, $q, StatisticChart) {
+angular.module('insight.charts').controller('ChartsController', function($scope, $routeParams, StatisticsBalanceIntervals, StatisticsByDaysSupply, StatisticsRicherThan, MarketsInfo, getSocket, $q, StatisticChart) {
 
         var self = this;
 
