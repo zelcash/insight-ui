@@ -33,7 +33,7 @@ angular.module('insight',[
 
 ]);
 
-angular.module('insight.system', []);
+angular.module('insight.system', [ 'chart.js' ]);
 angular.module('insight.socket', []);
 angular.module('insight.blocks', []);
 angular.module('insight.transactions', []);

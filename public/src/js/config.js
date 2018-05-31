@@ -1,5 +1,6 @@
 'use strict';
 
+angular.module('insight')
 .constant('Constants', {
 
 	CURRENCY: {
