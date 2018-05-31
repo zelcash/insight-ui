@@ -1,10 +1,10 @@
 <div data-ng-include src="'views/includes/connection.html'"></div>
 <div class="box" ng-controller="ChartsController as CC" ng-init="CC.init()">
     <div class="heading margin1 heading-width-900">
-        <h1 class="heading__title" translate>QTUMs in Circulation</h1>
+        <h1 class="heading__title" translate>RVNs in Circulation</h1>
         <div class="heading__sm">
             <div class="heading__smLabeled fsz-21" translate>
-                The total number qtum that have already been mined; in other words, the current supply qtum on the network.
+                The total number rvn that have already been mined; in other words, the current supply rvn on the network.
             </div>
         </div>
     </div>
@@ -54,7 +54,7 @@
                 <div class="td">{{ interval.min | numeraljs : '0,0[.][00000000]'}} - {{ interval.max | numeraljs : '0,0[.][00000000]'}}</div>
                 <div class="td">{{ interval.count | numeraljs : '0,0' }}</div>
                 <div class="td">{{ interval.addressesPercent | numeraljs : '0,0[.][00]'}}% <span class="muted">[{{ interval.addressesRelativePercent | numeraljs : '0,0[.][00]'}}%]</span></div>
-                <div class="td">{{ interval.sum | numeraljs : '0,0[.][00000000]' }} QTUM</div>
+                <div class="td">{{ interval.sum | numeraljs : '0,0[.][00000000]' }} RVN</div>
                 <div class="td">{{ interval.sum * CC.marketsInfo.price_usd | numeraljs : '0,0[.][00]' }} USD</div>
                 <div class="td">{{ interval.coinsPercent | numeraljs : '0,0[.][00]' }}% <span class="muted">[{{ interval.coinsRelativePercent  | numeraljs : '0,0[.][00]' }}%]</span></div>
             </div>
