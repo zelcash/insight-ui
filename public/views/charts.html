@@ -1,32 +1,80 @@
 <div data-ng-include src="'views/includes/connection.html'"></div>
-<section data-ng-controller="ChartsController" data-ng-init="list()">
-  <div class="row">
-    <div class="col-xs-12 col-gray col-gray-fixed">
-      <div class="block-id">
-        <div class="icon-block text-center">
-          <span class="glyphicon glyphicon-stats"></span>
-          <h3><span translate>Charts</span></h3>
+<div class="box" ng-controller="ChartsController as CC" ng-init="CC.init()">
+    <div class="heading margin1 heading-width-900">
+        <h1 class="heading__title" translate>QTUMs in Circulation</h1>
+        <div class="heading__sm">
+            <div class="heading__smLabeled fsz-21" translate>
+                The total number qtum that have already been mined; in other words, the current supply qtum on the network.
+            </div>
         </div>
-      </div>
-      <div class="m20v text-center">
-        <span class="fader" data-ng-repeat='(type, c) in charts'>
-          <a class="btn btn-primary" style="margin-bottom: 3px" href="charts/{{type}}">{{c.name}}<a>
-        </span>
-      </div>
     </div>
-    <div class="col-xs-12 col-md-9 col-md-offset-3">
-      <div class="page-header">
-        <h1>
-          <span data-ng-show="!chartName && !loading" translate>Select a Chart</span>
-		  <span>{{chartName}}</span>
-        </h1>
-      </div>
-      <div data-ng-show="loading">
-        <span translate>Loading chart...</span> <span class="loader-gif"></span>
-      </div>
-      <div data-ng-show="!loading">
-        <div id="chart"></div>
-      </div>
+
+    <div class="section-charts">
+        <div class="insight__chart">
+            <div class="insight__chartPeriodWrap">
+                <a href="/charts?days={{ button.days }}"
+                   class="insight__chartPeriod"
+                   ng-class="{ 'active' : CC.chartDays == button.days }"
+                   ng-repeat="button in CC.daysButtons">
+                    {{ button.name }}
+                </a>
+            </div>
+
+            <div class="">
+                <div class="">
+                    <canvas id="line"
+                            class="chart chart-line"
+                            chart-data="CC.chartOptions.data"
+                            chart-labels="CC.chartOptions.labels"
+                            chart-series="CC.chartOptions.series"
+                            chart-options="CC.chartOptions.options"
+                            chart-dataset-override="CC.chartOptions.datasetOverride"
+                            height="115">
+                    </canvas>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-</section>
+
+    <div class="heading">
+        <h1 class="heading__title" translate>Rich List</h1>
+    </div>
+    <div class="section section-richList">
+        <div class="table">
+            <div class="tr tr-head">
+                <div class="th" translate>Balance</div>
+                <div class="th" translate>Addresses</div>
+                <div class="th" translate>% Addresses <span class="muted fsz-16">(Total)</span></div>
+                <div class="th" translate>Coins</div>
+                <div class="th" translate>$USD</div>
+                <div class="th" translate>% coins <span class="muted fsz-16">(Total)</span></div>
+            </div>
+
+            <div class="tr" ng-repeat="interval in CC.balanceIntervals">
+                <div class="td">{{ interval.min | numeraljs : '0,0[.][00000000]'}} - {{ interval.max | numeraljs : '0,0[.][00000000]'}}</div>
+                <div class="td">{{ interval.count | numeraljs : '0,0' }}</div>
+                <div class="td">{{ interval.addressesPercent | numeraljs : '0,0[.][00]'}}% <span class="muted">[{{ interval.addressesRelativePercent | numeraljs : '0,0[.][00]'}}%]</span></div>
+                <div class="td">{{ interval.sum | numeraljs : '0,0[.][00000000]' }} QTUM</div>
+                <div class="td">{{ interval.sum * CC.marketsInfo.price_usd | numeraljs : '0,0[.][00]' }} USD</div>
+                <div class="td">{{ interval.coinsPercent | numeraljs : '0,0[.][00]' }}% <span class="muted">[{{ interval.coinsRelativePercent  | numeraljs : '0,0[.][00]' }}%]</span></div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="section section-addressesRicher">
+        <div class="section__heading">
+            <h2 class="section__title" translate>Addresses richer than </h2>
+        </div>
+        <div class="addressesRicher">
+            <div class="table">
+                <div class="tr tr-head">
+                    <div class="th" ng-repeat="interval in CC.richerThanIntervals">{{ interval.amount_usd | numeraljs : '0,0' }} USD</div>
+                </div>
+                <div class="tr">
+                    <div class="td" ng-repeat="interval in CC.richerThanIntervals">{{ interval.count_addresses | numeraljs : '0,0' }}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
