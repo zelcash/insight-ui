@@ -16,13 +16,13 @@ angular.module('insight.system').controller('HeaderController',
     }, {
       'title': 'Charts',
       'link': 'charts'
-	}, {
-	  'title': 'Rich List',
+  	}, {
+	    'title': 'Rich List',
       'link': 'rich-list'
-	},  {
-	  'title': 'Stats',
+	  }, {
+	    'title': 'Stats',
       'link': 'stats'
-	}, {{
+	  }, {
       'title': 'Status',
       'link': 'status'
     }];
