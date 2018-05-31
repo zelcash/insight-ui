@@ -70,7 +70,8 @@ module.exports = function(grunt) {
               'public/lib/ngclipboard/dist/ngclipboard.min.js',
               'public/lib/angular-chart.js/dist/angular-chart.min.js',
               'public/lib/angular-numeraljs/dist/angular-numeraljs.min.js',
-              'public/lib/angular-moment/angular-moment.min.js'
+              'public/lib/angular-moment/angular-moment.min.js',
+              'public/src/js/angularmerge.js'
             ],
         dest: 'public/js/angularjs-all.js'
       },
