@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('insight.statistics').controller('StatisticsController',
-function($scope, $routeParams, Statistics, StatisticsByDaysTransactions, StatisticsByDaysOutputs, StatisticsByDaysFees, StatisticsByDaysDifficulty, StatisticsByDaysStakes, Statistics24Hours, gettextCatalog, $filter, Constants, StatisticChart, MarketsInfo) {
+function($scope, $routeParams, Statistics, StatisticsByDaysTransactions, StatisticsByDaysOutputs, StatisticsByDaysFees, StatisticsByDaysDifficulty, Statistics24Hours, gettextCatalog, $filter, Constants, StatisticChart, MarketsInfo) {
 
 	var self = this,
 		factories = {
