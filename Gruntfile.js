@@ -50,7 +50,8 @@ module.exports = function(grunt) {
               'public/lib/momentjs/min/moment.min.js',
               'public/lib/moment/lang/es.js',
               'public/lib/numeral/min/numeral.min.js',
-              'public/lib/chart.js/dist/Chart.min.js'
+              'public/lib/chart.js/dist/Chart.min.js',
+			  'public/lib/bignumber.js/bignumber.min.js'
             ],
         dest: 'public/js/vendors.js'
       },
