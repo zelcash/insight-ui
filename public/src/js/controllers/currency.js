@@ -32,7 +32,7 @@ angular.module('insight.currency').controller('CurrencyController',
         var response;
 
         if (this.symbol === 'USD') {
-          response = _roundFloat((value * this.factor), 2);
+          response = _roundFloat((value * this.factor), 2); 
         } else if (this.symbol === 'mRVN') {
           this.factor = 1000;
           response = _roundFloat((value * this.factor), 5);
@@ -45,8 +45,14 @@ angular.module('insight.currency').controller('CurrencyController',
         }
         // prevent sci notation
         if (response < 1e-7) response=response.toFixed(8);
-
-        return response + ' ' + resSymbol;
+		
+		if (resSymbol === 'USD') {
+			return '$' + numeral(response).format('0,0.[00]') + ' ' + resSymbol;
+		} else if (resSymbol === 'RVN'){
+			return numeral(response).format('0,0.00000000') + ' ' + resSymbol;
+		} else {
+			return response + ' ' + resSymbol;
+		}
       }
 
       return 'value error';

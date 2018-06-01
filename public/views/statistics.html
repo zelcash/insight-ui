@@ -1,186 +1,101 @@
 <div data-ng-include src="'views/includes/connection.html'"></div>
 <div class="box" ng-controller="StatisticsController as SC" ng-init="SC.get24HoursStats()">
-	<div class="heading margin1">
-		<h1 class="heading__title" translate>Stats</h1>
-		<div class="heading__sm">
-			<div class="heading__smLabeled fsz-21" translate>
-				Summary of RVN statistics for last 24 hours
-			</div>
-		</div>
+	<div class="page-header">
+		<h1>
+          <span translate>Ravencoin Statistics for the last 24 hours</span>
+        </h1>
 	</div>
 
 	<div class="section-statsWrap">
-		<div class="col col-5 ">
+		<div class="col-xs-12 col-md-66 col-gray">
 			<div class="section section-stats">
 				<div class="section__heading">
 					<h2 class="section__title" translate>Block Summary</h2>
 				</div>
-				<div class=" summaryStats">
-					<ul class="list">
-						<li class="list__item">
-							<div class="list__left">
-								<b translate>Blocks Mined</b>
-							</div>
-							<div class="list__right">
-								<div class="">
-									{{ SC.statsTotal24.n_blocks_mined }}
-								</div>
-							</div>
-						</li>
-						<li class="list__item">
-							<div class="list__left">
-								<b translate>Time Between Blocks</b>
-							</div>
-							<div class="list__right">
-								<div class="">
-									{{ (SC.statsTotal24.time_between_blocks / 60) | numeraljs : '0.[00]' }} minutes
-								</div>
-							</div>
-						</li>
-						<li class="list__item">
-							<div class="list__left">
-								<b translate>Quantum Mined</b>
-							</div>
-							<div class="list__right">
-								<div class="">
-									{{ (SC.statsTotal24.mined_currency_amount / 100000000) | numeraljs:'0,0.00000000' }} {{ $root.currency.symbol }}
-								</div>
-							</div>
-						</li>
-					</ul>
+				<table class="table table-hover">
+					<tbody>
+						<tr>
+							<td translate>Blocks Mined:</td>
+							<td class="text-right">{{ SC.statsTotal24.n_blocks_mined }}</td>
+						</tr>
+						<tr>
+							<td translate>Time Between Blocks:</td>
+							<td class="text-right"><span>{{ (SC.statsTotal24.time_between_blocks / 60) | numeraljs : '0.[00]' }}</span>&nbsp;<span translate> minutes</span></td>
+						</tr>	
+						<tr>
+							<td translate>Ravencoin Mined:</td>
+							<td class="text-right">{{ (SC.statsTotal24.mined_currency_amount / 100000000) | numeraljs:'0,0' }} {{ $root.currency.symbol }}</td>
+						</tr>
+					</tbody>
+				</table>
 				</div>
-			</div>
 		</div>
-		<div class="col col-6">
+		<div class="col-xs-12 col-md-66 col-gray">
 			<div class="section section-stats">
 				<div class="section__heading">
 					<h2 class="section__title" translate>Market Summary</h2>
 				</div>
-				<div class="summary-marketStats">
-					<ul class="list">
-						<li class="list__item">
-							<div class="list__left">
-								<b translate>Market Price</b>
-							</div>
-							<div class="list__right">
-								<div class="list__rightText">
-									{{ SC.marketPrice }} {{ SC.marketCurrency }}
-								</div>
-							</div>
-						</li>
-						<li class="list__item">
-							<div class="list__left">
-								<b translate>Trade Volume</b>
-							</div>
-							<div class="list__right">
-								<div class="list__rightText">
-								</div>
-							</div>
-						</li>
-					</ul>
-				</div>
+				<table class="table table-hover">
+					<tbody>
+						<tr>
+							<td translate>Market Price:</td>
+							<td class="text-right">{{ SC.marketPrice }} {{ SC.marketCurrency }}</td>
+						</tr>
+						<tr>
+							<td translate>Trade Volume:</td>
+							<td class="text-right"></td>
+						</tr>	
+					</tbody>
+				</table>
 			</div>
 		</div>
 	</div>
-	<div class="section section-stats">
+	<div class="col-xs-12 col-md-122 col-gray">
 		<div class="section__heading">
 			<h2 class="section__title" translate>Transaction Summary</h2>
 		</div>
 		<div class="transactionsStats">
-			<ul class="list">
-				<li class="list__item">
-					<div class="list__left">
-						<b>
-							{{ 'Total Transaction Fees' | translate }}
-							({{ $root.currency.symbol }})
-						</b>
-					</div>
-					<div class="list__right">
-						<a href="stats/fees/60" class="btn btn-view-chart" translate>View Chart</a>
-						<div class="list__rightText">
-							{{ SC.statsTotal24.transaction_fees / 100000000 | numeraljs : '0,0.00000000' }} {{ $root.currency.symbol }}
-						</div>
-					</div>
-				</li>
-				<li class="list__item">
-					<div class="list__left">
-						<b translate>Number of Transactions</b>
-					</div>
-					<div class="list__right">
-						<a href="stats/transactions/60" class="btn btn-view-chart" translate>View Chart</a>
-						<div class="list__rightText">
-							{{ SC.statsTotal24.number_of_transactions }}
-						</div>
-					</div>
-				</li>
-				<li class="list__item">
-					<div class="list__left">
-						<b>
-							{{ 'Total Output Volume' | translate }}
-							({{ $root.currency.symbol }})
-						</b>
-					</div>
-					<div class="list__right">
-						<a href="stats/outputs/60" class="btn btn-view-chart" translate>View Chart</a>
-						<div class="list__rightText">
-							{{ SC.statsTotal24.outputs_volume / 100000000 | numeraljs : '0,0.00000000' }} {{ $root.currency.symbol }}
-						</div>
-					</div>
-				</li>
-				<li class="list__item">
-					<div class="list__left">
-						<b>
-							{{ 'Estimated Transaction Volume ' | translate }}
-							({{ $root.currency.symbol }})
-						</b>
-					</div>
-					<div class="list__right">
-						<div class="list__rightText">
-						</div>
-					</div>
-				</li>
-				<li class="list__item">
-					<div class="list__left">
-						<b translate>Estimated Transaction Volume (USD)</b>
-					</div>
-					<div class="list__right">
-						<div class="list__rightText">
-						</div>
-					</div>
-				</li>
-			</ul>
+			<table class="table table-hover">
+				<tbody>
+					<tr>
+						<td translate>Total Transaction Fees:</td>
+						<td class="text-left">{{ ($root.currency.getConvertion(SC.statsTotal24.transaction_fees / 100000000)) || (SC.statsTotal24.transaction_fees / 100000000 | numeraljs : '0,0.00000000') + RVN }}</td>
+						<td class="text-right"><a href="stats/fees/60" class="btn-copy" translate>View Chart</a></td>
+					</tr>
+					<tr>
+						<td translate>Number of Transactions:</td>
+						<td class="text-left">{{ SC.statsTotal24.number_of_transactions }}</td>
+						<td class="text-right"><a href="stats/transactions/60" class="btn-copy" translate>View Chart</a></td>
+					</tr>
+					<tr>
+						<td translate>Total Output Volume:</td>
+						<td class="text-left">{{ ($root.currency.getConvertion(SC.statsTotal24.outputs_volume / 100000000)) || (SC.statsTotal24.outputs_volume / 100000000 | number:'0.1-8') + RVN }}</td>
+						<td class="text-right"><a href="stats/outputs/60" class="btn-copy" translate>View Chart</a></td>
+					</tr>
+				</tbody>
+			</table>
 		</div>
 	</div>
 
-	<div class="section section-stats">
+	<div class="col-xs-12 col-md-122 col-gray">
 		<div class="section__heading">
-			<h2 class="section__title" translate>Hash Rate and Electricy Consumption</h2>
+			<h2 class="section__title" translate>Difficulty and Network Hashrate</h2>
 		</div>
 		<div class="rateElectricyStats">
-			<ul class="list">
-				<li class="list__item">
-					<div class="list__left">
-						<b translate>Difficulty</b>
-					</div>
-					<div class="list__right">
-						<a href="stats/difficulty/60" class="btn btn-view-chart" translate>View Chart</a>
-						<div class="list__rightText">
-							{{ SC.statsTotal24.difficulty | numeraljs : '0,0.[00000000]' }}
-						</div>
-					</div>
-				</li>
-				<li class="list__item">
-					<div class="list__left">
-						<b translate>Percent of staked supply</b>
-					</div>
-					<div class="list__right">
-						<a href="stats/stakes/60" class="btn btn-view-chart" translate>View Chart</a>
-						<div class="list__rightText">
-							{{ SC.statsTotal24.stake * 100 }} %
-						</div>
-					</div>
-				</li>
-			</ul>
+			<table class="table table-hover">
+				<tbody>
+					<tr>
+						<td translate>Difficulty</td>
+						<td class="text-left">{{ SC.statsTotal24.difficulty | numeraljs : '0,0.[00000000]' }}</td>
+						<td class="text-right"><a href="stats/difficulty/60" class="btn-copy" translate>View Chart</a></td>
+					</tr>
+					<tr>
+						<td translate>Current Network Hashrate</td>
+						<td class="text-right"></td>
+						<td class="text-right"></td>
+					</tr>
+				</tbody>
+			</table>
 		</div>
 	</div>
 </div>
