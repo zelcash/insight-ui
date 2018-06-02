@@ -56,8 +56,7 @@ angular.module('insight.statistics')
 		return $resource($window.apiPrefix + '/statistics/total');
 	})
     .factory('StatisticsTotalSupply', function($resource, $window) {
-        return $resource($window.apiPrefix + '/statistics/total-supply', {
-            format: '@format'
+        return $resource($window.apiPrefix + '/statistics/total-supply?format=object', {
         });
     })
 	.factory('StatisticsBalanceIntervals', function($resource, $window) {

@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('insight.statistics').controller('StatisticsController',
-function($scope, $routeParams, Statistics, StatisticsByDaysTransactions, StatisticsByDaysOutputs, StatisticsByDaysFees, StatisticsByDaysDifficulty, Statistics24Hours, gettextCatalog, $filter, Constants, StatisticChart, MarketsInfo) {
+function($scope, $routeParams, Statistics, StatisticsByDaysTransactions, StatisticsByDaysOutputs, StatisticsByDaysFees, StatisticsByDaysDifficulty, Statistics24Hours, gettextCatalog, $filter, Constants, StatisticChart, MarketsInfo, MiningInfo, StatisticsTotalSupply) {
 
 	var self = this,
 		factories = {
@@ -39,6 +39,10 @@ function($scope, $routeParams, Statistics, StatisticsByDaysTransactions, Statist
 		self.marketCap = 0;
 		self.volume = 0;
 		self.percent = 0;
+		self.difficulty = 0;
+		self.networkhashps = 0;
+		self.totalsupply = 0;
+		
 		
 		var statisticChart = new StatisticChart(self.chartDays);
 		self.chartOptions = statisticChart.chartOptions;
@@ -75,6 +79,16 @@ function($scope, $routeParams, Statistics, StatisticsByDaysTransactions, Statist
 				self.percent = response.percent_change_24h;
             }
         });
-
+		MiningInfo.get({}, function(response) {
+			if (response) {
+				self.difficulty = response.miningInfo.difficulty;
+				self.networkhashps = response.miningInfo.networkhashps;
+            }
+        });
+		StatisticsTotalSupply.get({}, function(response) {
+			if (response) {
+				self.totalsupply = response.supply;
+            }
+        });
 	};
 });

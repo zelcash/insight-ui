@@ -26,6 +26,10 @@
 							<td translate>Ravencoin Mined:</td>
 							<td class="text-right">{{ $root.currency.getConvertion(SC.statsTotal24.mined_currency_amount / 100000000) }}</td>
 						</tr>
+						<tr>
+							<td translate>Total Circulating Supply:</td>
+							<td class="text-right">{{ SC.totalsupply | numeraljs : '0,0' }} RVN&nbsp;<a href="/charts" class="btn-copy" translate>View Chart</a></td>
+						</tr>
 					</tbody>
 				</table>
 				</div>
@@ -39,12 +43,16 @@
 					<tbody>
 						<tr>
 							<td translate>Market Price:</td>
-							<td class="text-right">${{ SC.marketPrice }} {{ SC.marketCurrency }}<span ng-class="{ red: SC.percent < 0, green: SC.percent > 0 }">&nbsp;({{ SC.percent }}%)</span></td>
+							<td class="text-right">${{ SC.marketPrice }} {{ SC.marketCurrency }}<span ng-class="{ red: SC.percent < 0, green: SC.percent > 0 }">&nbsp;({{ SC.percent }}%)</span><br><small>{{ SC.marketBtcPrice }} BTC</small></br></td>
 						</tr>
 						<tr>
 							<td translate>Trade Volume:</td>
 							<td class="text-right">${{ SC.volume | numeraljs : '0,0.00'}} {{ SC.marketCurrency }}</td>
-						</tr>	
+						</tr>
+						<tr>
+							<td translate>Market Cap:</td>
+							<td class="text-right">${{ SC.marketCap | numeraljs : '0,0.00'}} {{ SC.marketCurrency }}</td>
+						</tr>
 					</tbody>
 				</table>
 			</div>
@@ -86,12 +94,12 @@
 				<tbody>
 					<tr>
 						<td translate>Difficulty</td>
-						<td class="text-left">{{ SC.statsTotal24.difficulty | numeraljs : '0,0.[00000000]' }}</td>
+						<td class="text-left">{{ SC.difficulty | numeraljs : '0,0.[00000000]' }}</td>
 						<td class="text-right"><a href="stats/difficulty/60" class="btn-copy" translate>View Chart</a></td>
 					</tr>
 					<tr>
 						<td translate>Current Network Hashrate</td>
-						<td class="text-right"></td>
+						<td class="text-left">{{ SC.networkhashps / 1000000000000 | numeraljs : '0,0.000' }} TH/s</td>
 						<td class="text-right"></td>
 					</tr>
 				</tbody>

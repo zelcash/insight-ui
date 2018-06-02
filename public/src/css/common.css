@@ -693,7 +693,7 @@ pre code {
     margin-left: -15px
 }
 
-.col-lg-1,.col-lg-10,.col-lg-11,.col-lg-12,.col-lg-2,.col-lg-3,.col-lg-4,.col-lg-5,.col-lg-6,.col-lg-7,.col-lg-8,.col-lg-9,.col-md-1,.col-md-10,.col-md-11,.col-md-12,.col-md-122,.col-md-13,.col-md-2,.col-md-3,.col-md-4,.col-md-5,.col-md-6,.col-md-66,.col-md-7,.col-md-8,.col-md-9,.col-sm-1,.col-sm-10,.col-sm-11,.col-sm-12,.col-sm-2,.col-sm-3,.col-sm-4,.col-sm-5,.col-sm-6,.col-sm-7,.col-sm-8,.col-sm-9,.col-xs-1,.col-xs-10,.col-xs-11,.col-xs-12,.col-xs-2,.col-xs-3,.col-xs-4,.col-xs-5,.col-xs-6,.col-xs-7,.col-xs-8,.col-xs-9 {
+.col-lg-1,.col-lg-10,.col-lg-11,.col-lg-12,.col-lg-2,.col-lg-3,.col-lg-4,.col-lg-5,.col-lg-6,.col-lg-7,.col-lg-8,.col-lg-9,.col-md-1,.col-md-10,.col-md-11,.col-md-12,.col-md-122,.col-md-13,.col-md-2,.col-md-3,.col-md-4,.col-md-5,.col-md-6,.col-md-66,.col-md-7,.col-md-8,.col-md-9,.col-sm-1,.col-sm-10,.col-sm-11,.col-sm-12,.col-sm-2,.col-sm-3,.col-sm-4,.col-sm-5,.col-sm-6,.col-sm-7,.col-sm-8,.col-sm-9,.col-xs-1,.col-xs-10,.col-xs-11,.col-xs-12,.col-xs-122,.col-xs-2,.col-xs-3,.col-xs-4,.col-xs-5,.col-xs-6,.col-xs-7,.col-xs-8,.col-xs-9 {
     position: relative;
     min-height: 1px;
     padding-right: 15px;
@@ -708,7 +708,8 @@ pre code {
     border-radius: 5px;
     background-color: #eaeef6e6;
     width: 60%;
-    margin: auto
+    margin: auto;
+	margin-top: 4px
 }
 
 .col-md-66 {
@@ -744,10 +745,17 @@ pre code {
     margin: auto
 }
 
-.col-xs-1,.col-xs-10,.col-xs-11,.col-xs-12,.col-xs-2,.col-xs-3,.col-xs-4,.col-xs-5,.col-xs-6,.col-xs-7,.col-xs-8,.col-xs-9 {
+.col-xs-1,.col-xs-10,.col-xs-11,.col-xs-12,.col-xs-122,.col-xs-2,.col-xs-3,.col-xs-4,.col-xs-5,.col-xs-6,.col-xs-7,.col-xs-8,.col-xs-9 {
     float: left
 }
 
+.col-xs-122 {
+    width: 100%;
+    background-color: #eaeef6e6;
+    padding: 14px;
+    border-radius: 5px;
+    overflow:auto !important
+}
 .col-xs-12 {
     width: 100%;
     background-color: #eaeef6e6;
@@ -1639,32 +1647,38 @@ th {
     border-radius: 0;
     background-color: #f5f5f5
 }
+
 .table1 {
     width: 100%;
     padding: 14px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
-    border-radius: 0;
+    border-radius: 0
 }
+
 .table1>tbody>tr>td,.table>tbody>tr>th,.table>tfoot>tr>td,.table>tfoot>tr>th,.table>thead>tr>td,.table>thead>tr>th {
     line-height: 1.42857143;
     padding: 8px;
-    vertical-align: top;
+    vertical-align: top
 }
+
 .table1>thead>tr>th {
     vertical-align: bottom;
-   border-bottom: 2px solid #ddd
+    border-bottom: 2px solid #ddd
 }
+
 .table>tbody>tr>td,.table>tbody>tr>th,.table>tfoot>tr>td,.table>tfoot>tr>th,.table>thead>tr>td,.table>thead>tr>th {
     line-height: 1.42857143;
     padding: 8px;
     vertical-align: top;
     border-top: 1px solid #ddd
 }
+
 .table>thead>tr>th {
     vertical-align: bottom;
     border-bottom: 2px solid #ddd
 }
+
 .btn,.btn-group,.btn-group-vertical,.caret,.checkbox-inline,.radio-inline,.vm {
     vertical-align: middle
 }
@@ -6987,7 +7001,7 @@ a.v_highlight_more {
     }
 
     #search {
-        color: #000
+        color: #fff
     }
 
     .txvalues {
@@ -7043,9 +7057,11 @@ a.v_highlight_more {
     top: 3px;
     vertical-align: unset!important
 }
-.red{
-    color: #f00
+
+.red {
+    color: red
 }
+
 .green {
     color: #18dc20
 }
