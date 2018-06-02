@@ -24,7 +24,7 @@ function($scope, $routeParams, Statistics, StatisticsByDaysTransactions, Statist
 		};
 
 		self.chartText = {
-			fees: gettextCatalog.getString('The total value of all transaction fees paid to miners (not including the coinbase value of block rewards).'),
+			fees: gettextCatalog.getString('The daily average of fees paid to miners per transaction.'),
 			transactions: gettextCatalog.getString('The number of daily confirmed RVN transactions.'),
 			outputs: gettextCatalog.getString('The total value of all transaction outputs per day (includes coins returned to the sender as change).'),
 			difficulty: gettextCatalog.getString('A relative measure of how difficult it is to find a new block. The difficulty is adjusted periodically as a function of how much hashing power has been deployed by the network of miners.')
@@ -35,7 +35,11 @@ function($scope, $routeParams, Statistics, StatisticsByDaysTransactions, Statist
 		self.chartType = $routeParams.type;
 		self.marketCurrency = Constants.CURRENCY.USD;
 		self.marketPrice = 0;
-
+		self.marketBtcPrice = 0;
+		self.marketCap = 0;
+		self.volume = 0;
+		self.percent = 0;
+		
 		var statisticChart = new StatisticChart(self.chartDays);
 		self.chartOptions = statisticChart.chartOptions;
 
@@ -63,8 +67,12 @@ function($scope, $routeParams, Statistics, StatisticsByDaysTransactions, Statist
 		});
 
         MarketsInfo.get({}, function(response) {
-            if (response && response.price_usd) {
-                self.marketPrice = response.price_usd;
+            if (response) {
+				self.marketPrice = response.price_usd;
+				self.marketBtcPrice = response.price_btc;
+				self.marketCap = response.market_cap_usd;
+				self.volume = response["24h_volume_usd"];
+				self.percent = response.percent_change_24h;
             }
         });
 

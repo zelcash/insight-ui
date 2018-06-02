@@ -6,22 +6,16 @@ angular.module('insight')
 	CURRENCY: {
 		RVN : 'RVN',
 		USD : 'USD',
-		mBTC : 'mBTC',
-		bits : 'bits'
-	},
-	QRCOLOR : {
-		color: '#232328',
-		background: '#2e9ad0'
+		BTC : 'BTC'
 	},
 	BLOCKS_AMOUNT: 15,
 	TRANSACTION_DISPLAYED: 10,
 	BLOCKS_DISPLAYED: 5,
 	CHART_DAYS: 14,
-	STORAGE_ROWS: 5,
     NETWORK: window.current_network ? window.current_network : 'livenet',
     DEFAULT_LANGUAGE: localStorage.getItem('insight-language') || 'en',
-    DEFAULT_CURRENCY: localStorage.getItem('insight-currency') || 'RVN',
-	NODEMAP_LINK: window.nodemapLink
+    DEFAULT_CURRENCY: localStorage.getItem('insight-currency') || 'RVN'
+
 });
 //Setting up route
 angular.module('insight').config(function($routeProvider) {
