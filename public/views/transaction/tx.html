@@ -1,5 +1,5 @@
 <div class="line-bot row" data-ng-hide="!tx">
-  <div class="col-xs-7 col-md-8">
+  <div class="col-xs-7 col-md-88">
     <div class="ellipsis">
       <a class="btn-expand" title="Show/Hide items details" data-ng-click="itemsExpanded = !itemsExpanded">
         <span class="glyphicon glyphicon-plus-sign" data-ng-class="{'glyphicon-minus-sign': itemsExpanded}"></span>
@@ -14,7 +14,7 @@
       <time>{{tx.firstSeenTs * 1000 | date:'medium'}}</time>
     </div>
     <div data-ng-show="tx.blocktime && !tx.firstSeenTs">
-      <span translate>mined</span>
+      <span translate>Mined</span>
       <time>{{tx.time * 1000 | date:'medium'}}</time>
     </div>
   </div>
@@ -113,7 +113,7 @@
       </div>
     </div>
   </div>
-  <div class="col-md-1 col-xs-12">
+  <div class="col-md-1 col-xs-1222">
     <div class="hidden-xs hidden-sm text-center">
       <span class="lead glyphicon glyphicon-chevron-right text-muted"></span>
     </div>
@@ -162,7 +162,9 @@
                 </span>
               </div>
               <div class="ellipsis">
-                <a href="address/{{address}}" data-ng-repeat="address in vout.scriptPubKey.addresses">{{address}}</a>
+                <span data-ng-show="vout.notAddr" data-ng-repeat="address in vout.scriptPubKey.addresses">{{address}}</span>
+				<span class="text-muted" title="Current Ravencoin Address" data-ng-show="address == $root.currentAddr" data-ng-repeat="address in vout.scriptPubKey.addresses">{{address}}</span>
+				<a href="address/{{address}}" data-ng-show="!vout.notAddr && address != $root.currentAddr" data-ng-repeat="address in vout.scriptPubKey.addresses">{{address}}</a>
               </div>
             </div>
           </div>
@@ -201,7 +203,7 @@
     <span data-ng-show="!tx.isCoinBase &&  !isNaN(parseFloat(tx.fees))"
       class="txvalues txvalues-default"><span translate>Fee</span>: {{$root.currency.getConvertion(tx.fees) || tx.fees + 'RVN'}} </span>
   </div>
-  <div class="col-xs-6 col-sm-8 col-md-8 text-right">
+  <div class="col-xs-6 col-sm-8 col-md-88 text-right">
     <span data-ng-show="tx.confirmations" class="txvalues
       txvalues-success">{{tx.confirmations}} <span translate>Confirmations</span></span>
     <span data-ng-show="!tx.confirmations" class="txvalues txvalues-danger" translate>Unconfirmed Transaction!</span>

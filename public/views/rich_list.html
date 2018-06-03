@@ -51,18 +51,20 @@
 <div class="box" ng-controller="RichListController as RL" ng-init="RL.init()">
 	<div class="col-xs-122 col-md-122 col-gray">
 		<div class="heading margin1">
-			<h1 class="heading__title" translate>Rich List</h1>
+			<h1 class="heading__title"> <span translate>Rich List</span>&nbsp;<small>(the top 200 richest addresses)</small></h1>
 		</div>
 
 		<div class="section section-adresses">
 			<table class="table table-hover table-striped">
 				<tbody>
 					<tr>
+						<th translate>Rank</th>
 						<th translate>Address</th>
 						<th translate>Balance</th>
 						<th translate>Blocks Mined</th>
 					</tr>
 					<tr ng-repeat="item in RL.items">
+						<td>{{$index + 1}}</td>
 						<td><a href="/address/{{ item.address }}" class="link mark">{{ item.address }}</a></td> 
 						<td>{{ item.balance | numeraljs : '0,0[.][00000000]' }} RVN</td>
 						<td>{{ item.blocks_mined ? item.blocks_mined : 0 }}</td>

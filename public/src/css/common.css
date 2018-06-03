@@ -693,11 +693,12 @@ pre code {
     margin-left: -15px
 }
 
-.col-lg-1,.col-lg-10,.col-lg-11,.col-lg-12,.col-lg-2,.col-lg-3,.col-lg-4,.col-lg-5,.col-lg-6,.col-lg-7,.col-lg-8,.col-lg-9,.col-md-1,.col-md-10,.col-md-11,.col-md-12,.col-md-122,.col-md-13,.col-md-2,.col-md-3,.col-md-4,.col-md-5,.col-md-6,.col-md-66,.col-md-7,.col-md-8,.col-md-9,.col-sm-1,.col-sm-10,.col-sm-11,.col-sm-12,.col-sm-2,.col-sm-3,.col-sm-4,.col-sm-5,.col-sm-6,.col-sm-7,.col-sm-8,.col-sm-9,.col-xs-1,.col-xs-10,.col-xs-11,.col-xs-12,.col-xs-122,.col-xs-2,.col-xs-3,.col-xs-4,.col-xs-5,.col-xs-6,.col-xs-7,.col-xs-8,.col-xs-9 {
+.col-lg-1,.col-lg-10,.col-lg-11,.col-lg-12,.col-lg-2,.col-lg-3,.col-lg-4,.col-lg-5,.col-lg-6,.col-lg-7,.col-lg-8,.col-lg-9,.col-md-1,.col-md-10,.col-md-11,.col-md-12,.col-md-122,.col-md-13,.col-md-2,.col-md-3,.col-md-4,.col-md-5,.col-md-6,.col-md-66,.col-md-7,.col-md-8,.col-md-88,.col-md-9,.col-sm-1,.col-sm-10,.col-sm-11,.col-sm-12,.col-sm-2,.col-sm-3,.col-sm-4,.col-sm-5,.col-sm-6,.col-sm-7,.col-sm-8,.col-sm-9,.col-xs-1,.col-xs-10,.col-xs-11,.col-xs-12,.col-xs-122,.col-xs-1222,.col-xs-2,.col-xs-3,.col-xs-4,.col-xs-5,.col-xs-6,.col-xs-7,.col-xs-8,.col-xs-9 {
     position: relative;
     min-height: 1px;
     padding-right: 15px;
-    padding-left: 15px
+    padding-left: 15px;
+    overflow: hidden
 }
 
 .col-md-122 {
@@ -709,7 +710,7 @@ pre code {
     background-color: #eaeef6e6;
     width: 60%;
     margin: auto;
-	margin-top: 4px
+    margin-top: 4px
 }
 
 .col-md-66 {
@@ -745,22 +746,25 @@ pre code {
     margin: auto
 }
 
-.col-xs-1,.col-xs-10,.col-xs-11,.col-xs-12,.col-xs-122,.col-xs-2,.col-xs-3,.col-xs-4,.col-xs-5,.col-xs-6,.col-xs-7,.col-xs-8,.col-xs-9 {
+.col-xs-1,.col-xs-10,.col-xs-11,.col-xs-12,.col-xs-122,.col-xs-1222,.col-xs-2,.col-xs-3,.col-xs-4,.col-xs-5,.col-xs-6,.col-xs-7,.col-xs-8,.col-xs-9 {
     float: left
 }
-
+.col-xs-1222 {
+    width: 100%;
+}
 .col-xs-122 {
     width: 100%;
     background-color: #eaeef6e6;
     padding: 14px;
     border-radius: 5px;
-    overflow:auto !important
+    overflow: auto!important
 }
+
 .col-xs-12 {
     width: 100%;
     background-color: #eaeef6e6;
     padding: 14px;
-    border-radius: 5px
+    border-radius: 5px;
 }
 
 .col-xs-11 {
@@ -1178,8 +1182,7 @@ pre code {
         padding:14px;
         background-color: #eaeef6e6
     }
-
-    .col-md-1,.col-md-10,.col-md-11,.col-md-12,.col-md-122,.col-md-13,.col-md-2,.col-md-3,.col-md-4,.col-md-5,.col-md-6,.col-md-66,.col-md-7,.col-md-8,.col-md-9 {
+    .col-md-1,.col-md-10,.col-md-11,.col-md-12,.col-md-122,.col-md-13,.col-md-2,.col-md-3,.col-md-4,.col-md-5,.col-md-6,.col-md-66,.col-md-7,.col-md-8,.col-md-88,.col-md-9 {
         float: left
     }
 
@@ -1217,6 +1220,9 @@ pre code {
         -webkit-border-radius: 5px;
         -moz-border-radius: 5px;
         border-radius: 5px
+    }
+    .col-md-88 {
+        width: 66.66666667%;
     }
 
     .col-md-7 {
@@ -1708,7 +1714,7 @@ th {
 }
 
 .table-striped>tbody>tr:nth-child(odd)>td,.table-striped>tbody>tr:nth-child(odd)>th {
-    background-color: #f9f9f9
+    background-color: #e9e7f1
 }
 
 table col[class*=col-] {
@@ -3923,8 +3929,13 @@ select[multiple].input-group-sm>.form-control,select[multiple].input-group-sm>.i
     padding: 0 15px 15px 0
 }
 
+.navbar-header:hover {
+    background-color: #02fafd33
+}
+
 .navbar-brand-logo {
-    max-height: 50px
+    max-height: 46px;
+    filter: drop-shadow(0px 0 5px #000000)
 }
 
 .navbar-brand:focus,.navbar-brand:hover {
@@ -3937,12 +3948,17 @@ select[multiple].input-group-sm>.form-control,select[multiple].input-group-sm>.i
         margin-left: 0
     }
 
+    .navbar-brand-logo {
+        max-height: 55px
+    }
+
     .navbar-fixed-bottom,.navbar-fixed-top,.navbar-static-top {
         border-radius: 0
     }
 
     .navbar>.container .navbar-brand,.navbar>.container-fluid .navbar-brand {
-        margin-left: -65px
+        margin-left: -25px;
+        height: 64px
     }
 }
 
@@ -6205,7 +6221,7 @@ body,html {
 }
 
 .navbar-default {
-    border-color: #e7e7e7;
+    border-color: #7087b7f7;
     background-color: #012d88f7;
     z-index: 4;
     position: fixed
@@ -6224,7 +6240,7 @@ body,html {
 }
 
 .navbar-default .navbar-nav>.active>a:hover,.navbar-default .navbar-nav>li>a:hover {
-    background-color: #182237a6;
+    background-color: #02fafd33;
     opacity: 50%
 }
 
@@ -6341,7 +6357,8 @@ body,html {
     border: 1px solid #5d2e97;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
-    border-radius: 5px
+    border-radius: 5px;
+	overflow: visible;
 }
 
 .ellipsis {
