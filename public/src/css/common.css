@@ -3862,14 +3862,20 @@ select[multiple].input-group-sm>.form-control,select[multiple].input-group-sm>.i
 .navbar-collapse.in {
     overflow-y: auto
 }
-
+@media (min-width: 991px) {
+    .navbar-header {
+        float: left;
+        margin-left: 0px!important
+    }
+}
 @media (min-width: 798px) {
     .navbar {
         border-radius:4px
     }
 
     .navbar-header {
-        float: left
+        float: left;
+        margin-left: -66px;
     }
 
     .navbar-collapse {
@@ -6372,7 +6378,7 @@ body,html {
     position: fixed;
     z-index: 3;
     width: 250px;
-    margin-top: 0px;
+    margin-top: 0;
     border: 1px solid #5d2e97;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
@@ -6944,11 +6950,13 @@ a.v_highlight_more {
 #search-form-mobile {
     margin-top: 15px
 }
+
 @media (max-width: 1199px) {
     .status {
         display:none
     }
 }
+
 @media (max-width: 797px) {
     .btn-copy {
         display:none
@@ -6956,9 +6964,8 @@ a.v_highlight_more {
 }
 
 @media (max-width: 991px) {
-
     .navbar-form {
-        width: auto
+        width:auto
     }
 
     .col-gray-fixed {
@@ -7114,11 +7121,13 @@ a.v_highlight_more {
         width: 338px
     }
 }
+
 @media (min-width: 798px) {
     .navbar-form .form-control {
-        width: 280px;
+        width:280px
     }
 }
+
 .clippy {
     margin-top: -4px;
     position: relative;
@@ -7133,12 +7142,15 @@ a.v_highlight_more {
 .green {
     color: #18dc20
 }
-.navbar-nav>li>a, .navbar-nav>li>a:active, .navbar-nav>li>a:focus {
-	outline: none;
+
+.navbar-nav>li>a,.navbar-nav>li>a:active,.navbar-nav>li>a:focus {
+    outline: 0
 }
+
 .navbar-header>a,.navbar-header>a:active,.navbar-header>a:focus {
- outline:0
+    outline: 0
 }
+
 .col-grayy {
     border: 1px solid #5d2e97;
     -webkit-border-radius: 5px;
@@ -7147,4 +7159,11 @@ a.v_highlight_more {
     padding: 14px;
     background-color: #eaeef6e6;
     margin-top: 4px
+}
+
+@media (max-width: 991px) {
+    .col-xs-12 {
+        top:5px;
+        margin-top: 5px
+    }
 }
