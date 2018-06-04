@@ -9,16 +9,16 @@ angular.module('insight.chart')
             this.chartOptions = {
                 series : ['Test'],
                 datasetOverride : [{
-                    defaultFontFamily: 'SimplonMono',
+                    defaultFontFamily: 'Ubuntu,sans-serif',
                     yAxisID: 'y-axis-1' ,
-                    borderColor: '#2e9ad0',
+                    borderColor: '#012d88',
                     borderWidth: 1,
-                    pointBorderColor: '#2e9ad0',
-                    pointBackgroundColor: '#2e9ad0',
+                    pointBorderColor: '#012d88',
+                    pointBackgroundColor: '#012d88',
                     pointBorderWidth: 0,
                     pointRadius: 0,
-                    pointHoverBackgroundColor: '#e75647',
-                    pointHoverBorderColor: '#e75647',
+                    pointHoverBackgroundColor: '#012d88',
+                    pointHoverBorderColor: '#012d88',
                     pointHoverBorderWidth: 1,
                     pointHitRadius: 10,
                     pointStyle: 'rect',
@@ -26,15 +26,15 @@ angular.module('insight.chart')
                 }],
                 options : {
                     tooltips:{
-                        backgroundColor: '#2e9ad0',
-                        titleFontFamily: 'SimplonMono',
+                        backgroundColor: '#012d88',
+                        titleFontFamily: 'Ubuntu,sans-serif',
                         titleFontSize: 12,
                         titleFontStyle: '500',
-                        titleFontColor: '#232328',
-                        bodyFontFamily: 'SimplonMono',
+                        titleFontColor: '#ffffff',
+                        bodyFontFamily: 'Ubuntu,sans-serif',
                         bodyFontSize: 12,
                         bodyFontStyle: '400',
-                        bodyFontColor: '#232328',
+                        bodyFontColor: '#ffffff',
                         caretSize: 5,
                         cornerRadius: 3,
                         displayColors: false,
@@ -42,7 +42,7 @@ angular.module('insight.chart')
                     },
                     layout: {
                         padding: {
-                            left: 25
+                            left: 5
                         }
                     },
                     scales: {
@@ -52,14 +52,14 @@ angular.module('insight.chart')
                             display: true,
                             position: 'left',
                             gridLines: {
-                                color: '#26475b',
+                                color: '#4700cc',
                                 drawBorder: false,
                                 offsetGridLines: true,
-                                zeroLineColor: '#26475b'
+                                zeroLineColor: '#4700cc'
                             },
                             ticks: {
-                                fontColor:'#2e9ad0',
-                                fontFamily: 'SimplonMono',
+                                fontColor:'#4700cc',
+                                fontFamily: 'Ubuntu,sans-serif',
                                 fontSize: 14,
                                 padding: 20
                             }
@@ -75,16 +75,16 @@ angular.module('insight.chart')
                                 max: Date.now()
                             },
                             gridLines: {
-                                color: '#26475b',
+                                color: '#4700cc',
                                 drawBorder: false,
                                 drawOnChartArea: false,
                                 drawTicks: true,
-                                zeroLineColor: '#26475b'
+                                zeroLineColor: '#4700cc'
                             },
                             ticks: {
-                                fontColor: '#2e9ad0',
+                                fontColor: '#4700cc',
                                 fontSize: 10,
-                                fontFamily: 'SimplonMono'
+                                fontFamily: 'Ubuntu,sans-serif'
                             }
                         }]
                     }
@@ -127,7 +127,7 @@ angular.module('insight.chart')
             var ctx = chart.chart.ctx;
             var gradient = ctx.createLinearGradient(0, 0, 0, 600);
 
-            gradient.addColorStop(0, 'rgba(46, 154, 208,0.5)');
+            gradient.addColorStop(0, 'rgba(1, 45, 136,0.9686274509803922)');
             gradient.addColorStop(1, 'rgba(0, 0, 0,0.001)');
             chart.chart.config.data.datasets[0].backgroundColor = gradient;
         };

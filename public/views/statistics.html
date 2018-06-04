@@ -43,7 +43,11 @@
 					<tbody>
 						<tr>
 							<td translate>Market Price:</td>
-							<td class="text-right">${{ SC.marketPrice }} {{ SC.marketCurrency }}<span ng-class="{ red: SC.percent < 0, green: SC.percent > 0 }">&nbsp;({{ SC.percent }}%)</span><br><small>{{ SC.marketBtcPrice }} BTC</small></br></td>
+							<td class="text-right">${{ SC.marketPrice }} {{ SC.marketCurrency }}<span ng-class="{ red: SC.percent < 0, green: SC.percent > 0 }">&nbsp;({{ SC.percent }}%)</span></td>
+						</tr>
+						<tr>
+							<td translate>Market Price (BTC):</td>
+							<td class="text-right">{{ SC.marketBtcPrice }} BTC&nbsp;<a href="https://wallet.crypto-bridge.org/market/BRIDGE.RVN_BRIDGE.BTC" target="_blank" class="btn-copy" translate>Live</a></td>
 						</tr>
 						<tr>
 							<td translate>Trade Volume:</td>
