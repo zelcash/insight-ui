@@ -7139,3 +7139,12 @@ a.v_highlight_more {
 .navbar-header>a,.navbar-header>a:active,.navbar-header>a:focus {
  outline:0
 }
+.col-grayy {
+    border: 1px solid #5d2e97;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    padding: 14px;
+    background-color: #eaeef6e6;
+    margin-top: 4px
+}
