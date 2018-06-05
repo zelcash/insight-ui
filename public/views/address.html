@@ -5,17 +5,16 @@
       <div class="col-md-8 text-left">
           <h3 translate>Address</h3> {{address.addrStr}}
 		  <span class="btn-copy" ngclipboard data-clipboard-text="{{address.addrStr}}"><img class="clippy" width="13" src="../img/clippy.svg" alt="Copy to clipboard"></span>
-		  </button>
       </div>
       <div class="col-md-4">
         <span class="txvalues txvalues-primary"><strong translate>Final Balance</strong> {{$root.currency.getConvertion(address.balance) || address.balance + ' RVN' }}</span>
       </div>
     </div>
     <div class="hide_snavbar">
-      <a href="#" data-ng-click="hideSNavbar=!hideSNavbar">
+      <button class="btn-copy" data-ng-click="hideSNavbar=!hideSNavbar">
         <span data-ng-show="hideSNavbar"><span class="text-muted glyphicon glyphicon-chevron-down"></span></span>
         <span data-ng-show="!hideSNavbar"><span class="text-muted glyphicon glyphicon-chevron-up"></span></span>
-      </a>
+      </button>
     </div>
   </div>
   <h1><span translate>Address</span> <small data-ng-show="address.addrStr">{{$root.currency.getConvertion(address.balance) || address.balance + ' RVN'}}</small></h1>

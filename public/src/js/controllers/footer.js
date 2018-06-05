@@ -13,7 +13,7 @@ angular.module('insight.system').controller('FooterController',
     };
 
     $scope.version = _getVersion();
-
+	
     $scope.availableLanguages = [{
       name: 'English',
       isoCode: 'en',
@@ -21,14 +21,17 @@ angular.module('insight.system').controller('FooterController',
       name: 'Deutsch',
       isoCode: 'de_DE',
     }, {
-      name: 'Spanish',
+      name: 'Español',
       isoCode: 'es',
     }, {
-      name: 'Japanese',
+      name: '⽇本語',
       isoCode: 'ja',
     }, {
-      name: 'Russian',
+      name: 'Русский',
       isoCode: 'ru',
+    }, {
+      name: 'Français',
+      isoCode: 'fr_FR',
     }];
 
     $scope.setLanguage = function(isoCode) {
@@ -37,7 +40,7 @@ angular.module('insight.system').controller('FooterController',
       localStorage.setItem('insight-language', isoCode);
       var currentPageTemplate = $route.current.templateUrl;
       $templateCache.remove(currentPageTemplate);
-      $route.reload();
+      location.reload();
     };
 
   });

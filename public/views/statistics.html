@@ -1,0 +1,113 @@
+<div data-ng-include src="'views/includes/connection.html'"></div>
+<div class="box" ng-controller="StatisticsController as SC" ng-init="SC.get24HoursStats()">
+	<div class="page-header">
+		<h1>
+          <span translate>Ravencoin Statistics for the last 24 hours</span>
+        </h1>
+	</div>
+
+	<div class="section-statsWrap">
+		<div class="col-xs-12 col-md-66 col-gray">
+			<div class="section section-stats">
+				<div class="section__heading">
+					<h2 class="section__title" translate>Block Summary</h2>
+				</div>
+				<table class="table table-hover">
+					<tbody>
+						<tr>
+							<td translate>Blocks Mined:</td>
+							<td class="text-right">{{ SC.statsTotal24.n_blocks_mined }}</td>
+						</tr>
+						<tr>
+							<td translate>Time Between Blocks:</td>
+							<td class="text-right"><span>{{ (SC.statsTotal24.time_between_blocks / 60) | numeraljs : '0.[00]' }}</span>&nbsp;<span translate> minutes</span></td>
+						</tr>	
+						<tr>
+							<td translate>Ravencoin Mined:</td>
+							<td class="text-right">{{ $root.currency.getConvertion(SC.statsTotal24.mined_currency_amount / 100000000) }}</td>
+						</tr>
+						<tr>
+							<td translate>Total Circulating Supply:</td>
+							<td class="text-right">{{ SC.totalsupply | numeraljs : '0,0' }} RVN&nbsp;<a href="/charts" class="btn-copy" translate>View Chart</a></td>
+						</tr>
+					</tbody>
+				</table>
+				</div>
+		</div>
+		<div class="col-xs-12 col-md-66 col-gray">
+			<div class="section section-stats">
+				<div class="section__heading">
+					<h2 class="section__title" translate>Market Summary</h2>
+				</div>
+				<table class="table table-hover">
+					<tbody>
+						<tr>
+							<td translate>Market Price:</td>
+							<td class="text-right">${{ SC.marketPrice }} {{ SC.marketCurrency }}<span ng-class="{ red: SC.percent < 0, green: SC.percent > 0 }">&nbsp;({{ SC.percent }}%)</span></td>
+						</tr>
+						<tr>
+							<td translate>Market Price (BTC):</td>
+							<td class="text-right">{{ SC.marketBtcPrice }} BTC&nbsp;<a href="https://wallet.crypto-bridge.org/market/BRIDGE.RVN_BRIDGE.BTC" target="_blank" class="btn-copy" translate>Live</a></td>
+						</tr>
+						<tr>
+							<td translate>Trade Volume:</td>
+							<td class="text-right">${{ SC.volume | numeraljs : '0,0.00'}} {{ SC.marketCurrency }}</td>
+						</tr>
+						<tr>
+							<td translate>Market Cap:</td>
+							<td class="text-right">${{ SC.marketCap | numeraljs : '0,0.00'}} {{ SC.marketCurrency }}</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+	<div class="col-xs-12 col-md-122 col-gray">
+		<div class="section__heading">
+			<h2 class="section__title" translate>Transaction Summary</h2>
+		</div>
+		<div class="transactionsStats">
+			<table class="table table-hover">
+				<tbody>
+					<tr>
+						<td translate>Total Transaction Fees:</td>
+						<td class="text-left">{{ $root.currency.getConvertion(SC.statsTotal24.transaction_fees / 100000000) }}</td>
+						<td class="text-right"><a href="stats/fees/60" class="btn-copy" translate>View Chart</a></td>
+					</tr>
+					<tr>
+						<td translate>Number of Transactions:</td>
+						<td class="text-left">{{ SC.statsTotal24.number_of_transactions }}</td>
+						<td class="text-right"><a href="stats/transactions/60" class="btn-copy" translate>View Chart</a></td>
+					</tr>
+					<tr>
+						<td translate>Total Output Volume:</td>
+						<td class="text-left">{{ $root.currency.getConvertion(SC.statsTotal24.outputs_volume / 100000000) }}</td>
+						<td class="text-right"><a href="stats/outputs/60" class="btn-copy" translate>View Chart</a></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+
+	<div class="col-xs-12 col-md-122 col-gray">
+		<div class="section__heading">
+			<h2 class="section__title" translate>Difficulty and Network Hashrate</h2>
+		</div>
+		<div class="rateElectricyStats">
+			<table class="table table-hover">
+				<tbody>
+					<tr>
+						<td translate>Difficulty</td>
+						<td class="text-left">{{ SC.difficulty | numeraljs : '0,0.[00000000]' }}</td>
+						<td class="text-right"><a href="stats/difficulty/60" class="btn-copy" translate>View Chart</a></td>
+					</tr>
+					<tr>
+						<td translate>Current Network Hashrate</td>
+						<td class="text-left">{{ SC.networkhashps / 1000000000000 | numeraljs : '0,0.000' }} TH/s</td>
+						<td class="text-right"></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>

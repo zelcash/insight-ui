@@ -26,19 +26,72 @@ module.exports = function(grunt) {
         }
       },
       vendors: {
-        src: ['public/src/js/ios-imagefile-megapixel/megapix-image.js', 'public/lib/clipboard/dist/clipboard.min.js', 'public/lib/qrcode-generator/js/qrcode.js', 'public/src/js/jsqrcode/grid.js', 'public/src/js/jsqrcode/version.js', 'public/src/js/jsqrcode/detector.js', 'public/src/js/jsqrcode/formatinf.js', 'public/src/js/jsqrcode/errorlevel.js', 'public/src/js/jsqrcode/bitmat.js', 'public/src/js/jsqrcode/datablock.js', 'public/src/js/jsqrcode/bmparser.js', 'public/src/js/jsqrcode/datamask.js', 'public/src/js/jsqrcode/rsdecoder.js', 'public/src/js/jsqrcode/gf256poly.js', 'public/src/js/jsqrcode/gf256.js', 'public/src/js/jsqrcode/decoder.js', 'public/src/js/jsqrcode/qrcode.js', 'public/src/js/jsqrcode/findpat.js', 'public/src/js/jsqrcode/alignpat.js', 'public/src/js/jsqrcode/databr.js', 'public/lib/momentjs/min/moment.min.js', 'public/lib/moment/lang/es.js', 'public/lib/c3/c3.min.js', 'public/lib/d3/d3.min.js'],
+        src: [
+              'public/src/js/ios-imagefile-megapixel/megapix-image.js',
+              'public/lib/clipboard/dist/clipboard.min.js',
+              'public/lib/qrcode-generator/js/qrcode.js',
+              'public/src/js/jsqrcode/grid.js',
+              'public/src/js/jsqrcode/version.js',
+              'public/src/js/jsqrcode/detector.js',
+              'public/src/js/jsqrcode/formatinf.js',
+              'public/src/js/jsqrcode/errorlevel.js',
+              'public/src/js/jsqrcode/bitmat.js',
+              'public/src/js/jsqrcode/datablock.js',
+              'public/src/js/jsqrcode/bmparser.js',
+              'public/src/js/jsqrcode/datamask.js',
+              'public/src/js/jsqrcode/rsdecoder.js',
+              'public/src/js/jsqrcode/gf256poly.js',
+              'public/src/js/jsqrcode/gf256.js',
+              'public/src/js/jsqrcode/decoder.js',
+              'public/src/js/jsqrcode/qrcode.js',
+              'public/src/js/jsqrcode/findpat.js',
+              'public/src/js/jsqrcode/alignpat.js',
+              'public/src/js/jsqrcode/databr.js',
+              'public/lib/momentjs/min/moment.min.js',
+              'public/lib/moment/lang/es.js',
+              'public/lib/numeral/min/numeral.min.js',
+              'public/lib/chart.js/dist/Chart.min.js',
+			        'public/lib/bignumber.js/bignumber.min.js'
+            ],
         dest: 'public/js/vendors.js'
       },
       angular: {
-        src: ['public/lib/angular/angular.min.js', 'public/lib/angular-resource/angular-resource.min.js', 'public/lib/angular-route/angular-route.min.js', 'public/lib/angular-qrcode/qrcode.js', 'public/lib/angular-animate/angular-animate.min.js', 'public/lib/angular-bootstrap/ui-bootstrap.js', 'public/lib/angular-bootstrap/ui-bootstrap-tpls.js', 'public/lib/angular-ui-utils/ui-utils.min.js', 'public/lib/ngprogress/build/ngProgress.min.js', 'public/lib/angular-gettext/dist/angular-gettext.min.js', 'public/lib/ngclipboard/dist/ngclipboard.min.js', 'public/lib/angular-moment/angular-moment.min.js'],
+        src: [
+              'public/lib/angular/angular.min.js',
+              'public/lib/angular-resource/angular-resource.min.js',
+              'public/lib/angular-route/angular-route.min.js',
+              'public/lib/angular-qrcode/qrcode.js',
+              'public/lib/angular-animate/angular-animate.min.js',
+              'public/lib/angular-bootstrap/ui-bootstrap.js',
+              'public/lib/angular-bootstrap/ui-bootstrap-tpls.js',
+              'public/lib/angular-ui-utils/ui-utils.min.js',
+              'public/lib/ngprogress/build/ngProgress.min.js',
+              'public/lib/angular-gettext/dist/angular-gettext.min.js',
+              'public/lib/ngclipboard/dist/ngclipboard.min.js',
+              'public/lib/angular-chart.js/dist/angular-chart.min.js',
+              'public/lib/angular-numeraljs/dist/angular-numeraljs.min.js',
+              'public/lib/angular-moment/angular-moment.min.js',
+              'public/src/js/angularmerge.js'
+            ],
         dest: 'public/js/angularjs-all.js'
       },
       main: {
-        src: ['public/src/js/app.js', 'public/src/js/controllers/*.js', 'public/src/js/services/*.js', 'public/src/js/directives.js', 'public/src/js/filters.js', 'public/src/js/config.js', 'public/src/js/init.js', 'public/src/js/translations.js'],
+        src: [
+              'public/src/js/app.js',
+              'public/src/js/controllers/*.js',
+              'public/src/js/services/*.js',
+              'public/src/js/directives.js',
+              'public/src/js/filters.js',
+              'public/src/js/config.js',
+              'public/src/js/init.js',
+              'public/src/js/translations.js'
+            ],
         dest: 'public/js/main.js'
       },
       css: {
-        src: ['public/lib/c3/c3.min.css', 'public/src/css/**/*.css'],
+        src: [
+              'public/src/css/**/*.css'
+            ],
         dest: 'public/css/main.css'
       }
     },
@@ -97,7 +150,7 @@ module.exports = function(grunt) {
     nggettext_extract: {
       pot: {
         files: {
-          'po/template.pot': ['public/views/*.html', 'public/views/**/*.html']
+          'po/template.pot': ['public/*.html', 'public/views/*.html', 'public/views/**/*.html']
         }
       },
     },

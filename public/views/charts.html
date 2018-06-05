@@ -1,32 +1,41 @@
 <div data-ng-include src="'views/includes/connection.html'"></div>
-<section data-ng-controller="ChartsController" data-ng-init="list()">
-  <div class="row">
-    <div class="col-xs-12 col-gray col-gray-fixed">
-      <div class="block-id">
-        <div class="icon-block text-center">
-          <span class="glyphicon glyphicon-stats"></span>
-          <h3><span translate>Charts</span></h3>
-        </div>
-      </div>
-      <div class="m20v text-center">
-        <span class="fader" data-ng-repeat='(type, c) in charts'>
-          <a class="btn btn-primary" style="margin-bottom: 3px" href="charts/{{type}}">{{c.name}}<a>
-        </span>
-      </div>
-    </div>
-    <div class="col-xs-12 col-md-9 col-md-offset-3">
-      <div class="page-header">
-        <h1>
-          <span data-ng-show="!chartName && !loading" translate>Select a Chart</span>
-		  <span>{{chartName}}</span>
-        </h1>
-      </div>
-      <div data-ng-show="loading">
-        <span translate>Loading chart...</span> <span class="loader-gif"></span>
-      </div>
-      <div data-ng-show="!loading">
-        <div id="chart"></div>
-      </div>
-    </div>
-  </div>
-</section>
+<div class="box" ng-controller="ChartsController as CC" ng-init="CC.init()">
+    <div class="col-xs-12 col-md-122 col-gray">
+		<div class="heading margin1 heading-width-900">
+			<h1 class="heading__title" translate>Ravencoin Circulation</h1>
+			<div class="heading__sm">
+				<h5 class="heading__smLabeled fsz-21" translate>
+					The current supply of Ravencoin on the network.
+				</h5>
+			</div>
+		</div>
+
+		<div class="section-charts">
+				<table class="table1">
+					<tbody>
+						<tr>
+							<td class="text-right"><a href="/charts?days={{ button.days }}"
+							   class="btn-copy"
+							   ng-class="{ 'active' : CC.chartDays == button.days }"
+							   ng-repeat="button in CC.daysButtons">
+								{{ button.name }}</a>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="">
+					<div class="">
+						<canvas id="line"
+								class="chart chart-line"
+								chart-data="CC.chartOptions.data"
+								chart-labels="CC.chartOptions.labels"
+								chart-series="CC.chartOptions.series"
+								chart-options="CC.chartOptions.options"
+								chart-dataset-override="CC.chartOptions.datasetOverride"
+								height="115">
+						</canvas>
+					</div>
+				</div>
+		</div>
+	</div>
+</div>

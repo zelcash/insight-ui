@@ -1,5 +1,22 @@
 'use strict';
 
+angular.module('insight')
+.constant('Constants', {
+
+	CURRENCY: {
+		RVN : 'RVN',
+		USD : 'USD',
+		BTC : 'BTC'
+	},
+	BLOCKS_AMOUNT: 15,
+	TRANSACTION_DISPLAYED: 10,
+	BLOCKS_DISPLAYED: 5,
+	CHART_DAYS: 14,
+    NETWORK: window.current_network ? window.current_network : 'livenet',
+    DEFAULT_LANGUAGE: localStorage.getItem('insight-language') || 'en',
+    DEFAULT_CURRENCY: localStorage.getItem('insight-currency') || 'RVN'
+
+});
 //Setting up route
 angular.module('insight').config(function($routeProvider) {
   $routeProvider.
@@ -35,15 +52,29 @@ angular.module('insight').config(function($routeProvider) {
       templateUrl: 'views/address.html',
       title: 'Ravencoin Address '
     }).
-	when('/charts/:chartType?', {
+	 when('/charts', {
       templateUrl: 'views/charts.html',
       title: 'Charts'
     }).
+    when('/stats', {
+		  templateUrl: 'views/statistics.html',
+		  title: 'Stats'
+	  }).
+    when('/stats/:type/:days', {
+		  controller: 'StatisticsController',
+		  templateUrl: 'views/chart.html',
+		  title: 'Statistics'
+	  }).
     when('/status', {
       templateUrl: 'views/status.html',
       title: 'Status'
     }).
-    when('/messages/verify', {
+    when('/rich-list', {
+        controller: 'RichListController',
+        templateUrl: 'views/rich_list.html',
+        title: 'Rich List'
+	}).
+	when('/messages/verify', {
       templateUrl: 'views/messages_verify.html',
       title: 'Verify Message'
     })

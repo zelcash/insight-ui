@@ -20,32 +20,36 @@
       </div>
     </div>
     <div class="hide_snavbar">
-      <a href="#" data-ng-click="hideSNavbar=!hideSNavbar">
+      <button class="btn-copy" data-ng-click="hideSNavbar=!hideSNavbar">
         <span data-ng-show="hideSNavbar"><span class="text-muted glyphicon glyphicon-chevron-down"></span></span>
         <span data-ng-show="!hideSNavbar"><span class="text-muted glyphicon glyphicon-chevron-up"></span></span>
-      </a>
+      </button>
     </div>
   </div>
-  <div data-ng-if="tx.txid">
-    <h1><span translate>Transaction</span>
-      <small data-ng-show="from_vin || from_vout">
-        <span data-ng-show="from_vin" translate>Input</span>
-        <span data-ng-show="from_vout" translate>Output</span>
-        <span>{{v_index}}</span>
-      </small>
-    </h1>
-    <div class="progress progress-striped active" data-ng-if="!tx.txid">
-      <div class="progress-bar progress-bar-info" style="width: 100%">
-        <span translate>Loading Transaction Details</span> <span class="loader-gif"></span>
-      </div>
+  <div class="col-xs-1222 col-md-1222 col-grayy">
+	<h1><span translate>Transaction</span>
+	  <span data-ng-if="tx.txid">
+		<small data-ng-show="from_vin || from_vout">
+			<span data-ng-show="from_vin" translate>Input</span>
+			<span data-ng-show="from_vout" translate>Output</span>
+			<span>{{v_index}}</span>
+		</small>
+	  </span>
+	</h1>
+	<div class="text-muted" data-ng-if="!tx.txid">
+      <span translate>Loading Transaction Details</span> <span class="loader-gif"></span>
     </div>
-    <div data-ng-if="tx.txid">
+	<div data-ng-if="tx.txid">
       <div class="well well-sm ellipsis">
         <strong translate>Transaction</strong>
         <span class="txid text-muted">{{tx.txid}}</span>
         <span class="btn-copy" ngclipboard data-clipboard-text="{{tx.txid}}"><img class="clippy" width="13" src="../img/clippy.svg" alt="Copy to clipboard"></span>
       </div>
-      <h2 translate>Summary</h2>
+	</div>
+  </div>
+	<div data-ng-if="tx.txid">
+      <div class="col-xs-1222 col-md-1222 col-grayy">
+	  <h2 translate>Summary</h2>
       <table class="table" style="table-layout: fixed">
         <tbody>
         <tr>
@@ -54,7 +58,7 @@
         </tr>
         <tr data-ng-show="tx.fees">
           <td><strong translate>Fee Rate</strong></td>
-          <td class="text-muted text-right">{{$root.currency.getConvertion((tx.fees * 1000) / tx.size) + ' per kB' || ((tx.fees * 1000) / tx.size) + 'RVN per kB'}}</td>
+          <td class="text-muted text-right">{{ ((tx.fees * 1000) / tx.size) | numeraljs : '0.00000000'}} RVN per kB</td>
         </tr>
         <tr>
           <td><strong translate>Received Time</strong></td>
@@ -89,10 +93,13 @@
         </tr>
         </tbody>
       </table>
-    </div>
-    <h2 translate>Details</h2>
-    <div class="block-tx" data-ng-if="tx.txid">
-      <div data-ng-include src="'views/transaction/tx.html'"></div>
-    </div>
+	  </div>
+	</div>
+    <div class="col-xs-1222 col-md-1222 col-grayy">
+		<h2 translate>Details</h2>
+		<div class="block-tx" data-ng-if="tx.txid">
+		  <div data-ng-include src="'views/transaction/tx.html'"></div>
+		</div>
+	</div>
   </div>
 </section>

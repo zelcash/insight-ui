@@ -16,13 +16,48 @@ msgstr ""
 msgid "(Input unconfirmed)"
 msgstr "(Eingabe unbestätigt)"
 
+#: public/views/rich_list.html
+msgid "(the top 200 richest addresses)"
+msgstr "(die Top 200 reichsten Adressen)"
+
+#: public/views/rich_list.html
+msgid "% Addresses"
+msgstr "% Adressen"
+
+#: public/views/rich_list.html
+msgid "% coins"
+msgstr "% Münzen"
+
+#: public/views/rich_list.html
+msgid "$USD"
+msgstr "$USD"
+
 #: public/views/404.html
 msgid "404 Page not found :("
 msgstr "404 Seite nicht gefunden :("
 
+#: public/views/dummy-translations.html
+msgid ""
+"A relative measure of how difficult it is to find a new block. The "
+"difficulty is adjusted periodically as a function of how much hashing power "
+"has been deployed by the network of miners."
+msgstr ""
+"Ein relatives Maß dafür, wie schwierig es ist, einen neuen Block zu finden. "
+"Die Schwierigkeit wird periodisch als eine Funktion davon eingestellt, wie "
+"viel Hashing-Leistung durch das Netzwerk von Bergleuten bereitgestellt wurde."
+
 #: public/views/address.html public/views/messages_verify.html
+#: public/views/rich_list.html
 msgid "Address"
 msgstr "Adresse"
+
+#: public/views/rich_list.html
+msgid "Addresses"
+msgstr "Adressen"
+
+#: public/views/rich_list.html
+msgid "Addresses richer than:"
+msgstr "Adressen reicher als:"
 
 #: public/views/index.html
 msgid "Age"
@@ -44,6 +79,10 @@ msgstr "Programmstatus"
 msgid "are very much appreciated: RD7yadeCvSDs4fCbEPuHstU3GHbiS7ao9q"
 msgstr "werden sehr geschätzt: RD7yadeCvSDs4fCbePuHstU3GHbiS7ao9q"
 
+#: public/views/rich_list.html
+msgid "Balance"
+msgstr "Bilanz"
+
 #: public/views/block.html
 msgid "Block"
 msgstr "Block"
@@ -52,14 +91,30 @@ msgstr "Block"
 msgid "Block Reward"
 msgstr "Belohnung"
 
+#: public/views/statistics.html
+msgid "Block Summary"
+msgstr "Blockzusammenfassung"
+
 #: public/views/block_list.html public/views/dummy-translations.html
 #: public/views/status.html
 msgid "Blocks"
 msgstr "Blöcke"
 
+#: public/views/rich_list.html
+msgid "Blocks Mined"
+msgstr "Blöcke abgebaut"
+
+#: public/views/statistics.html
+msgid "Blocks Mined:"
+msgstr "Blöcke abgebaut:"
+
 #: public/views/transaction_sendraw.html
 msgid "Broadcast Raw Transaction"
 msgstr "Broadcast-Rohtransaktion"
+
+#: public/index.html
+msgid "broadcast transaction"
+msgstr "Broadcast-Transaktion"
 
 #: public/views/block_list.html
 msgid "by date."
@@ -84,9 +139,9 @@ msgstr ""
 "vom P2P Netzwerk zu erhalten. (Verbindungsversuch zu ravend an {{host}}:"
 "{{port}} ist fehlgeschlagen.)"
 
-#: public/views/charts.html
-msgid "Charts"
-msgstr "Diagramme"
+#: public/views/rich_list.html
+msgid "Coins"
+msgstr "Münzen"
 
 #: public/views/status.html
 msgid "Complete"
@@ -105,8 +160,12 @@ msgid "Connections to other nodes"
 msgstr "Verbindungen zu Nodes"
 
 #: public/views/status.html
-msgid "Current Blockchain Tip (insight)"
-msgstr "Aktueller Blockchain Tip (insight)"
+msgid "Current Blockchain Tip (ravencore)"
+msgstr "Aktueller Blockchain Tipp (Ravencore)"
+
+#: public/views/statistics.html
+msgid "Current Network Hashrate"
+msgstr "Aktuelle Netzwerk-Hashrate"
 
 #: public/views/status.html
 msgid "Current Sync Status"
@@ -116,9 +175,17 @@ msgstr "Aktueller Status"
 msgid "Details"
 msgstr "Details"
 
-#: public/views/block.html
+#: public/views/block.html public/views/statistics.html
 msgid "Difficulty"
 msgstr "Schwierigkeit"
+
+#: public/views/statistics.html
+msgid "Difficulty and Network Hashrate"
+msgstr "Schwierigkeit und Netzwerk-Hashrate"
+
+#: public/views/rich_list.html
+msgid "Distribution Details:"
+msgstr "Vertriebsdetails:"
 
 #: public/views/index.html
 msgid "Donations"
@@ -156,10 +223,6 @@ msgstr "Fertigstellung"
 msgid "first seen at"
 msgstr "zuerst gesehen am"
 
-#: public/views/index.html
-msgid "Follow the guide"
-msgstr "Lesen Sie das Handbuch"
-
 #: public/views/404.html
 msgid "Go to home"
 msgstr "Zur Startseite"
@@ -185,10 +248,6 @@ msgstr "Es wurde eine Zusammenhangslosigkeit in der LevelDB festgestellt:"
 msgid "Info Errors"
 msgstr "Fehlerbeschreibung"
 
-#: public/views/index.html
-msgid "Information"
-msgstr "Information"
-
 #: public/views/status.html
 msgid "Initial Block Chain Height"
 msgstr "Ursprüngliche Blockchain Höhe"
@@ -206,8 +265,8 @@ msgid "Last Block"
 msgstr "Letzter Block"
 
 #: public/views/status.html
-msgid "Last Block Hash (Ravend)"
-msgstr "Letzter Hash (Ravend)"
+msgid "Last Block Hash (ravend)"
+msgstr "Letzter Blockhasch (ravend)"
 
 #: public/views/index.html
 msgid "Latest Blocks"
@@ -217,6 +276,10 @@ msgstr "Letzte Blöcke"
 msgid "Latest Transactions"
 msgstr "Letzte Transaktionen"
 
+#: public/views/statistics.html
+msgid "Live"
+msgstr "Aktuell"
+
 #: public/views/address.html
 msgid "Loading Address Information"
 msgstr "Lade Adressinformationen"
@@ -224,10 +287,6 @@ msgstr "Lade Adressinformationen"
 #: public/views/block.html
 msgid "Loading Block Information"
 msgstr "Lade Blockinformation"
-
-#: public/views/charts.html
-msgid "Loading chart..."
-msgstr "Lade diagramm..."
 
 #: public/views/block_list.html
 msgid "Loading Selected Date..."
@@ -246,13 +305,29 @@ msgstr "Lade Transaktionen..."
 msgid "Loading..."
 msgstr "Lade..."
 
+#: public/views/statistics.html
+msgid "Market Cap:"
+msgstr "Marktkapitalisierung:"
+
+#: public/views/statistics.html
+msgid "Market Price (BTC):"
+msgstr "Marktpreis (BTC):"
+
+#: public/views/statistics.html
+msgid "Market Price:"
+msgstr "Marktpreis:"
+
+#: public/views/statistics.html
+msgid "Market Summary"
+msgstr "Marktübersicht"
+
 #: public/views/messages_verify.html
 msgid "Message"
 msgstr "Botschaft"
 
 #: public/views/transaction/tx.html
-msgid "mined"
-msgstr "gefunden"
+msgid "Mined"
+msgstr "Abgebaut"
 
 #: public/views/block.html public/views/block_list.html public/views/index.html
 msgid "Mined by"
@@ -269,6 +344,10 @@ msgstr "Block gefunden (Mining)"
 #: public/views/status.html
 msgid "Mining Difficulty"
 msgstr "Schwierigkeitgrad"
+
+#: public/views/statistics.html
+msgid "minutes"
+msgstr "minuten"
 
 #: public/views/status.html
 msgid "Network"
@@ -294,9 +373,17 @@ msgstr "Keine passenden Einträge gefunden!"
 msgid "No. Transactions"
 msgstr "Anzahl Transaktionen"
 
+#: public/views/status.html
+msgid "Node Information"
+msgstr "Knoteninformationen"
+
 #: public/views/block.html
 msgid "Number Of Transactions"
 msgstr "Anzahl der Transaktionen"
+
+#: public/views/statistics.html
+msgid "Number of Transactions:"
+msgstr "Anzahl der Transaktionen:"
 
 #: public/views/transaction.html
 msgid "Output"
@@ -314,9 +401,13 @@ msgstr "Protokollversion"
 msgid "Proxy setting"
 msgstr "Proxyeinstellung"
 
-#: public/views/index.html
-msgid "PSA for Pool Operators:"
-msgstr "Öffentliche Bekanntmachung für Poolbetreiber:"
+#: public/views/rich_list.html
+msgid "Rank"
+msgstr "Rang"
+
+#: public/views/charts.html
+msgid "Ravencoin Circulation"
+msgstr "Ravencoin-Zirkulation"
 
 #: public/views/messages_verify.html
 msgid "Ravencoin comes with a way of signing arbitrary messages."
@@ -326,9 +417,17 @@ msgstr "Ravencoin bietet eine Möglichkeit, beliebige Nachrichten zu signieren."
 msgid "Ravencoin Community"
 msgstr "Ravencoin Gemeinschaft"
 
-#: public/views/status.html
-msgid "Ravencoin node information"
-msgstr "Ravencoin-Node Info"
+#: public/views/rich_list.html
+msgid "Ravencoin Distribution"
+msgstr "Ravencoin Verteilung"
+
+#: public/views/statistics.html
+msgid "Ravencoin Mined:"
+msgstr "Ravencoin Minen:"
+
+#: public/views/statistics.html
+msgid "Ravencoin Statistics for the last 24 hours"
+msgstr "Ravencoin Statistiken für die letzten 24 Stunden"
 
 #: public/views/index.html
 msgid "Ravencore"
@@ -351,6 +450,10 @@ msgstr "Eingangszeitpunkt"
 msgid "Redirecting..."
 msgstr "Umleitung..."
 
+#: public/views/rich_list.html
+msgid "Rich List"
+msgstr "Rich-Liste"
+
 #: public/views/includes/search.html
 msgid "Search for block, transaction or address"
 msgstr "Suche Block, Transaktion oder Adresse"
@@ -358,10 +461,6 @@ msgstr "Suche Block, Transaktion oder Adresse"
 #: public/views/index.html
 msgid "See all blocks"
 msgstr "Alle Blöcke anzeigen"
-
-#: public/views/charts.html
-msgid "Select a Chart"
-msgstr "Auswählen eines Diagramms"
 
 #: public/views/transaction_sendraw.html
 msgid "Send transaction"
@@ -405,6 +504,10 @@ msgid "Start Date"
 msgstr "Startdatum"
 
 #: public/views/dummy-translations.html
+msgid "Statistics"
+msgstr "Statistiken"
+
+#: public/views/dummy-translations.html
 msgid "Status"
 msgstr "Status"
 
@@ -432,6 +535,16 @@ msgstr "Art der Syncronisation"
 msgid "Synced Blocks"
 msgstr "Syncronisierte Blöcke"
 
+#: public/views/charts.html
+msgid "The current supply of Ravencoin on the network."
+msgstr "Die aktuelle Versorgung von Ravencoin im Netzwerk."
+
+#: public/views/dummy-translations.html
+msgid "The daily average of fees paid to miners per transaction."
+msgstr ""
+"Der tägliche Durchschnitt der Gebühren, die den Bergarbeitern pro "
+"Transaktion gezahlt werden."
+
 #: public/views/messages_verify.html
 msgid "The message failed to verify."
 msgstr "Die Nachricht konnte nicht überprüft werden."
@@ -439,6 +552,18 @@ msgstr "Die Nachricht konnte nicht überprüft werden."
 #: public/views/messages_verify.html
 msgid "The message is verifiably from {{verification.address}}."
 msgstr "Die Nachricht stammt nachweislich von {{verification.address}}."
+
+#: public/views/dummy-translations.html
+msgid "The number of daily confirmed RVN transactions."
+msgstr "Die Anzahl der täglich bestätigten RVN-Transaktionen."
+
+#: public/views/dummy-translations.html
+msgid ""
+"The total value of all transaction outputs per day (includes coins returned "
+"to the sender as change)."
+msgstr ""
+"Der Gesamtwert aller Transaktionsausgaben pro Tag (einschließlich Münzen, "
+"die als Änderung an den Absender zurückgegeben werden)."
 
 #: public/views/transaction/list.html
 msgid "There are no transactions involving this address."
@@ -460,6 +585,10 @@ msgstr ""
 "Dieses Formular kann verwendet werden, um zu überprüfen, ob\n"
 "        eine Nachricht stammt eine spezifische Ravencoin-Adresse."
 
+#: public/views/statistics.html
+msgid "Time Between Blocks:"
+msgstr "Zeit zwischen den Blöcken:"
+
 #: public/views/status.html
 msgid "Time Offset"
 msgstr "Zeitoffset zu UTC"
@@ -472,6 +601,14 @@ msgstr "Zeitstempel"
 msgid "Today"
 msgstr "Heute"
 
+#: public/views/statistics.html
+msgid "Total Circulating Supply:"
+msgstr "Gesamtumlaufversorgung:"
+
+#: public/views/statistics.html
+msgid "Total Output Volume:"
+msgstr "Gesamtausgabevolumen:"
+
 #: public/views/address.html
 msgid "Total Received"
 msgstr "Insgesamt empfangen"
@@ -480,6 +617,14 @@ msgstr "Insgesamt empfangen"
 msgid "Total Sent"
 msgstr "Insgesamt gesendet"
 
+#: public/views/statistics.html
+msgid "Total Transaction Fees:"
+msgstr "Transaktionsgebühren insgesamt:"
+
+#: public/views/statistics.html
+msgid "Trade Volume:"
+msgstr "Handelsvolumen:"
+
 #: public/views/transaction.html
 msgid "Transaction"
 msgstr "Transaktion"
@@ -487,6 +632,10 @@ msgstr "Transaktion"
 #: public/views/transaction_sendraw.html
 msgid "Transaction succesfully broadcast.<br>Transaction id: {{txid}}"
 msgstr "Transaktion erfolgreich gesendet.<br>Transaktions-ID: {{txid}}"
+
+#: public/views/statistics.html
+msgid "Transaction Summary"
+msgstr "Transaktions zusammenfassung"
 
 #: public/views/address.html public/views/block.html
 #: public/views/block_list.html public/views/index.html
@@ -517,6 +666,10 @@ msgstr "Wert"
 msgid "Verify"
 msgstr "Überprüfen"
 
+#: public/index.html
+msgid "verify message"
+msgstr "nachricht verifizieren"
+
 #: public/views/messages_verify.html
 msgid "Verify signed message"
 msgstr "Überprüfen Sie die signierte Nachricht"
@@ -525,6 +678,10 @@ msgstr "Überprüfen Sie die signierte Nachricht"
 msgid "Version"
 msgstr "Version"
 
+#: public/views/statistics.html
+msgid "View Chart"
+msgstr "Diagramm anzeigen"
+
 #: public/views/block_list.html public/views/index.html
 msgid "Waiting for blocks..."
 msgstr "Warte auf Blöcke..."
@@ -532,6 +689,21 @@ msgstr "Warte auf Blöcke..."
 #: public/views/index.html
 msgid "Waiting for transactions..."
 msgstr "Warte auf Transaktionen..."
+
+#~ msgid "Charts"
+#~ msgstr "Diagramme"
+
+#~ msgid "Loading chart..."
+#~ msgstr "Lade diagramm..."
+
+#~ msgid "Select a Chart"
+#~ msgstr "Auswählen eines Diagramms"
+
+#~ msgid "Follow the guide"
+#~ msgstr "Lesen Sie das Handbuch"
+
+#~ msgid "PSA for Pool Operators:"
+#~ msgstr "Öffentliche Bekanntmachung für Poolbetreiber:"
 
 #~ msgid ""
 #~ "<strong>insight</strong>  is an <a href=\"http://live.insight.is/\" "
@@ -563,9 +735,6 @@ msgstr "Warte auf Transaktionen..."
 
 #~ msgid "About"
 #~ msgstr "Über insight"
-
-#~ msgid "Best Block"
-#~ msgstr "Bester Block"
 
 #~ msgid "Bytes Serialized"
 #~ msgstr "Serialisierte Bytes"

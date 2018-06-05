@@ -15,13 +15,48 @@ msgstr ""
 msgid "(Input unconfirmed)"
 msgstr "(入力は未検証です)"
 
+#: public/views/rich_list.html
+msgid "(the top 200 richest addresses)"
+msgstr "（上位200の最も豊かなアドレス）"
+
+#: public/views/rich_list.html
+msgid "% Addresses"
+msgstr "％アドレス"
+
+#: public/views/rich_list.html
+msgid "% coins"
+msgstr "％コイン"
+
+#: public/views/rich_list.html
+msgid "$USD"
+msgstr "$USD"
+
 #: public/views/404.html
 msgid "404 Page not found :("
 msgstr "404 ページがみつかりません (´・ω・`)"
 
+#: public/views/dummy-translations.html
+msgid ""
+"A relative measure of how difficult it is to find a new block. The "
+"difficulty is adjusted periodically as a function of how much hashing power "
+"has been deployed by the network of miners."
+msgstr ""
+"新しいブロックを見つけることがどれほど難しいかの相対的な尺度。 難易度は、鉱夫"
+"のネットワークによってどのくらいのハッシングパワーが配備されたかに応じて定期"
+"的に調整されます。"
+
 #: public/views/address.html public/views/messages_verify.html
+#: public/views/rich_list.html
 msgid "Address"
 msgstr "アドレス"
+
+#: public/views/rich_list.html
+msgid "Addresses"
+msgstr "アドレス"
+
+#: public/views/rich_list.html
+msgid "Addresses richer than:"
+msgstr "より豊かな住所："
 
 #: public/views/index.html
 msgid "Age"
@@ -43,6 +78,10 @@ msgstr "アプリケーションの状態"
 msgid "are very much appreciated: RD7yadeCvSDs4fCbEPuHstU3GHbiS7ao9q"
 msgstr "非常に感謝しています：RD7yadeCvSDs4fCbEPuHstU3GHbiS7ao9q"
 
+#: public/views/rich_list.html
+msgid "Balance"
+msgstr "バランス"
+
 #: public/views/block.html
 msgid "Block"
 msgstr "ブロック"
@@ -51,14 +90,30 @@ msgstr "ブロック"
 msgid "Block Reward"
 msgstr "ブロック報酬"
 
+#: public/views/statistics.html
+msgid "Block Summary"
+msgstr "ブロックサマリー"
+
 #: public/views/block_list.html public/views/dummy-translations.html
 #: public/views/status.html
 msgid "Blocks"
 msgstr "ブロック"
 
+#: public/views/rich_list.html
+msgid "Blocks Mined"
+msgstr "ブロックされたブロック"
+
+#: public/views/statistics.html
+msgid "Blocks Mined:"
+msgstr "ブロックされたブロック："
+
 #: public/views/transaction_sendraw.html
 msgid "Broadcast Raw Transaction"
 msgstr "生のトランザクションを配信"
+
+#: public/index.html
+msgid "broadcast transaction"
+msgstr "放送取引"
 
 #: public/views/block_list.html
 msgid "by date."
@@ -80,9 +135,9 @@ msgstr ""
 "P2Pネットワークからライブ情報を取得するためにravendへ接続することができません"
 "でした。({{host}}:{{port}} への接続を試みましたが、失敗しました。)"
 
-#: public/views/charts.html
-msgid "Charts"
-msgstr "チャート"
+#: public/views/rich_list.html
+msgid "Coins"
+msgstr "コイン"
 
 #: public/views/status.html
 msgid "Complete"
@@ -101,8 +156,12 @@ msgid "Connections to other nodes"
 msgstr "他ノードへの接続"
 
 #: public/views/status.html
-msgid "Current Blockchain Tip (insight)"
-msgstr "現在のブロックチェインのTip (insight)"
+msgid "Current Blockchain Tip (ravencore)"
+msgstr "現在のブロックチェーンのヒント（ravencore）"
+
+#: public/views/statistics.html
+msgid "Current Network Hashrate"
+msgstr "現在のネットワークハッシュレート"
 
 #: public/views/status.html
 msgid "Current Sync Status"
@@ -112,9 +171,17 @@ msgstr "現在の同期状況"
 msgid "Details"
 msgstr "詳細"
 
-#: public/views/block.html
+#: public/views/block.html public/views/statistics.html
 msgid "Difficulty"
 msgstr "難易度"
+
+#: public/views/statistics.html
+msgid "Difficulty and Network Hashrate"
+msgstr "難易度とネットワークハッシュレート"
+
+#: public/views/rich_list.html
+msgid "Distribution Details:"
+msgstr "流通の詳細："
 
 #: public/views/index.html
 msgid "Donations"
@@ -152,10 +219,6 @@ msgstr "終了日時"
 msgid "first seen at"
 msgstr "最初に発見された日時"
 
-#: public/views/index.html
-msgid "Follow the guide"
-msgstr "ガイドに従ってください"
-
 #: public/views/404.html
 msgid "Go to home"
 msgstr "ホームへ"
@@ -181,10 +244,6 @@ msgstr "levelDBの破損を検知しました:"
 msgid "Info Errors"
 msgstr "エラー情報"
 
-#: public/views/index.html
-msgid "Information"
-msgstr "情報"
-
 #: public/views/status.html
 msgid "Initial Block Chain Height"
 msgstr "起動時のブロック高"
@@ -202,8 +261,8 @@ msgid "Last Block"
 msgstr "直前のブロック"
 
 #: public/views/status.html
-msgid "Last Block Hash (Ravend)"
-msgstr "直前のブロックのハッシュ値 (Ravend)"
+msgid "Last Block Hash (ravend)"
+msgstr "最後のブロックハッシュ（ravend）"
 
 #: public/views/index.html
 msgid "Latest Blocks"
@@ -213,6 +272,10 @@ msgstr "最新のブロック"
 msgid "Latest Transactions"
 msgstr "最新のトランザクション"
 
+#: public/views/statistics.html
+msgid "Live"
+msgstr "当座"
+
 #: public/views/address.html
 msgid "Loading Address Information"
 msgstr "アドレス情報を読み込んでいます"
@@ -220,10 +283,6 @@ msgstr "アドレス情報を読み込んでいます"
 #: public/views/block.html
 msgid "Loading Block Information"
 msgstr "ブロック情報を読み込んでいます"
-
-#: public/views/charts.html
-msgid "Loading chart..."
-msgstr "チャートを読み込んでいます..."
 
 #: public/views/block_list.html
 msgid "Loading Selected Date..."
@@ -242,13 +301,29 @@ msgstr "トランザクションを読み込んでいます..."
 msgid "Loading..."
 msgstr "ロード中..."
 
+#: public/views/statistics.html
+msgid "Market Cap:"
+msgstr "時価総額："
+
+#: public/views/statistics.html
+msgid "Market Price (BTC):"
+msgstr "市場価格 (BTC)："
+
+#: public/views/statistics.html
+msgid "Market Price:"
+msgstr "市場価格："
+
+#: public/views/statistics.html
+msgid "Market Summary"
+msgstr "市場概要"
+
 #: public/views/messages_verify.html
 msgid "Message"
 msgstr "メッセージ"
 
 #: public/views/transaction/tx.html
-msgid "mined"
-msgstr "採掘された"
+msgid "Mined"
+msgstr "地雷"
 
 #: public/views/block.html public/views/block_list.html public/views/index.html
 msgid "Mined by"
@@ -265,6 +340,10 @@ msgstr "採掘時刻"
 #: public/views/status.html
 msgid "Mining Difficulty"
 msgstr "採掘難易度"
+
+#: public/views/statistics.html
+msgid "minutes"
+msgstr "分"
 
 #: public/views/status.html
 msgid "Network"
@@ -290,9 +369,17 @@ msgstr "一致するレコードはありません！"
 msgid "No. Transactions"
 msgstr "トランザクション数"
 
+#: public/views/status.html
+msgid "Node Information"
+msgstr "ノード情報"
+
 #: public/views/block.html
 msgid "Number Of Transactions"
 msgstr "トランザクション数"
+
+#: public/views/statistics.html
+msgid "Number of Transactions:"
+msgstr "トランザクション数："
 
 #: public/views/transaction.html
 msgid "Output"
@@ -310,9 +397,13 @@ msgstr "プロトコルバージョン"
 msgid "Proxy setting"
 msgstr "プロキシ設定"
 
-#: public/views/index.html
-msgid "PSA for Pool Operators:"
-msgstr "プール運営者のための公共サービスアナウンス："
+#: public/views/rich_list.html
+msgid "Rank"
+msgstr "序列"
+
+#: public/views/charts.html
+msgid "Ravencoin Circulation"
+msgstr "Ravencoin 流通"
 
 #: public/views/messages_verify.html
 msgid "Ravencoin comes with a way of signing arbitrary messages."
@@ -322,9 +413,17 @@ msgstr "Ravencoinには任意のメッセージを署名する昨日が備わっ
 msgid "Ravencoin Community"
 msgstr "Ravencoinコミュニティ"
 
-#: public/views/status.html
-msgid "Ravencoin node information"
-msgstr "Ravencoinノード情報"
+#: public/views/rich_list.html
+msgid "Ravencoin Distribution"
+msgstr "Ravencoin 分布"
+
+#: public/views/statistics.html
+msgid "Ravencoin Mined:"
+msgstr "Ravencoin 鉱山："
+
+#: public/views/statistics.html
+msgid "Ravencoin Statistics for the last 24 hours"
+msgstr "Ravencoin 過去24時間の統計"
 
 #: public/views/index.html
 msgid "Ravencore"
@@ -346,6 +445,10 @@ msgstr "受信時刻"
 msgid "Redirecting..."
 msgstr "リダイレクトしています..."
 
+#: public/views/rich_list.html
+msgid "Rich List"
+msgstr "リッチリスト"
+
 #: public/views/includes/search.html
 msgid "Search for block, transaction or address"
 msgstr "ブロック、トランザクション、アドレスを検索"
@@ -353,10 +456,6 @@ msgstr "ブロック、トランザクション、アドレスを検索"
 #: public/views/index.html
 msgid "See all blocks"
 msgstr "すべてのブロックをみる"
-
-#: public/views/charts.html
-msgid "Select a Chart"
-msgstr "チャートを選択"
 
 #: public/views/transaction_sendraw.html
 msgid "Send transaction"
@@ -400,6 +499,10 @@ msgid "Start Date"
 msgstr "開始日時"
 
 #: public/views/dummy-translations.html
+msgid "Statistics"
+msgstr "統計"
+
+#: public/views/dummy-translations.html
 msgid "Status"
 msgstr "ステータス"
 
@@ -427,6 +530,14 @@ msgstr "同期タイプ"
 msgid "Synced Blocks"
 msgstr "同期されたブロック数"
 
+#: public/views/charts.html
+msgid "The current supply of Ravencoin on the network."
+msgstr "ネットワーク上のRavencoinの現在の供給。"
+
+#: public/views/dummy-translations.html
+msgid "The daily average of fees paid to miners per transaction."
+msgstr "取引ごとに鉱山者に支払われる手数料の日々の平均。"
+
 #: public/views/messages_verify.html
 msgid "The message failed to verify."
 msgstr "メッセージの検証に失敗しました。"
@@ -434,6 +545,18 @@ msgstr "メッセージの検証に失敗しました。"
 #: public/views/messages_verify.html
 msgid "The message is verifiably from {{verification.address}}."
 msgstr "メッセージは{{verification.address}}により検証されました。"
+
+#: public/views/dummy-translations.html
+msgid "The number of daily confirmed RVN transactions."
+msgstr "毎日確認されたRVNトランザクションの数。"
+
+#: public/views/dummy-translations.html
+msgid ""
+"The total value of all transaction outputs per day (includes coins returned "
+"to the sender as change)."
+msgstr ""
+"1日あたりのすべての取引成果の合計金額（変更に応じて差出人に返されたコインを含"
+"む）。"
 
 #: public/views/transaction/list.html
 msgid "There are no transactions involving this address."
@@ -455,6 +578,10 @@ msgstr ""
 "このフォームでは、メッセージが特定のRavencoinアドレスから来たかどうかを検証す"
 "ることができます。"
 
+#: public/views/statistics.html
+msgid "Time Between Blocks:"
+msgstr "ブロック間の時間："
+
 #: public/views/status.html
 msgid "Time Offset"
 msgstr "時間オフセット"
@@ -467,6 +594,14 @@ msgstr "タイムスタンプ"
 msgid "Today"
 msgstr "今日"
 
+#: public/views/statistics.html
+msgid "Total Circulating Supply:"
+msgstr "総供給量："
+
+#: public/views/statistics.html
+msgid "Total Output Volume:"
+msgstr "総出力量："
+
 #: public/views/address.html
 msgid "Total Received"
 msgstr "総入金額"
@@ -475,6 +610,14 @@ msgstr "総入金額"
 msgid "Total Sent"
 msgstr "総送金額"
 
+#: public/views/statistics.html
+msgid "Total Transaction Fees:"
+msgstr "合計取引手数料："
+
+#: public/views/statistics.html
+msgid "Trade Volume:"
+msgstr "貿易量："
+
 #: public/views/transaction.html
 msgid "Transaction"
 msgstr "トランザクション"
@@ -482,6 +625,10 @@ msgstr "トランザクション"
 #: public/views/transaction_sendraw.html
 msgid "Transaction succesfully broadcast.<br>Transaction id: {{txid}}"
 msgstr "トランザクションの配信に成功しました。<br>トランザクションID: {{txid}}"
+
+#: public/views/statistics.html
+msgid "Transaction Summary"
+msgstr "トランザクション概要"
 
 #: public/views/address.html public/views/block.html
 #: public/views/block_list.html public/views/index.html
@@ -512,6 +659,10 @@ msgstr "出力値"
 msgid "Verify"
 msgstr "検証"
 
+#: public/index.html
+msgid "verify message"
+msgstr "確認メッセージ"
+
 #: public/views/messages_verify.html
 msgid "Verify signed message"
 msgstr "署名済みメッセージを検証"
@@ -520,6 +671,10 @@ msgstr "署名済みメッセージを検証"
 msgid "Version"
 msgstr "バージョン"
 
+#: public/views/statistics.html
+msgid "View Chart"
+msgstr "チャートを見る"
+
 #: public/views/block_list.html public/views/index.html
 msgid "Waiting for blocks..."
 msgstr "ブロックを待っています..."
@@ -527,6 +682,21 @@ msgstr "ブロックを待っています..."
 #: public/views/index.html
 msgid "Waiting for transactions..."
 msgstr "トランザクションを待っています..."
+
+#~ msgid "Charts"
+#~ msgstr "チャート"
+
+#~ msgid "Loading chart..."
+#~ msgstr "チャートを読み込んでいます..."
+
+#~ msgid "Select a Chart"
+#~ msgstr "チャートを選択"
+
+#~ msgid "Follow the guide"
+#~ msgstr "ガイドに従ってください"
+
+#~ msgid "PSA for Pool Operators:"
+#~ msgstr "プール運営者のための公共サービスアナウンス："
 
 #~ msgid ""
 #~ "<strong>insight</strong>  is an <a href=\"http://live.insight.is/\" "
@@ -555,9 +725,6 @@ msgstr "トランザクションを待っています..."
 
 #~ msgid "About"
 #~ msgstr "はじめに"
-
-#~ msgid "Best Block"
-#~ msgstr "最良ブロック"
 
 #~ msgid "Bytes Serialized"
 #~ msgstr "シリアライズ後の容量 (バイト)"
@@ -597,12 +764,6 @@ msgstr "トランザクションを待っています..."
 
 #~ msgid "BlockHash"
 #~ msgstr "ブロックのハッシュ値"
-
-#~ msgid "Blocks <br> mined on:"
-#~ msgstr "ブロック <br> 採掘日"
-
-#~ msgid "Coinbase"
-#~ msgstr "コインベース"
 
 #~ msgid "Hash"
 #~ msgstr "ハッシュ値"
