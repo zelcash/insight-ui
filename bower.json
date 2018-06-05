@@ -1,6 +1,6 @@
 {
-  "name": "insight",
-  "version": "0.0.1",
+  "name": "insight-ui",
+  "version": "1.0.1",
   "dependencies": {
     "angular": "~1.2.13",
     "angular-resource": "~1.2.13",
