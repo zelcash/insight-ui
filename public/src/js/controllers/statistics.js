@@ -42,8 +42,8 @@ function($scope, $routeParams, Statistics, StatisticsByDaysTransactions, Statist
 		self.difficulty = 0;
 		self.networkhashps = 0;
 		self.totalsupply = 0;
-		
-		
+
+
 		var statisticChart = new StatisticChart(self.chartDays);
 		self.chartOptions = statisticChart.chartOptions;
 
