@@ -28,7 +28,7 @@ npm-debug.log
 
 .DS_Store
 public/lib/*
-!public/lib/chartjs-plugin-stacked100/*
+!public/lib/chartjs-plugin-stacked100/
 db/txs/*
 db/txs
 db/testnet/txs/*
