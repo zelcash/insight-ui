@@ -25,21 +25,21 @@ angular.module('insight.statistics')
 			days: '@days'
 		});
 	})
-  .factory('StatisticsByDaysSupply', function($resource, $window) {
+	.factory('StatisticsByDaysSupply', function($resource, $window) {
 
-    return $resource($window.apiPrefix + '/statistics/supply', {
-      days: '@days'
-    });
-  })
+		return $resource($window.apiPrefix + '/statistics/supply', {
+			days: '@days'
+		});
+	})
 	.factory('Statistics24Hours', function($resource, $window) {
 
 		return $resource($window.apiPrefix + '/statistics/total');
 	})
-  .factory('StatisticsTotalSupply', function($resource, $window) {
+	.factory('StatisticsTotalSupply', function($resource, $window) {
 
 		return $resource($window.apiPrefix + '/statistics/total-supply?format=object', {
-    });
-  })
+		});
+	})
 	.factory('StatisticsBalanceIntervals', function($resource, $window) {
 
 			return $resource($window.apiPrefix + '/statistics/balance-intervals');
