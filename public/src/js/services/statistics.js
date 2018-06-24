@@ -31,6 +31,12 @@ angular.module('insight.statistics')
 			days: '@days'
 		});
 	})
+	.factory('StatisticsByDatePools', function($resource, $window) {
+
+		return $resource($window.apiPrefix + '/statistics/pools', {
+			date: '@date'
+		});
+	})
 	.factory('Statistics24Hours', function($resource, $window) {
 
 		return $resource($window.apiPrefix + '/statistics/total');

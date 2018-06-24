@@ -23,13 +23,14 @@ angular.module('insight',[
   'insight.search',
   'insight.chart',
   'insight.charts',
-  'insight.statistics',
   'insight.markets',
   'insight.status',
   'insight.connection',
   'insight.currency',
   'insight.messages',
-  'ngclipboard'
+  'ngclipboard',
+  'insight.pools',
+  'insight.pool'
 
 ]);
 
@@ -41,6 +42,8 @@ angular.module('insight.address', []);
 angular.module('insight.search', []);
 angular.module('insight.charts', []);
 angular.module('insight.chart', []);
+angular.module('insight.pools', [ 'chart.js' ]);
+angular.module('insight.pool', []);
 angular.module('insight.markets', []);
 angular.module('insight.chart', []);
 angular.module('insight.richList', []);

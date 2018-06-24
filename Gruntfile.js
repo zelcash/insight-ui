@@ -51,7 +51,8 @@ module.exports = function(grunt) {
               'public/lib/moment/lang/es.js',
               'public/lib/numeral/min/numeral.min.js',
               'public/lib/chart.js/dist/Chart.min.js',
-			        'public/lib/bignumber.js/bignumber.min.js'
+			  'public/lib/chartjs-plugin-stacked100/src/index.js',
+			  'public/lib/bignumber.js/bignumber.min.js',
             ],
         dest: 'public/js/vendors.js'
       },

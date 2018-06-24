@@ -1,0 +1,30 @@
+<div data-ng-include src="'views/includes/connection.html'"></div>
+<div class="box" ng-controller="PoolsController as PC" ng-init="PC.init()">
+    <div class="col-xs-12 col-md-122 col-gray">
+		<div class="heading margin1 heading-width-900">
+			<h1 class="heading__title" translate>Ravencoin Pools</h1>
+			<div class="heading__sm">
+				<h5 class="heading__smLabeled fsz-21" translate>
+					The Pools on the network.
+				</h5>
+			</div>
+		</div>
+
+		<div class="section-charts">
+				<div class="">
+					<div class="">
+						<canvas id="horizontalBar"
+								class="chart chart-horizontalBar"
+								chart-data="PC.chartOptions.data"
+								chart-type="type"
+								chart-labels="PC.chartOptions.labels"
+								chart-series="PC.chartOptions.series"
+								chart-options="PC.chartOptions.options"
+								chart-dataset-override="PC.chartOptions.datasetOverride"
+								height="115">
+						</canvas>
+					</div>
+				</div>
+		</div>
+	</div>
+</div>
