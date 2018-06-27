@@ -24,7 +24,7 @@
 			  <td>{{p.address}}</a></td>
 			  <td class="text-right">{{p.protocol}}</td>
 			  <td class="text-right">{{p.version}}</td>
-			  <td class="text-right"><span data-ng-show="p.uptime.Days">{{p.uptime.Days}} days</span><span data-ng-if=" (p.uptime.Hours) || (p.uptime.Days) "> {{p.uptime.Hours}} hrs </span><span data-ng-if=" (p.uptime.Hours) || (p.uptime.Days) || (p.uptime.Minutes) "> {{p.uptime.Minutes}} mins</span> {{p.uptime.Seconds}} secs</td>
+			  <td class="text-right"><span data-ng-show="p.uptime.Days" translate>{{p.uptime.Days}} days </span>&nbsp;<span data-ng-if=" (p.uptime.Hours) || (p.uptime.Days) " translate> {{p.uptime.Hours}} hrs </span>&nbsp;<span data-ng-if=" (p.uptime.Hours) || (p.uptime.Days) || (p.uptime.Minutes) " translate> {{p.uptime.Minutes}} mins </span>&nbsp;<span translate> {{p.uptime.Seconds}} secs </span></td>
 			</tr>
 			</tbody>
 		</table>
