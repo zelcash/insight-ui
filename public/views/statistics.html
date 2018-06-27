@@ -5,7 +5,32 @@
           <span translate>Ravencoin Statistics for the last 24 hours</span>
         </h1>
 	</div>
-
+	<div class="col-xs-12 col-md-122 col-gray">
+		<div class="section__heading text-center">
+			<h2 class="section__title" translate>Pools</h2>
+		</div>
+		<div class="transactionsStats">
+			<table class="table table-hover">
+				<tbody>
+					<tr>
+						<td translate>Total Transaction Fees:</td>
+						<td class="text-left">{{ $root.currency.getConvertion(SC.statsTotal24.transaction_fees / 100000000) }}</td>
+						<td class="text-right"><a href="stats/fees/60" class="btn-copy" translate>View Chart</a></td>
+					</tr>
+					<tr>
+						<td translate>Number of Transactions:</td>
+						<td class="text-left">{{ SC.statsTotal24.number_of_transactions }}</td>
+						<td class="text-right"><a href="stats/transactions/60" class="btn-copy" translate>View Chart</a></td>
+					</tr>
+					<tr>
+						<td translate>Total Output Volume:</td>
+						<td class="text-left">{{ $root.currency.getConvertion(SC.statsTotal24.outputs_volume / 100000000) }}</td>
+						<td class="text-right"><a href="stats/outputs/60" class="btn-copy" translate>View Chart</a></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
 	<div class="section-statsWrap">
 		<div class="col-xs-12 col-md-66 col-gray">
 			<div class="section section-stats">
@@ -21,7 +46,7 @@
 						<tr>
 							<td translate>Time Between Blocks:</td>
 							<td class="text-right"><span>{{ (SC.statsTotal24.time_between_blocks / 60) | numeraljs : '0.[00]' }}</span>&nbsp;<span translate> minutes</span></td>
-						</tr>	
+						</tr>
 						<tr>
 							<td translate>Ravencoin Mined:</td>
 							<td class="text-right">{{ $root.currency.getConvertion(SC.statsTotal24.mined_currency_amount / 100000000) }}</td>
@@ -104,7 +129,7 @@
 					<tr>
 						<td translate>Current Network Hashrate</td>
 						<td class="text-left">{{ SC.networkhashps / 1000000000000 | numeraljs : '0,0.000' }} TH/s</td>
-						<td class="text-right"></td>
+						<td class="text-right"><a href="stats/nethash/60" class="btn-copy" translate>View Chart</a></td>
 					</tr>
 				</tbody>
 			</table>

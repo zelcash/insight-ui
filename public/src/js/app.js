@@ -42,7 +42,7 @@ angular.module('insight.address', []);
 angular.module('insight.search', []);
 angular.module('insight.charts', []);
 angular.module('insight.chart', []);
-angular.module('insight.pools', [ 'chart.js' ]);
+angular.module('insight.pools', [ 'chart.js', 'ngNumeraljs' ]);
 angular.module('insight.pool', []);
 angular.module('insight.markets', []);
 angular.module('insight.chart', []);

@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('insight.statistics').controller('StatisticsController',
-function($scope, $routeParams, StatisticsByDaysTransactions, StatisticsByDaysOutputs, StatisticsByDaysFees, StatisticsByDaysDifficulty, Statistics24Hours, gettextCatalog, $filter, Constants, StatisticChart, MarketsInfo, MiningInfo, StatisticsTotalSupply) {
+function($scope, $routeParams, StatisticsByDaysTransactions, StatisticsByDaysOutputs, StatisticsByDaysNetHash, StatisticsByDaysFees, StatisticsByDaysDifficulty, Statistics24Hours, gettextCatalog, $filter, Constants, StatisticChart, MarketsInfo, MiningInfo, StatisticsTotalSupply) {
 
 	var self = this,
 		factories = {
@@ -20,6 +20,10 @@ function($scope, $routeParams, StatisticsByDaysTransactions, StatisticsByDaysOut
 			'difficulty' : {
 				factory : StatisticsByDaysDifficulty,
 				field : 'sum'
+			},
+			'nethash' : {
+				factory : StatisticsByDaysNetHash,
+				field : 'sum'
 			}
 		};
 
@@ -27,8 +31,8 @@ function($scope, $routeParams, StatisticsByDaysTransactions, StatisticsByDaysOut
 			fees: gettextCatalog.getString('The daily average of fees paid to miners per transaction.'),
 			transactions: gettextCatalog.getString('The number of daily confirmed RVN transactions.'),
 			outputs: gettextCatalog.getString('The total value of all transaction outputs per day (includes coins returned to the sender as change).'),
-			difficulty: gettextCatalog.getString('A relative measure of how difficult it is to find a new block. The difficulty is adjusted periodically as a function of how much hashing power has been deployed by the network of miners.')
-
+			difficulty: gettextCatalog.getString('A relative measure of how difficult it is to find a new block. The difficulty is adjusted periodically as a function of how much hashing power has been deployed by the network of miners.'),
+			nethash: gettextCatalog.getString('The daily average Global Network Hashrate.')
 		};
 
 		self.chartDays = $routeParams.days;

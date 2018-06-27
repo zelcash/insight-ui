@@ -31,11 +31,15 @@ angular.module('insight.statistics')
 			days: '@days'
 		});
 	})
+	.factory('StatisticsByDaysNetHash', function($resource, $window) {
+
+		return $resource($window.apiPrefix + '/statistics/network-hash', {
+			days: '@days'
+		});
+	})
 	.factory('StatisticsByDatePools', function($resource, $window) {
 
-		return $resource($window.apiPrefix + '/statistics/pools', {
-			date: '@date'
-		});
+		return $resource($window.apiPrefix + '/statistics/pools');
 	})
 	.factory('Statistics24Hours', function($resource, $window) {
 

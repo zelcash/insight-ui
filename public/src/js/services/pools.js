@@ -39,7 +39,7 @@ angular.module('insight.pool')
                         }
                     },
 					legend: {
-						display: true,
+						display: false,
 						position: 'bottom',
 						labels: {
 							    fontColor: '#4700cc',
