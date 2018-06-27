@@ -19,6 +19,26 @@ msgstr "(入力は未検証です)"
 msgid "(the top 200 richest addresses)"
 msgstr "（上位200の最も豊かなアドレス）"
 
+#: public/views/network.html
+msgid "{{p.uptime.Days}} days"
+msgstr "{{p.uptime.Days}} days"
+
+#: public/views/network.html
+msgid "{{p.uptime.Hours}} hrs"
+msgstr "{{p.uptime.Hours}} hrs"
+
+#: public/views/network.html
+msgid "{{p.uptime.Minutes}} mins"
+msgstr "{{p.uptime.Minutes}} mins"
+
+#: public/views/network.html
+msgid "{{p.uptime.Seconds}} secs"
+msgstr "{{p.uptime.Seconds}} secs"
+
+#: public/views/pools.html
+msgid "# of Blocks Found"
+msgstr "見つかったブロック数"
+
 #: public/views/rich_list.html
 msgid "% Addresses"
 msgstr "％アドレス"
@@ -26,6 +46,10 @@ msgstr "％アドレス"
 #: public/views/rich_list.html
 msgid "% coins"
 msgstr "％コイン"
+
+#: public/views/pools.html
+msgid "% of Total Blocks"
+msgstr "合計ブロックの割合"
 
 #: public/views/rich_list.html
 msgid "$USD"
@@ -46,7 +70,7 @@ msgstr ""
 "的に調整されます。"
 
 #: public/views/address.html public/views/messages_verify.html
-#: public/views/rich_list.html
+#: public/views/network.html public/views/rich_list.html
 msgid "Address"
 msgstr "アドレス"
 
@@ -89,6 +113,14 @@ msgstr "ブロック"
 #: public/views/block.html
 msgid "Block Reward"
 msgstr "ブロック報酬"
+
+#: public/views/statistics.html
+msgid "Block Share last 24 hours:"
+msgstr "過去24時間をブロックする："
+
+#: public/views/statistics.html
+msgid "Block Share last hour:"
+msgstr "ブロック共有前の時間："
 
 #: public/views/statistics.html
 msgid "Block Summary"
@@ -151,6 +183,14 @@ msgstr "検証数"
 msgid "Conn"
 msgstr "接続数"
 
+#: public/views/network.html
+msgid "Connected Nodes:"
+msgstr "接続されたノード："
+
+#: public/views/network.html
+msgid "Connection Duration"
+msgstr "接続時間"
+
 #: public/views/status.html
 msgid "Connections to other nodes"
 msgstr "他ノードへの接続"
@@ -190,6 +230,10 @@ msgstr "寄付"
 #: public/views/transaction/tx.html
 msgid "Double spent attempt detected. From tx:"
 msgstr "二重支払い攻撃をこのトランザクションから検知しました："
+
+#: public/views/pools.html
+msgid "Effective Hashrate"
+msgstr "効果的なハシレート"
 
 #: public/views/messages_verify.html
 msgid "Error message:"
@@ -263,6 +307,10 @@ msgstr "直前のブロック"
 #: public/views/status.html
 msgid "Last Block Hash (ravend)"
 msgstr "最後のブロックハッシュ（ravend）"
+
+#: public/views/block_list.html
+msgid "Lastest block from date"
+msgstr "最新のブロック日付"
 
 #: public/views/index.html
 msgid "Latest Blocks"
@@ -373,6 +421,10 @@ msgstr "トランザクション数"
 msgid "Node Information"
 msgstr "ノード情報"
 
+#: public/views/dummy-translations.html
+msgid "Nodes"
+msgstr "ノード"
+
 #: public/views/block.html
 msgid "Number Of Transactions"
 msgstr "トランザクション数"
@@ -381,13 +433,33 @@ msgstr "トランザクション数"
 msgid "Number of Transactions:"
 msgstr "トランザクション数："
 
+#: public/views/block_list.html
+msgid "Older blocks from this date"
+msgstr "この日から古いブロック"
+
 #: public/views/transaction.html
 msgid "Output"
 msgstr "出力"
 
+#: public/views/statistics.html
+msgid "Percent of total(blocks found)"
+msgstr "合計のパーセント（見つかったブロック）"
+
+#: public/views/pools.html
+msgid "Pool Name"
+msgstr "プール名"
+
+#: public/views/dummy-translations.html
+msgid "Pools"
+msgstr "プール"
+
 #: public/views/block.html
 msgid "Previous Block"
 msgstr "前のブロック"
+
+#: public/views/network.html
+msgid "Protocol"
+msgstr "プロトコル"
 
 #: public/views/status.html
 msgid "Protocol version"
@@ -420,6 +492,14 @@ msgstr "Ravencoin 分布"
 #: public/views/statistics.html
 msgid "Ravencoin Mined:"
 msgstr "Ravencoin 鉱山："
+
+#: public/views/pools.html
+msgid "Ravencoin Pools"
+msgstr "Ravencoinプール"
+
+#: public/views/statistics.html
+msgid "Ravencoin Pools Stats"
+msgstr "Ravencoinプール統計"
 
 #: public/views/statistics.html
 msgid "Ravencoin Statistics for the last 24 hours"
@@ -667,7 +747,7 @@ msgstr "確認メッセージ"
 msgid "Verify signed message"
 msgstr "署名済みメッセージを検証"
 
-#: public/views/block.html public/views/status.html
+#: public/views/block.html public/views/network.html public/views/status.html
 msgid "Version"
 msgstr "バージョン"
 
@@ -678,6 +758,14 @@ msgstr "チャートを見る"
 #: public/views/block_list.html public/views/index.html
 msgid "Waiting for blocks..."
 msgstr "ブロックを待っています..."
+
+#: public/views/network.html
+msgid "Waiting for nodes..."
+msgstr "ノードを待っています..."
+
+#: public/views/pools.html
+msgid "Waiting for pools..."
+msgstr "プールを待っています..."
 
 #: public/views/index.html
 msgid "Waiting for transactions..."

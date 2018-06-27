@@ -21,6 +21,26 @@ msgstr "(Вход неподтвержденный)"
 msgid "(the top 200 richest addresses)"
 msgstr "(лучшие 200 самых богатых адресов)"
 
+#: public/views/network.html
+msgid "{{p.uptime.Days}} days"
+msgstr "{{p.uptime.Days}} days"
+
+#: public/views/network.html
+msgid "{{p.uptime.Hours}} hrs"
+msgstr "{{p.uptime.Hours}} hrs"
+
+#: public/views/network.html
+msgid "{{p.uptime.Minutes}} mins"
+msgstr "{{p.uptime.Minutes}} mins"
+
+#: public/views/network.html
+msgid "{{p.uptime.Seconds}} secs"
+msgstr "{{p.uptime.Seconds}} secs"
+
+#: public/views/pools.html
+msgid "# of Blocks Found"
+msgstr "Количество найденных блоков"
+
 #: public/views/rich_list.html
 msgid "% Addresses"
 msgstr "% Адреса"
@@ -28,6 +48,10 @@ msgstr "% Адреса"
 #: public/views/rich_list.html
 msgid "% coins"
 msgstr "% монет"
+
+#: public/views/pools.html
+msgid "% of Total Blocks"
+msgstr "% от общего количества блоков"
 
 #: public/views/rich_list.html
 msgid "$USD"
@@ -48,7 +72,7 @@ msgstr ""
 "развернуто сетью шахтеров."
 
 #: public/views/address.html public/views/messages_verify.html
-#: public/views/rich_list.html
+#: public/views/network.html public/views/rich_list.html
 msgid "Address"
 msgstr "Адрес"
 
@@ -91,6 +115,14 @@ msgstr "блок"
 #: public/views/block.html
 msgid "Block Reward"
 msgstr "Награда за блок"
+
+#: public/views/statistics.html
+msgid "Block Share last 24 hours:"
+msgstr "Блокировать Последние 24 часа:"
+
+#: public/views/statistics.html
+msgid "Block Share last hour:"
+msgstr "Блокировать Доля в последний час:"
 
 #: public/views/statistics.html
 msgid "Block Summary"
@@ -152,7 +184,15 @@ msgstr "Подтверждения"
 
 #: public/views/includes/header.html
 msgid "Conn"
-msgstr "соединение"
+msgstr "Conn"
+
+#: public/views/network.html
+msgid "Connected Nodes:"
+msgstr "Связанные узлы:"
+
+#: public/views/network.html
+msgid "Connection Duration"
+msgstr "Продолжительность соединения"
 
 #: public/views/status.html
 msgid "Connections to other nodes"
@@ -193,6 +233,10 @@ msgstr "Пожертвования"
 #: public/views/transaction/tx.html
 msgid "Double spent attempt detected. From tx:"
 msgstr "Обнаружена обнаруженная двойная попытка. Из tx:"
+
+#: public/views/pools.html
+msgid "Effective Hashrate"
+msgstr "Эффективный хешрат"
 
 #: public/views/messages_verify.html
 msgid "Error message:"
@@ -266,6 +310,10 @@ msgstr "Последний блок"
 #: public/views/status.html
 msgid "Last Block Hash (ravend)"
 msgstr "Последний блочный хэш (ravend)"
+
+#: public/views/block_list.html
+msgid "Lastest block from date"
+msgstr "Последний блок с даты"
 
 #: public/views/index.html
 msgid "Latest Blocks"
@@ -376,6 +424,10 @@ msgstr "Количество транзакций"
 msgid "Node Information"
 msgstr "Информация об узле"
 
+#: public/views/dummy-translations.html
+msgid "Nodes"
+msgstr "узлы"
+
 #: public/views/block.html
 msgid "Number Of Transactions"
 msgstr "Количество транзакций"
@@ -384,13 +436,33 @@ msgstr "Количество транзакций"
 msgid "Number of Transactions:"
 msgstr "Количество транзакций:"
 
+#: public/views/block_list.html
+msgid "Older blocks from this date"
+msgstr "Старые блоки с этой даты"
+
 #: public/views/transaction.html
 msgid "Output"
 msgstr "Вывод"
 
+#: public/views/statistics.html
+msgid "Percent of total(blocks found)"
+msgstr "Процент от общего числа (найденные блоки)"
+
+#: public/views/pools.html
+msgid "Pool Name"
+msgstr "Имя пула"
+
+#: public/views/dummy-translations.html
+msgid "Pools"
+msgstr "бассейны"
+
 #: public/views/block.html
 msgid "Previous Block"
 msgstr "Предыдущий блок"
+
+#: public/views/network.html
+msgid "Protocol"
+msgstr "протокол"
 
 #: public/views/status.html
 msgid "Protocol version"
@@ -423,6 +495,14 @@ msgstr "Ravencoin распределение"
 #: public/views/statistics.html
 msgid "Ravencoin Mined:"
 msgstr "Ravencoin Заминированный:"
+
+#: public/views/pools.html
+msgid "Ravencoin Pools"
+msgstr "Ravencoin бассейны"
+
+#: public/views/statistics.html
+msgid "Ravencoin Pools Stats"
+msgstr "Ravencoin Статистика пулов"
 
 #: public/views/statistics.html
 msgid "Ravencoin Statistics for the last 24 hours"
@@ -673,7 +753,7 @@ msgstr "проверить сообщение"
 msgid "Verify signed message"
 msgstr "Подтвердить подписанное сообщение"
 
-#: public/views/block.html public/views/status.html
+#: public/views/block.html public/views/network.html public/views/status.html
 msgid "Version"
 msgstr "Версия"
 
@@ -684,6 +764,14 @@ msgstr "Просмотр диаграммы"
 #: public/views/block_list.html public/views/index.html
 msgid "Waiting for blocks..."
 msgstr "Ожидание блоков ..."
+
+#: public/views/network.html
+msgid "Waiting for nodes..."
+msgstr "Ожидание узлов ..."
+
+#: public/views/pools.html
+msgid "Waiting for pools..."
+msgstr "Ожидание бассейнов ..."
 
 #: public/views/index.html
 msgid "Waiting for transactions..."
