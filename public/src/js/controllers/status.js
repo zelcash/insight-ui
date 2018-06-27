@@ -1,9 +1,9 @@
 'use strict';
 
 angular.module('insight.status').controller('StatusController',
-  function($scope, $routeParams, $location, Global, Status, Sync, getSocket) {
+  function($scope, $routeParams, $location, Global, Status, Sync, Peers, getSocket) {
     $scope.global = Global;
-
+	$scope.loading = false;
     $scope.getStatus = function(q) {
       Status.get({
           q: 'get' + q
@@ -32,7 +32,7 @@ angular.module('insight.status').controller('StatusController',
         _onSyncUpdate(sync);
       });
     };
-    
+
     var socket = getSocket($scope);
     socket.on('connect', function() {
       _startSocket();
@@ -50,6 +50,15 @@ angular.module('insight.status').controller('StatusController',
           $scope.sync = {
             error: err
           };
+        });
+    };
+	$scope.getPeers = function() {
+      $scope.loading = true;
+
+	  Peers.get({},
+        function(res) {
+		$scope.loading = false;
+		$scope.peers = res.peerInfo;
         });
     };
   });

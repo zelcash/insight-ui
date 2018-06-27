@@ -3862,12 +3862,14 @@ select[multiple].input-group-sm>.form-control,select[multiple].input-group-sm>.i
 .navbar-collapse.in {
     overflow-y: auto
 }
+
 @media (min-width: 991px) {
     .navbar-header {
-        float: left;
-        margin-left: 0px!important
+        float:left;
+        margin-left: 0!important
     }
 }
+
 @media (min-width: 798px) {
     .navbar {
         border-radius:4px
@@ -3875,7 +3877,7 @@ select[multiple].input-group-sm>.form-control,select[multiple].input-group-sm>.i
 
     .navbar-header {
         float: left;
-        margin-left: -66px;
+        margin-left: -66px
     }
 
     .navbar-collapse {
@@ -4104,12 +4106,12 @@ select[multiple].input-group-sm>.form-control,select[multiple].input-group-sm>.i
 }
 
 .navbar-form {
-    padding: 10px 15px;
+    padding: 5px 5px;
     border-top: 1px solid transparent;
     border-bottom: 1px solid transparent;
     -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.1),0 1px 0 rgba(255,255,255,.1);
     box-shadow: inset 0 1px 0 rgba(255,255,255,.1),0 1px 0 rgba(255,255,255,.1);
-    margin: 8px -15px
+    margin: 8px -15px;
 }
 
 @media (min-width: 798px) {
@@ -6253,10 +6255,10 @@ body,html {
 }
 
 .navbar-default .navbar-nav>li>a {
-    padding-right: 10px;
-    padding-left: 10px;
+    padding-right: 5px;
+    padding-left: 5px;
     color: #fff;
-    cursor: pointer
+    cursor: pointer;
 }
 
 .navbar-default .navbar-nav>.active>a,.navbar-default .navbar-nav>.active>a:focus {
@@ -7166,4 +7168,8 @@ a.v_highlight_more {
         top:5px;
         margin-top: 5px
     }
+}
+
+#adjust-left .dropdown-menu {
+    margin: 2px -135px
 }

@@ -20,6 +20,12 @@ angular.module('insight.system').controller('HeaderController',
 	  'title': 'Rich List',
       'link': 'rich-list'
 	}, {
+	  'title': 'Pools',
+      'link': 'pools'
+	}, {
+	  'title': 'Nodes',
+      'link': 'network'
+	}, {
       'title': 'Status',
       'link': 'status'
     }];

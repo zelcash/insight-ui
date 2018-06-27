@@ -64,11 +64,25 @@ angular.module('insight').config(function($routeProvider) {
 		  controller: 'StatisticsController',
 		  templateUrl: 'views/chart.html',
 		  title: 'Statistics'
-	  }).
+	 }).
+	when('/pools', {
+			controller: 'PoolsController',
+			templateUrl: 'views/pools.html',
+			title: 'Pools'
+	}).
+	when('/pools/:date', {
+			controller: 'PoolsController',
+			templateUrl: 'views/pools.html',
+			title: 'Pools'
+	}).
     when('/status', {
       templateUrl: 'views/status.html',
       title: 'Status'
     }).
+		when('/network', {
+			templateUrl: 'views/network.html',
+			title: 'Network'
+		}).
     when('/rich-list', {
         controller: 'RichListController',
         templateUrl: 'views/rich_list.html',

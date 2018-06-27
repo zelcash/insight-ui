@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('insight.statistics').controller('StatisticsController',
-function($scope, $routeParams, Statistics, StatisticsByDaysTransactions, StatisticsByDaysOutputs, StatisticsByDaysFees, StatisticsByDaysDifficulty, Statistics24Hours, gettextCatalog, $filter, Constants, StatisticChart, MarketsInfo, MiningInfo, StatisticsTotalSupply) {
+function($scope, $routeParams, StatisticsByDaysTransactions, StatisticsByDaysOutputs, StatisticsByDaysNetHash, StatisticsByDaysFees, StatisticsByDaysDifficulty, PoolDayChart, Statistics24Hours, Statistics1Hour, gettextCatalog, $filter, Constants, StatisticChart, MarketsInfo, MiningInfo, StatisticsTotalSupply) {
 
 	var self = this,
 		factories = {
@@ -20,6 +20,10 @@ function($scope, $routeParams, Statistics, StatisticsByDaysTransactions, Statist
 			'difficulty' : {
 				factory : StatisticsByDaysDifficulty,
 				field : 'sum'
+			},
+			'nethash' : {
+				factory : StatisticsByDaysNetHash,
+				field : 'sum'
 			}
 		};
 
@@ -27,8 +31,8 @@ function($scope, $routeParams, Statistics, StatisticsByDaysTransactions, Statist
 			fees: gettextCatalog.getString('The daily average of fees paid to miners per transaction.'),
 			transactions: gettextCatalog.getString('The number of daily confirmed RVN transactions.'),
 			outputs: gettextCatalog.getString('The total value of all transaction outputs per day (includes coins returned to the sender as change).'),
-			difficulty: gettextCatalog.getString('A relative measure of how difficult it is to find a new block. The difficulty is adjusted periodically as a function of how much hashing power has been deployed by the network of miners.')
-
+			difficulty: gettextCatalog.getString('A relative measure of how difficult it is to find a new block. The difficulty is adjusted periodically as a function of how much hashing power has been deployed by the network of miners.'),
+			nethash: gettextCatalog.getString('The daily average Global Network Hashrate.')
 		};
 
 		self.chartDays = $routeParams.days;
@@ -42,8 +46,8 @@ function($scope, $routeParams, Statistics, StatisticsByDaysTransactions, Statist
 		self.difficulty = 0;
 		self.networkhashps = 0;
 		self.totalsupply = 0;
-		
-		
+
+
 		var statisticChart = new StatisticChart(self.chartDays);
 		self.chartOptions = statisticChart.chartOptions;
 
@@ -58,7 +62,7 @@ function($scope, $routeParams, Statistics, StatisticsByDaysTransactions, Statist
 			chart.update();
 		}
 	});
-
+	$scope.type = 'StackedBar';
 	self.getDifficulties = function(){
         statisticChart.load(factories[ $routeParams.type ].factory, factories[ $routeParams.type ].field, $routeParams.type);
 	};
@@ -70,7 +74,15 @@ function($scope, $routeParams, Statistics, StatisticsByDaysTransactions, Statist
 			self.statsTotal24 = response;
 		});
 
-        MarketsInfo.get({}, function(response) {
+		var pools1hChart = new PoolDayChart();
+		self.pools1hOptions = pools1hChart.chartOptions;
+		pools1hChart.load(Statistics1Hour, 'blocks_found', 'Pools');
+
+		var pools24hChart = new PoolDayChart();
+		self.pools24hOptions = pools24hChart.chartOptions;
+		pools24hChart.load(Statistics24Hours, 'blocks_found', 'Pools');
+
+		    MarketsInfo.get({}, function(response) {
             if (response) {
 				self.marketPrice = response.price_usd;
 				self.marketBtcPrice = response.price_btc;
