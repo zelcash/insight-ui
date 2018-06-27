@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('insight.statistics').controller('StatisticsController',
-function($scope, $routeParams, StatisticsByDaysTransactions, StatisticsByDaysOutputs, StatisticsByDaysNetHash, StatisticsByDaysFees, StatisticsByDaysDifficulty, Statistics24Hours, gettextCatalog, $filter, Constants, StatisticChart, MarketsInfo, MiningInfo, StatisticsTotalSupply) {
+function($scope, $routeParams, StatisticsByDaysTransactions, StatisticsByDaysOutputs, StatisticsByDaysNetHash, StatisticsByDaysFees, StatisticsByDaysDifficulty, PoolDayChart, Statistics24Hours, Statistics1Hour, gettextCatalog, $filter, Constants, StatisticChart, MarketsInfo, MiningInfo, StatisticsTotalSupply) {
 
 	var self = this,
 		factories = {
@@ -62,7 +62,7 @@ function($scope, $routeParams, StatisticsByDaysTransactions, StatisticsByDaysOut
 			chart.update();
 		}
 	});
-
+	$scope.type = 'StackedBar';
 	self.getDifficulties = function(){
         statisticChart.load(factories[ $routeParams.type ].factory, factories[ $routeParams.type ].field, $routeParams.type);
 	};
@@ -74,7 +74,15 @@ function($scope, $routeParams, StatisticsByDaysTransactions, StatisticsByDaysOut
 			self.statsTotal24 = response;
 		});
 
-        MarketsInfo.get({}, function(response) {
+		var pools1hChart = new PoolDayChart();
+		self.pools1hOptions = pools1hChart.chartOptions;
+		pools1hChart.load(Statistics1Hour, 'blocks_found', 'Pools');
+
+		var pools24hChart = new PoolDayChart();
+		self.pools24hOptions = pools24hChart.chartOptions;
+		pools24hChart.load(Statistics24Hours, 'blocks_found', 'Pools');
+
+		    MarketsInfo.get({}, function(response) {
             if (response) {
 				self.marketPrice = response.price_usd;
 				self.marketBtcPrice = response.price_btc;

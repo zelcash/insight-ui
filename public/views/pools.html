@@ -4,6 +4,7 @@
 		<div class="heading margin1 heading-width-900">
 			<h1 class="text-center">
 				<span translate>Ravencoin Pools</span>
+				<small>{{pagination.current}}</small>
 			</h1>
 		</div>
 	<table class="table">
@@ -13,13 +14,13 @@
 		  <a class="btn btn-primary" href="pools/{{pagination.prev}}"><small>&larr; {{pagination.prev}}</small></a>
 		</td>
 
-        <td class="lead text-center m20v col-md-10">
-					{{pagination.current}} UTC
+        <td class="lead text-center m20v col-md-10" id="adjust-left">
 					<a href="#" class="btn btn-primary btn-xs" datepicker-popup show-button-bar="false" data-ng-click="openCalendar($event)" data-ng-model="dt" is-open="opened" data-ng-required="true"><span class="glyphicon glyphicon-calendar"></span></a>
 		</td>
 
         <td class="m50v text-center col-md-1">
 		  <a class="btn btn-primary" href="pools/{{pagination.next}}" data-ng-show="!pagination.isToday"><small>{{pagination.next}} &rarr;</small></a>
+		  <a class="btn btn-primary" style="visibility: hidden" data-ng-show="pagination.isToday"><small>{{pagination.next}} &rarr;</small></a>
 		</td>
 		</tr>
 		</thead>
