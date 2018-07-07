@@ -148,7 +148,8 @@ angular.module('insight.statistics')
 
 				self.chartOptions.labels = [  ];
 
-
+				self.chartOptions.blocks = response.n_blocks_mined
+				
                 self.chartOptions.data = array.map(function(item) {
 
 				return [item[ itemField ]];

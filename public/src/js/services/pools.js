@@ -85,6 +85,7 @@ angular.module('insight.pool')
 
 				self.chartOptions.labels = [  ];
 
+				self.chartOptions.blocks = response.n_blocks_mined
 
                 self.chartOptions.data = array.map(function(item) {
 
