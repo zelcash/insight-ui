@@ -30,7 +30,8 @@ angular.module('insight',[
   'insight.messages',
   'ngclipboard',
   'insight.pools',
-  'insight.pool'
+  'insight.pool',
+  'insight.faucet'
 
 ]);
 
@@ -40,12 +41,12 @@ angular.module('insight.blocks', []);
 angular.module('insight.transactions', []);
 angular.module('insight.address', []);
 angular.module('insight.search', []);
+angular.module('insight.faucet', []);
 angular.module('insight.charts', []);
 angular.module('insight.chart', []);
 angular.module('insight.pools', [ 'chart.js', 'ngNumeraljs' ]);
 angular.module('insight.pool', []);
 angular.module('insight.markets', []);
-angular.module('insight.chart', []);
 angular.module('insight.richList', []);
 angular.module('insight.statistics', [ 'ngNumeraljs' ]);
 angular.module('insight.status', []);
