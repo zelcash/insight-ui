@@ -4,7 +4,7 @@
 <div data-ng-include src="'views/includes/connection.html'"></div>
 <section data-ng-controller="IndexController" data-ng-init="index()">
   <div class="container">
-    <div id="home" class="row">
+	<div id="home" class="row">
       <div class="col-xs-12 col-md-8">
 
         <div id="search-form-mobile" class="visible-xs" data-ng-include src="'views/includes/search.html'"></div>
@@ -65,6 +65,19 @@
         <p><strong class="ng-scope" translate>Donations</strong>&nbsp;<span class="ng-scope" translate>are very much appreciated: RD7yadeCvSDs4fCbEPuHstU3GHbiS7ao9q</span></p>
         <!--<script type="text/javascript" src="https://files.coinmarketcap.com/static/widget/currency.js"></script>
         <div class="coinmarketcap-currency-widget" data-currencyid="2577" data-base="USD" data-secondary="BTC" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-stats="USD" data-statsticker="true"></div>-->
+		<h4>
+		<small>Enter your Testnet wallet address for 550 RVN</small>
+		<div class="text-center">
+            <input type="text" class="form-control" id="verify-message-address"
+                data-ng-model="message.address">
+        </div>
+		<div class="text-center">
+            <button class="btn-copy" translate
+                data-ng-click="verify()" data-ng-disabled="!verifiable()">
+              Submit
+            </button>
+		</div>
+		</h4>
         <div id="powered" class="row">
           <div class="powered-text">
             <small class="text-muted" translate>Ravencoin Community</small>
