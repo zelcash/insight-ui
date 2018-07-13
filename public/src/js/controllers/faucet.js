@@ -29,7 +29,6 @@ angular.module('insight.faucet').controller('FaucetController',
       .error(function(data) {
         $scope.verification.status = 'error';
         $scope.verification.error = data.data.message;
-		console.log('!!!', data);
       });
   };
 
