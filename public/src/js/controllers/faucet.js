@@ -1,10 +1,14 @@
 'use strict';
 
 angular.module('insight.faucet').controller('FaucetController',
-  function($scope, $http) {
+  function($scope, $http, $timeout) {
+  $scope.stopSpam = false;
   $scope.message = {
     address: '',
 
+  };
+  function activateBtn(){
+    $scope.stopSpam = false;
   };
   $scope.verification = {
     status: 'unverified',  // ready|loading|verified|error
@@ -14,10 +18,12 @@ angular.module('insight.faucet').controller('FaucetController',
   };
 
   $scope.verifiable = function() {
-    return ($scope.message.address
+    return ($scope.stopSpam
 	);
   };
   $scope.verify = function() {
+	$scope.stopSpam = true;
+	$timeout(activateBtn, 5000);
     $scope.verification.status = 'loading';
     $scope.verification.address = $scope.message.address;
     $http.get('faucet/withdrawal?address=' + $scope.message.address)

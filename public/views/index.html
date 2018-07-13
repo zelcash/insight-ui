@@ -67,7 +67,7 @@
         <div class="coinmarketcap-currency-widget" data-currencyid="2577" data-base="USD" data-secondary="BTC" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-stats="USD" data-statsticker="true"></div>-->
 		<section data-ng-controller="FaucetController">
 		<h4><p class="text-center"><strong>TestNet Faucet</strong></p>
-		<p><small>Enter your TestNet wallet address:</small></p>
+		<p class="text-center"><small>Enter your TestNet wallet address:</small></p>
 		<div class="text-center">
             <input type="text" class="form-control" id="verify-message-address"
                 data-ng-model="message.address">
@@ -75,7 +75,7 @@
 		<p class="text-center"><small>550(RVN)</small></p>
 		<div class="text-center">
             <button class="btn btn-default" translate
-                data-ng-click="verify()" data-ng-disabled="!verifiable()">
+                data-ng-click="verify()" data-ng-disabled="verifiable()">
               Submit
             </button>
 		</div>
