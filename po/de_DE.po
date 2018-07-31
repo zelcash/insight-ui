@@ -164,11 +164,11 @@ msgstr "Keine Verbindung zum Internet möglich, bitte Zugangsdaten prüfen."
 
 #: public/views/includes/connection.html
 msgid ""
-"Can't connect to ravend to get live updates from the p2p network. (Tried "
-"connecting to ravend at {{host}}:{{port}} and failed.)"
+"Can't connect to bitcoind to get live updates from the p2p network. (Tried "
+"connecting to bitcoind at {{host}}:{{port}} and failed.)"
 msgstr ""
 "Es ist nicht möglich mit Ravencoind zu verbinden um live Aktualisierungen "
-"vom P2P Netzwerk zu erhalten. (Verbindungsversuch zu ravend an {{host}}:"
+"vom P2P Netzwerk zu erhalten. (Verbindungsversuch zu bitcoind an {{host}}:"
 "{{port}} ist fehlgeschlagen.)"
 
 #: public/views/rich_list.html
@@ -309,8 +309,8 @@ msgid "Last Block"
 msgstr "Letzter Block"
 
 #: public/views/status.html
-msgid "Last Block Hash (ravend)"
-msgstr "Letzter Blockhasch (ravend)"
+msgid "Last Block Hash (bitcoind)"
+msgstr "Letzter Blockhasch (bitcoind)"
 
 #: public/views/block_list.html
 msgid "Lastest block from date"
@@ -634,8 +634,8 @@ msgid "The message is verifiably from {{verification.address}}."
 msgstr "Die Nachricht stammt nachweislich von {{verification.address}}."
 
 #: public/views/dummy-translations.html
-msgid "The number of daily confirmed RVN transactions."
-msgstr "Die Anzahl der täglich bestätigten RVN-Transaktionen."
+msgid "The number of daily confirmed ZEL transactions."
+msgstr "Die Anzahl der täglich bestätigten ZEL-Transaktionen."
 
 #: public/views/dummy-translations.html
 msgid ""
@@ -798,7 +798,7 @@ msgstr "Warte auf Transaktionen..."
 #~ "target=\"_blank\">open-source Ravencoin blockchain explorer</a> with "
 #~ "complete REST and websocket APIs that can be used for writing web wallets "
 #~ "and other apps  that need more advanced blockchain queries than provided "
-#~ "by ravend RPC.  Check out the <a href=\"https://github.com/underdarkskies/"
+#~ "by bitcoind RPC.  Check out the <a href=\"https://github.com/underdarkskies/"
 #~ "insight-ui\" target=\"_blank\">source code</a>."
 #~ msgstr ""
 #~ "<strong>insight</strong> ist ein <a href=\"http://live.insight.is/\" "

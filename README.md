@@ -1,25 +1,7 @@
 # Insight UI
 
-A Ravencoin blockchain explorer web application service for [Ravencore Node](https://github.com/underdarkskies/ravencore-node) using the [Insight API](https://github.com/underdarkskies/insight-api).
+A Ravencoin blockchain explorer web application service for [Bitcore Node Zelcash](https://github.com/TheTrunk/bitore-node-zelcash) using the [Insight API](https://github.com/TheTrunk/insight-api).
 
-## Quick Start
-
-Please see the guide at [https://bitcore.io/guides/full-node](https://bitcore.io/guides/full-node) for information about getting a block explorer running. This is only the front-end component of the block explorer, and is packaged together with all of the necessary components in [Ravencore](https://github.com/underdarkskies/ravencore).
-
-## Getting Started
-
-To manually install all of the necessary components, you can run these commands:
-
-```bash
-npm install -g ravencore-node
-ravencore-node create mynode
-cd mynode
-ravencore-node install insight-api
-ravencore-node install insight-ui
-ravencore-node start
-```
-
-Open a web browser to `http://localhost:3001/insight/`
 
 ## Development
 
@@ -70,11 +52,11 @@ compile***.
 
 ## Note
 
-For more details about the [Insight API](https://github.com/underdarkskies/insight-api) configuration and end-points, go to [Insight API GitHub repository](https://github.com/underdarkskies/insight-api).
+For more details about the [Insight API](https://github.com/TheTrunk/insight-api) configuration and end-points, go to [Insight API GitHub repository](https://github.com/TheTrunk/insight-api).
 
 ## Contribute
 
-Contributions and suggestions are welcomed at the [Insight UI GitHub repository](https://github.com/underdarkskies/insight-ui).
+Contributions and suggestions are welcomed at the [Insight UI GitHub repository](https://github.com/TheTrunk/insight-ui).
 
 
 ## License

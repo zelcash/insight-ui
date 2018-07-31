@@ -8,7 +8,7 @@ angular.module('insight.address').controller('AddressController',
     var addrStr = $routeParams.addrStr;
 
     var _startSocket = function() {
-      socket.on('ravend/addresstxid', function(data) {
+      socket.on('bitcoind/addresstxid', function(data) {
         if (data.address === addrStr) {
           $rootScope.$broadcast('tx', data.txid);
           var base = document.querySelector('base');
@@ -16,11 +16,11 @@ angular.module('insight.address').controller('AddressController',
           beep.play();
         }
       });
-      socket.emit('subscribe', 'ravend/addresstxid', [addrStr]);
+      socket.emit('subscribe', 'bitcoind/addresstxid', [addrStr]);
     };
 
     var _stopSocket = function () {
-      socket.emit('unsubscribe', 'ravend/addresstxid', [addrStr]);
+      socket.emit('unsubscribe', 'bitcoind/addresstxid', [addrStr]);
     };
 
     socket.on('connect', function() {

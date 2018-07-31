@@ -162,11 +162,11 @@ msgstr "No se pudo conectar a Internet. Por favor, verifique su conexión."
 
 #: public/views/includes/connection.html
 msgid ""
-"Can't connect to ravend to get live updates from the p2p network. (Tried "
-"connecting to ravend at {{host}}:{{port}} and failed.)"
+"Can't connect to bitcoind to get live updates from the p2p network. (Tried "
+"connecting to bitcoind at {{host}}:{{port}} and failed.)"
 msgstr ""
-"No se pudo conectar a ravend para obtener actualizaciones en vivo de la red "
-"p2p. (Se intentó conectar a ravend de {{host}}:{{port}} y falló.)"
+"No se pudo conectar a bitcoind para obtener actualizaciones en vivo de la red "
+"p2p. (Se intentó conectar a bitcoind de {{host}}:{{port}} y falló.)"
 
 #: public/views/rich_list.html
 msgid "Coins"
@@ -306,8 +306,8 @@ msgid "Last Block"
 msgstr "Último Bloque"
 
 #: public/views/status.html
-msgid "Last Block Hash (ravend)"
-msgstr "Último Bloque Hash (ravend)"
+msgid "Last Block Hash (bitcoind)"
+msgstr "Último Bloque Hash (bitcoind)"
 
 #: public/views/block_list.html
 msgid "Lastest block from date"
@@ -630,8 +630,8 @@ msgid "The message is verifiably from {{verification.address}}."
 msgstr "El mensaje es verificable desde {{Verification. Address}}."
 
 #: public/views/dummy-translations.html
-msgid "The number of daily confirmed RVN transactions."
-msgstr "El número de transacciones RVN confirmadas diariamente."
+msgid "The number of daily confirmed ZEL transactions."
+msgstr "El número de transacciones ZEL confirmadas diariamente."
 
 #: public/views/dummy-translations.html
 msgid ""
@@ -794,7 +794,7 @@ msgstr "Esperando transacciones..."
 #~ "target=\"_blank\">open-source Ravencoin blockchain explorer</a> with "
 #~ "complete REST and websocket APIs that can be used for writing web wallets "
 #~ "and other apps  that need more advanced blockchain queries than provided "
-#~ "by ravend RPC.  Check out the <a href=\"https://github.com/underdarkskies/"
+#~ "by bitcoind RPC.  Check out the <a href=\"https://github.com/underdarkskies/"
 #~ "insight-ui\" target=\"_blank\">source code</a>."
 #~ msgstr ""
 #~ "<strong>insight</strong>  es un <a href=\"http://live.insight.is/\" "

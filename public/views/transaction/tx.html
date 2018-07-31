@@ -20,22 +20,162 @@
   </div>
 </div>
 <div class="row line-mid">
+  <div class="col-md-12">
+    <div class="row" data-ng-if="!tx.vjoinsplit || tx.vjoinsplit.length == 0">
+      <div class="col-md-12 transaction-vin-vout">
+        <div class="ellipsis">
+          <span translate>No JoinSplits</span>
+        </div>
+      </div>
+    </div>
+    <div class="row" data-ng-if="tx.vjoinsplit && tx.vjoinsplit.length != 0">
+       <!-- <<< Simple view -->
+      <div data-ng-if="!itemsExpanded" data-ng-init="currentJSNoExpanded=0; sizeJSNoExpanded=5">
+        <div class="panel panel-default" data-ng-repeat="vjs in tx.vjoinsplit| startFrom:currentJSNoExpanded*sizeJSNoExpanded | limitTo:sizeJSNoExpanded">
+          <div class="panel-body transaction-vin-vout">
+            <div class="col-md-3 col-xs-12">
+              <div class="pull-right btc-value">
+                {{$root.currency.getConvertion(vjs.vpub_old) || vjs.vpub_old + ' ZEL'}}
+              </div>
+              <div class="ellipsis">
+                <span>Public input</span>
+              </div>
+            </div>
+            <div class="col-md-1 col-xs-12">
+              <div class="hidden-xs hidden-sm text-center">
+                <span class="glyphicon glyphicon-chevron-right text-muted"></span>
+              </div>
+              <div class="hidden-md hidden-lg text-center">
+                <span class="glyphicon glyphicon-chevron-down text-muted"></span>
+              </div>
+            </div>
+            <div class="col-md-4 col-xs-12">
+              <div class="ellipsis text-center">
+                <span>JoinSplit [{{vjs.n}}]</span>
+              </div>
+            </div>
+            <div class="col-md-1 col-xs-12">
+              <div class="hidden-xs hidden-sm text-center">
+                <span class="glyphicon glyphicon-chevron-right text-muted"></span>
+              </div>
+              <div class="hidden-md hidden-lg text-center">
+                <span class="glyphicon glyphicon-chevron-down text-muted"></span>
+              </div>
+            </div>
+            <div class="col-md-3 col-xs-12">
+              <div class="pull-right btc-value">
+                {{$root.currency.getConvertion(vjs.vpub_new) || vjs.vpub_new + ' ZEL' }}
+              </div>
+              <div class="ellipsis">
+                <span>Public output</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="showmore_collapse text-left" data-ng-show="tx.vjoinsplit.length > 5" data-ng-class="{ 'hidden': itemsExpanded}">
+          <button type="button" class="btn btn-info btn-sm" ng-hide="sizeJSNoExpanded != tx.vjoinsplit.length" ng-click="currentJSNoExpanded=0; sizeJSNoExpanded=5"><i class="glyphicon glyphicon-chevron-up"></i>
+            <span translate>Show less</span></button>
+          <button type="button" class="btn btn-info btn-sm" ng-hide="currentJSNoExpanded >= tx.vjoinsplit.length/sizeJSNoExpanded - 1" ng-click="currentJSNoExpanded=0; sizeJSNoExpanded=tx.vjoinsplit.length"><i class="glyphicon glyphicon-chevron-down"></i>
+            <span translate>Show more</span></button>
+        </div>
+      </div>
+       <!-- <<< Full view -->
+      <div data-ng-if="itemsExpanded" data-ng-init="currentJSExpanded=0; sizeJSExpanded=(from_vjs) ? tx.vjoinsplit.length : 5; fromVjsCollapsed=(from_vjs)">
+        <div data-ng-repeat="vjs in tx.vjoinsplit| startFrom:currentJSExpanded*sizeJSExpanded | limitTo:sizeJSExpanded" data-ng-if="fromVjsCollapsed ? v_index == vjs.n : 1">
+          <div class="panel panel-default transaction-vin-vout">
+            <div class="panel-body">
+              <div class="col-md-3 col-xs-12">
+                <div class="pull-right btc-value">
+                  {{$root.currency.getConvertion(vjs.vpub_old) || vjs.vpub_old + ' ZEL'}}
+                </div>
+                <div class="ellipsis">
+                  <span translate>Public input</span>
+                </div>
+              </div>
+              <div class="col-md-1 col-xs-12">
+                <div class="hidden-xs hidden-sm text-center">
+                  <span class="glyphicon glyphicon-chevron-right text-muted"></span>
+                </div>
+                <div class="hidden-md hidden-lg text-center">
+                  <span class="glyphicon glyphicon-chevron-down text-muted"></span>
+                </div>
+              </div>
+              <div class="col-md-4 col-xs-12">
+                <div class="ellipsis text-center">
+                  <span>JoinSplit [{{vjs.n}}]</span>
+                </div>
+              </div>
+              <div class="col-md-1 col-xs-12">
+                <div class="hidden-xs hidden-sm text-center">
+                  <span class="glyphicon glyphicon-chevron-right text-muted"></span>
+                </div>
+                <div class="hidden-md hidden-lg text-center">
+                  <span class="glyphicon glyphicon-chevron-down text-muted"></span>
+                </div>
+              </div>
+              <div class="col-md-3 col-xs-12">
+                <div class="pull-right btc-value">
+                  {{$root.currency.getConvertion(vjs.vpub_new) || vjs.vpub_new + ' ZEL' }}
+                </div>
+                <div class="ellipsis">
+                  <span translate>Public output</span>
+                </div>
+              </div>
+            </div> <!-- END OF PANEL BODY -->
+          </div> <!-- END OF PANEL-DEFAULT -->
+        </div>
+        <div class="text-left">
+          <button type="button" class="btn btn-default btn-sm" data-ng-show="(from_vjs) && tx.vjoinsplit.length > 1" data-ng-disabled="fromVjsCollapsed" data-ng-click="currentJSExpanded=0; sizeJSExpanded=tx.vjoinsplit.length;fromVjsCollapsed=1">
+            <span translate>Show input</span> #{{ v_index }}</button>
+          <button type="button" class="btn btn-default btn-sm" data-ng-show="(from_vjs) && tx.vjoinsplit.length > 1" data-ng-disabled="!fromVinCollapsed" data-ng-click="currentJSExpanded=0; sizeJSExpanded=tx.vjoinsplit.length;fromVjsCollapsed=0">
+            <span translate>Show all</span></button>
+        </div>
+        <div class="showmore_collapse text-left" data-ng-show="tx.vjoinsplit.length > 5 && !fromVjsCollapsed" data-ng-class="{ 'hidden': !itemsExpanded}">
+          <button type="button" class="btn btn-info btn-sm" ng-hide="sizeJSExpanded != tx.vjoinsplit.length" ng-click="currentJSExpanded=0; sizeJSExpanded=5"><i class="glyphicon glyphicon-chevron-up"></i>
+            <span translate>Show less</span></button>
+          <button type="button" class="btn btn-info btn-sm" ng-hide="currentJSExpanded >= tx.vjoinsplit.length/sizeJSExpanded - 1" ng-click="currentJSExpanded=0; sizeJSExpanded=tx.vjoinsplit.length"><i class="glyphicon glyphicon-chevron-down"></i>
+            <span translate>Show more</span></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-6">
+    <div class="hidden-xs hidden-sm text-center">
+      <span class="lead glyphicon glyphicon-chevron-up text-muted"></span>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="hidden-xs hidden-sm text-center">
+      <span class="lead glyphicon glyphicon-chevron-down text-muted"></span>
+    </div>
+  </div>
+</div>
+<div class="row line-mid">
   <div class="col-md-5">
-    <div class="row" data-ng-if="tx.isCoinBase">
+    <div class="row" data-ng-if="tx.vin.length == 0">
+      <div class="col-md-12 transaction-vin-vout">
+        <div class="ellipsis">
+          <span translate>No Inputs</span>
+        </div>
+      </div>
+    </div>
+    <div class="row" data-ng-if="tx.vin.length != 0 && tx.isCoinBase">
       <div class="col-md-12 transaction-vin-vout" data-ng-repeat="vin in tx.vin">
         <div class="ellipsis">
           <span translate>No Inputs (Newly Generated Coins)</span>
         </div>
       </div>
     </div>
-    <div class="row" data-ng-if="!tx.isCoinBase">
+    <div class="row" data-ng-if="tx.vin.length != 0 && !tx.isCoinBase">
 
       <!-- <<< Simple view -->
       <div data-ng-if="!itemsExpanded" data-ng-init="currentInNoExpanded=0; sizeInNoExpanded=5">
         <div class="panel panel-default" data-ng-repeat="vin in tx.vinSimple| startFrom:currentInNoExpanded*sizeInNoExpanded | limitTo:sizeInNoExpanded">
           <div class="panel-body transaction-vin-vout">
             <div class="pull-right rvn-value" data-ng-class="{'text-danger': $root.currentAddr == vin.addr}">
-              {{$root.currency.getConvertion(vin.value) || vin.value + ' RVN'}}
+              {{$root.currency.getConvertion(vin.value) || vin.value + ' ZEL'}}
             </div>
             <div class="ellipsis">
               <span data-ng-show="vin.notAddr">{{vin.addr}}</span>
@@ -68,7 +208,7 @@
           <div class="panel panel-default transaction-vin-vout">
             <div class="panel-body">
               <div class="pull-right rvn-value">
-                {{$root.currency.getConvertion(vin.value) || vin.value + ' RVN'}}
+                {{$root.currency.getConvertion(vin.value) || vin.value + ' ZEL'}}
               </div>
               <div class="ellipsis">
                 <a class="glyphicon glyphicon-chevron-right" href="tx/{{vin.txid}}/>/{{vin.vout}}" title="Outpoint: {{vin.txid}},{{vin.vout}}"></a>
@@ -122,14 +262,21 @@
     </div>
   </div>
   <div class="col-md-6">
-    <div class="row">
+    <div class="row" data-ng-if="tx.vout.length == 0">
+      <div class="col-md-12 transaction-vin-vout">
+        <div class="ellipsis">
+          <span translate>No Outputs</span>
+        </div>
+      </div>
+    </div>
+    <div class="row" data-ng-if="tx.vout.length != 0">
       <!-- Simple view >>> -->
       <div data-ng-if="!itemsExpanded" data-ng-init="currentOutNoExpanded=0; sizeOutNoExpanded=5">
         <div data-ng-repeat="vout in tx.voutSimple| startFrom:currentOutNoExpanded*sizeOutNoExpanded | limitTo:sizeOutNoExpanded">
           <div class="transaction-vin-vout panel panel-default">
             <div class="panel-body">
               <div class="pull-right rvn-value" data-ng-class="{'text-success': $root.currentAddr == vout.addr}">
-                {{$root.currency.getConvertion(vout.value) || vout.value + ' RVN' }}
+                {{$root.currency.getConvertion(vout.value) || vout.value + ' ZEL' }}
                 <span class="text-danger" data-ng-show="vout.isSpent" tooltip="Output is spent" tooltip-placement="left">(S)</span>
                 <span class="text-success" data-ng-show="!vout.isSpent"  tooltip="Output is unspent" tooltip-placement="left">(U)</span>
               </div>
@@ -156,7 +303,7 @@
           <div class="panel panel-default transaction-vin-vout">
             <div class="panel-body">
               <div class="pull-right rvn-value">
-                <span>{{$root.currency.getConvertion(vout.value) || vout.value + ' RVN'}}
+                <span>{{$root.currency.getConvertion(vout.value) || vout.value + ' ZEL'}}
                   <span class="text-success" data-ng-show="!vout.spentTxId" tooltip="Output is unspent" tooltip-placement="left">(U)</span>
                   <a class="glyphicon glyphicon-chevron-right" data-ng-show="vout.spentTxId" href="tx/{{vout.spentTxId}}/</{{vout.spentIndex}}" title="Spent at: {{vout.spentTxId}},{{vout.spentIndex}}"></a>
                 </span>
@@ -201,12 +348,12 @@
 <div class="line-top row" data-ng-hide="!tx">
   <div class="col-xs-6 col-sm-4 col-md-4">
     <span data-ng-show="!tx.isCoinBase &&  !isNaN(parseFloat(tx.fees))"
-      class="txvalues txvalues-default"><span translate>Fee</span>: {{$root.currency.getConvertion(tx.fees) || tx.fees + 'RVN'}} </span>
+      class="txvalues txvalues-default"><span translate>Fee</span>: {{$root.currency.getConvertion(tx.fees) || tx.fees + 'ZEL'}} </span>
   </div>
   <div class="col-xs-6 col-sm-8 col-md-88 text-right">
     <span data-ng-show="tx.confirmations" class="txvalues
       txvalues-success">{{tx.confirmations}} <span translate>Confirmations</span></span>
     <span data-ng-show="!tx.confirmations" class="txvalues txvalues-danger" translate>Unconfirmed Transaction!</span>
-    <span class="txvalues txvalues-primary">{{$root.currency.getConvertion(tx.valueOut) || tx.valueOut + ' RVN' }}</span>
+    <span class="txvalues txvalues-primary">{{$root.currency.getConvertion(tx.valueOut) || tx.valueOut + ' ZEL' }}</span>
   </div>
 </div>

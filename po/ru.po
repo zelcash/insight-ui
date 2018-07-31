@@ -164,11 +164,11 @@ msgstr "Не удается подключиться к Интернету. Пр
 
 #: public/views/includes/connection.html
 msgid ""
-"Can't connect to ravend to get live updates from the p2p network. (Tried "
-"connecting to ravend at {{host}}:{{port}} and failed.)"
+"Can't connect to bitcoind to get live updates from the p2p network. (Tried "
+"connecting to bitcoind at {{host}}:{{port}} and failed.)"
 msgstr ""
-"Невозможно подключиться к ravend для получения живых обновлений из сети p2p. "
-"(Пробовал подключиться к ravend на {{host}}: {{port}} и не удалось.)"
+"Невозможно подключиться к bitcoind для получения живых обновлений из сети p2p. "
+"(Пробовал подключиться к bitcoind на {{host}}: {{port}} и не удалось.)"
 
 #: public/views/rich_list.html
 msgid "Coins"
@@ -308,8 +308,8 @@ msgid "Last Block"
 msgstr "Последний блок"
 
 #: public/views/status.html
-msgid "Last Block Hash (ravend)"
-msgstr "Последний блочный хэш (ravend)"
+msgid "Last Block Hash (bitcoind)"
+msgstr "Последний блочный хэш (bitcoind)"
 
 #: public/views/block_list.html
 msgid "Lastest block from date"
@@ -632,8 +632,8 @@ msgid "The message is verifiably from {{verification.address}}."
 msgstr "Сообщение проверяется с {{verify.address}}."
 
 #: public/views/dummy-translations.html
-msgid "The number of daily confirmed RVN transactions."
-msgstr "Количество ежедневных подтвержденных транзакций RVN."
+msgid "The number of daily confirmed ZEL transactions."
+msgstr "Количество ежедневных подтвержденных транзакций ZEL."
 
 #: public/views/dummy-translations.html
 msgid ""

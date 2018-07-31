@@ -19,7 +19,7 @@ angular.module('insight.currency').controller('CurrencyController',
 
         if (this.symbol === 'USD') {
           resSymbol = 'USD';
-        } else if (this.symbol === 'mRVN') {
+        } else if (this.symbol === 'mZEL') {
           resSymbol = 'm' + this.realSymbol;
         } else if (this.symbol === 'bits') {
           resSymbol = 'bits';
@@ -33,7 +33,7 @@ angular.module('insight.currency').controller('CurrencyController',
 
         if (this.symbol === 'USD') {
           response = _roundFloat((value * this.factor), 2); 
-        } else if (this.symbol === 'mRVN') {
+        } else if (this.symbol === 'mZEL') {
           this.factor = 1000;
           response = _roundFloat((value * this.factor), 5);
         } else if (this.symbol === 'bits') {
@@ -48,7 +48,7 @@ angular.module('insight.currency').controller('CurrencyController',
 		
 		if (resSymbol === 'USD') {
 			return '$' + numeral(response).format('0,0.[00]') + ' ' + resSymbol;
-		} else if (resSymbol === 'RVN'){
+		} else if (resSymbol === 'ZEL'){
 			return numeral(response).format('0,0.00000000') + ' ' + resSymbol;
 		} else {
 			return response + ' ' + resSymbol;
@@ -67,7 +67,7 @@ angular.module('insight.currency').controller('CurrencyController',
           $rootScope.currency.factor = res.data.rate;
           $rootScope.currency.realSymbol = res.data.short;
         });
-      } else if (currency === 'mRVN') {
+      } else if (currency === 'mZEL') {
         $rootScope.currency.factor = 1000;
       } else if (currency === 'bits') {
         $rootScope.currency.factor = 1000000;

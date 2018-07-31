@@ -161,10 +161,10 @@ msgstr "インターネットに接続できません。コネクションを確
 
 #: public/views/includes/connection.html
 msgid ""
-"Can't connect to ravend to get live updates from the p2p network. (Tried "
-"connecting to ravend at {{host}}:{{port}} and failed.)"
+"Can't connect to bitcoind to get live updates from the p2p network. (Tried "
+"connecting to bitcoind at {{host}}:{{port}} and failed.)"
 msgstr ""
-"P2Pネットワークからライブ情報を取得するためにravendへ接続することができません"
+"P2Pネットワークからライブ情報を取得するためにbitcoindへ接続することができません"
 "でした。({{host}}:{{port}} への接続を試みましたが、失敗しました。)"
 
 #: public/views/rich_list.html
@@ -305,8 +305,8 @@ msgid "Last Block"
 msgstr "直前のブロック"
 
 #: public/views/status.html
-msgid "Last Block Hash (ravend)"
-msgstr "最後のブロックハッシュ（ravend）"
+msgid "Last Block Hash (bitcoind)"
+msgstr "最後のブロックハッシュ（bitcoind）"
 
 #: public/views/block_list.html
 msgid "Lastest block from date"
@@ -627,8 +627,8 @@ msgid "The message is verifiably from {{verification.address}}."
 msgstr "メッセージは{{verification.address}}により検証されました。"
 
 #: public/views/dummy-translations.html
-msgid "The number of daily confirmed RVN transactions."
-msgstr "毎日確認されたRVNトランザクションの数。"
+msgid "The number of daily confirmed ZEL transactions."
+msgstr "毎日確認されたZELトランザクションの数。"
 
 #: public/views/dummy-translations.html
 msgid ""
@@ -791,10 +791,10 @@ msgstr "トランザクションを待っています..."
 #~ "target=\"_blank\">open-source Ravencoin blockchain explorer</a> with "
 #~ "complete REST and websocket APIs that can be used for writing web wallets "
 #~ "and other apps  that need more advanced blockchain queries than provided "
-#~ "by ravend RPC.  Check out the <a href=\"https://github.com/underdarkskies/"
+#~ "by bitcoind RPC.  Check out the <a href=\"https://github.com/underdarkskies/"
 #~ "insight-ui\" target=\"_blank\">source code</a>."
 #~ msgstr ""
-#~ "<strong>insight</strong>は、ravend RPCの提供するものよりも詳細なブロック"
+#~ "<strong>insight</strong>は、bitcoind RPCの提供するものよりも詳細なブロック"
 #~ "チェインへの問い合わせを必要とするウェブウォレットやその他のアプリを書くの"
 #~ "に使える、完全なRESTおよびwebsocket APIを備えた<a href=\"http://live."
 #~ "insight.is/\" target=\"_blank\">オープンソースのビットコインブロックエクス"
