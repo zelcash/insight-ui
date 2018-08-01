@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('insight.statistics').controller('StatisticsController',
-function($scope, $routeParams, StatisticsByDaysTransactions, StatisticsByDaysOutputs, StatisticsByDaysNetHash, StatisticsByDaysFees, StatisticsByDaysDifficulty, PoolDayChart, Statistics24Hours, Statistics1Hour, gettextCatalog, $filter, Constants, StatisticChart, MarketsInfo, MiningInfo, StatisticsByDaysSupply) {
+function($scope, $routeParams, StatisticsByDaysTransactions, StatisticsByDaysOutputs, StatisticsByDaysNetHash, StatisticsByDaysFees, StatisticsByDaysDifficulty, PoolDayChart, Statistics24Hours, Statistics1Hour, gettextCatalog, $filter, Constants, StatisticChart, MarketsInfo, MiningInfo, StatisticsTotalSupply) {
 
 	var self = this,
 		factories = {
@@ -97,7 +97,7 @@ function($scope, $routeParams, StatisticsByDaysTransactions, StatisticsByDaysOut
 				self.networkhashps = response.miningInfo.networkhashps;
             }
         });
-		StatisticsByDaysSupply.get({}, function(response) {
+		StatisticsTotalSupply.get({}, function(response) {
 			if (response) {
 				self.totalsupply = response.supply;
             }
