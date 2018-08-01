@@ -3908,8 +3908,8 @@ select[multiple].input-group-sm>.form-control,select[multiple].input-group-sm>.i
 }
 
 .container-fluid>.navbar-collapse,.container-fluid>.navbar-header,.container>.navbar-collapse,.container>.navbar-header {
-    margin-right: -15px;
-    margin-left: -15px
+    margin-right: -10px;
+    margin-left: -10px
 }
 
 .navbar-static-top {
@@ -6164,8 +6164,6 @@ body,html {
 }
 
 #wrap {
-    background-image: url(/img/background.png);
-    background-size: 70%;
     z-index: 4;
     position: static;
     height: auto;
@@ -6251,7 +6249,9 @@ body,html {
     border-color: #7087b7f7;
     background-color: #012d88f7;
     z-index: 4;
-    position: fixed
+    position: fixed;
+    background-image: url('../../img/background.png');
+    background-size: 100%
 }
 
 .navbar-default .navbar-nav>li>a {
