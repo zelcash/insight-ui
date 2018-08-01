@@ -179,7 +179,7 @@
             </div>
             <div class="ellipsis">
               <span data-ng-show="vin.notAddr">{{vin.addr}}</span>
-              <span class="text-muted" title="Current Ravencoin Address" data-ng-show="vin.addr == $root.currentAddr">{{vin.addr}}</span>
+              <span class="text-muted" title="Current ZelCash Address" data-ng-show="vin.addr == $root.currentAddr">{{vin.addr}}</span>
               <a href="address/{{vin.addr}}" data-ng-show="!vin.notAddr && vin.addr != $root.currentAddr">{{vin.addr}}</a>
             </div>
             <div data-ng-show="vin.unconfirmedInput" class="text-danger"> <span class="glyphicon glyphicon-warning-sign"></span> (Input unconfirmed)</div>
@@ -283,7 +283,7 @@
 
               <div class="ellipsis">
                 <span data-ng-show="vout.notAddr">{{vout.addr}}</span>
-                <span class="text-muted" title="Current Ravencoin Address" data-ng-show="address == $root.currentAddr" data-ng-repeat="address in vout.addr.split(',')">{{vout.addr}}</span>
+                <span class="text-muted" title="Current ZelCash Address" data-ng-show="address == $root.currentAddr" data-ng-repeat="address in vout.addr.split(',')">{{vout.addr}}</span>
                 <a href="address/{{address}}"  data-ng-show="!vout.notAddr && address != $root.currentAddr" data-ng-repeat="address in vout.addr.split(',')">{{address}}</a>
               </div>
             </div>
@@ -310,7 +310,7 @@
               </div>
               <div class="ellipsis">
                 <span data-ng-show="vout.notAddr" data-ng-repeat="address in vout.scriptPubKey.addresses">{{address}}</span>
-				<span class="text-muted" title="Current Ravencoin Address" data-ng-show="address == $root.currentAddr" data-ng-repeat="address in vout.scriptPubKey.addresses">{{address}}</span>
+				<span class="text-muted" title="Current ZelCash Address" data-ng-show="address == $root.currentAddr" data-ng-repeat="address in vout.scriptPubKey.addresses">{{address}}</span>
 				<a href="address/{{address}}" data-ng-show="!vout.notAddr && address != $root.currentAddr" data-ng-repeat="address in vout.scriptPubKey.addresses">{{address}}</a>
               </div>
             </div>
