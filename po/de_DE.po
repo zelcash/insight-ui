@@ -200,7 +200,7 @@ msgid "Connections to other nodes"
 msgstr "Verbindungen zu Nodes"
 
 #: public/views/status.html
-msgid "Current Blockchain Tip (ravencore)"
+msgid "Current Blockchain Tip (bitcore)"
 msgstr "Aktueller Blockchain Tipp (Ravencore)"
 
 #: public/views/statistics.html

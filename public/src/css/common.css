@@ -6414,7 +6414,7 @@ body,html {
     width: 165px;
     margin: 0 auto;
     border: 3px solid #fff;
-    background-color: #08338b
+    background-color: #000000
 }
 
 .block-id span {
@@ -6817,7 +6817,7 @@ body,html {
     background-size: 80px
 }
 
-#powered a.ravencoin,#powered a.twitter {
+#powered a.zelcash,#powered a.twitter {
     width: 20%;
     background-size: 80px
 }

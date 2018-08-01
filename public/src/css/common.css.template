@@ -613,7 +613,7 @@ margin-left: 0;
   float: left;
   height: 45px;
 }
-#powered a.ravencore {
+#powered a.bitcore {
   background-image: url('../img/logo.svg');
   background-size: 80px;
   width: 30%;

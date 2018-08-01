@@ -1,6 +1,6 @@
 {
   "name": "insight-ui",
-  "description": "An open-source frontend for the Insight API. The Insight API provides you with a convenient, powerful and simple way to query and broadcast data on the ravencoin network and build your own services with it.",
+  "description": "An open-source frontend for the Insight API. The Insight API provides you with a convenient, powerful and simple way to query and broadcast data on the zelcash network and build your own services with it.",
   "version": "1.0.3",
   "repository": "git://github.com/TheTrunk/insight-ui.git",
   "contributors": [

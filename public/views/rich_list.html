@@ -72,7 +72,8 @@
 					</tr>
 					<tr ng-repeat="item in RL.items">
 						<td>{{$index + 1}}</td>
-						<td><a href="/address/{{ item.address }}" class="link mark">{{ item.address }}</a></td> 
+						<td ng-if="item.address == 't1W3DXSzNbXPWF7ghEU3xcqjLfBAKJGcmN4'"><a href="/address/{{ item.address }}" class="link mark">Developers fund</a></td>
+						<td ng-if="item.address != 't1W3DXSzNbXPWF7ghEU3xcqjLfBAKJGcmN4'"><a href="/address/{{ item.address }}" class="link mark">{{ item.address }}</a></td> 
 						<td>{{ item.balance | numeraljs : '0,0[.][00000000]' }} ZEL</td>
 						<td>{{ item.blocks_mined ? item.blocks_mined : 0 }}</td>
 					</tr>

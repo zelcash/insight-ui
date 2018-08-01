@@ -199,8 +199,8 @@ msgid "Connections to other nodes"
 msgstr "Соединения с другими узлами"
 
 #: public/views/status.html
-msgid "Current Blockchain Tip (ravencore)"
-msgstr "Текущий бит-код (ravencore)"
+msgid "Current Blockchain Tip (bitcore)"
+msgstr "Текущий бит-код (bitcore)"
 
 #: public/views/statistics.html
 msgid "Current Network Hashrate"

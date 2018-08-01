@@ -64,7 +64,7 @@
 			  <td><span class="glyphicon glyphicon-stop" style= "color:{{p.fill}}">&nbsp</span><a href="{{p.url}}" title="{{p.poolName}}" target="_blank" data-ng-show="p.address">{{p.poolName}}</a></td>
 			  <td class="text-right">{{p.blocks_found}}</td>
 			  <td class="text-right">{{p.percent_total }} %</td>
-			  <td class="text-right">{{((p.percent_total / 100) * nethash)/ 1000000000 | numeraljs : '0,0.00'}} GH/s</td>
+			  <td class="text-right">{{((p.percent_total / 100) * nethash)/ 1000 | numeraljs : '0,0.00'}} kH/s</td>
 			  <td class="text-right hidden-xs"><a href="address/{{p.address}}">{{p.address}}</a></td>
 			</tr>
 			</tbody>
