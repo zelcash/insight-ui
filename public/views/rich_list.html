@@ -46,7 +46,7 @@
 							<td>{{ interval.count | numeraljs : '0,0' }}</td>
 							<td>{{ interval.addressesPercent | numeraljs : '0,0[.][00]'}}%</td>
 							<td>{{ interval.sum | numeraljs : '0,0[.][00000000]' }} <small>(ZEL)</small></td>
-							<td>${{ interval.sum * CC.marketsInfo.price_usd | numeraljs : '0,0[.][00]' }} <small>(USD)</small></td>
+							<td>${{ interval.sum * CC.marketsInfo.price | numeraljs : '0,0[.][00]' }} <small>(USD)</small></td>
 							<td>{{ interval.coinsPercent | numeraljs : '0,0[.][00]' }}%</td>
 						</tr>
 					</tbody>

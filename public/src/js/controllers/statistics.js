@@ -84,11 +84,11 @@ function($scope, $routeParams, StatisticsByDaysTransactions, StatisticsByDaysOut
 
 		    MarketsInfo.get({}, function(response) {
             if (response) {
-				self.marketPrice = response.price_usd;
+				self.marketPrice = response.price;
 				self.marketBtcPrice = response.price_btc;
-				self.marketCap = response.market_cap_usd;
-				self.volume = response["24h_volume_usd"];
-				self.percent = response.percent_change_24h;
+				self.marketCap = response.price * 32433500;
+				self.volume = response.total_volume_24h;
+				self.percent = response.delta_24h;
             }
         });
 		MiningInfo.get({}, function(response) {
