@@ -6859,23 +6859,39 @@ body,html {
     width: 20%;
 }
 
-#powered a.bitcore:hover {
-    background-image: url(../img/bitcore.png);
+#powered a.twitter {
+    background-image: url(../img/rsz_twitterlogo.png);
+}
+
+#powered a.reddit {
+    background-image: url(../img/rsz_redditlogo.png);
+}
+
+#powered a.youtube {
+    background-image: url(../img/rsz_ytlogo.png);
+}
+
+#powered a.discord {
+    background-image: url(../img/rsz_discordlogo.png);
+}
+
+#powered a.twitter:hover {
+    background-image: url(../img/rsz_twitterlogo.png);
     filter: drop-shadow(0px 0 3px #000)
 }
 
-#powered a.nodejs:hover {
-    background-image: url(../img/nodejs.png);
+#powered a.reddit:hover {
+    background-image: url(../img/rsz_redditlogo.png);
     filter: drop-shadow(0px 0 3px #000)
 }
 
-#powered a.angularjs:hover {
-    background-image: url(../img/angularjs.png);
+#powered a.youtube:hover {
+    background-image: url(../img/rsz_ytlogo.png);
     filter: drop-shadow(0px 0 3px #000)
 }
 
-#powered a.leveldb:hover {
-    background-image: url(../img/leveldb.png);
+#powered a.discord:hover {
+    background-image: url(../img/rsz_discordlogo.png);
     filter: drop-shadow(0px 0 3px #000)
 }
 
