@@ -563,7 +563,7 @@ dd {
     }
 
     .container {
-        width: 750px
+        width: 800px
     }
 }
 
@@ -678,13 +678,13 @@ pre code {
 
 @media (min-width: 992px) {
     .container {
-        width:970px
+        width:1000px
     }
 }
 
 @media (min-width: 1200px) {
     .container {
-        width:1170px
+        width: 1250px
     }
 }
 
@@ -3908,8 +3908,8 @@ select[multiple].input-group-sm>.form-control,select[multiple].input-group-sm>.i
 }
 
 .container-fluid>.navbar-collapse,.container-fluid>.navbar-header,.container>.navbar-collapse,.container>.navbar-header {
-    margin-right: -10px;
-    margin-left: -10px
+    margin-right: -15px;
+    margin-left: -15px
 }
 
 .navbar-static-top {
@@ -6087,6 +6087,9 @@ button.close {
 
     .hidden-print {
         display: none!important
+    }
+    .label {
+        border: 1px solid #000
     }
 }
 
