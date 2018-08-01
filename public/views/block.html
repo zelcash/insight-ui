@@ -133,7 +133,7 @@
             <td> <strong>Nonce</strong></td>
             <td class="text-right text-muted">
               <div class="ellipsis">
-                <span class="btn-copy" clip-copy="block.nonce"></span>
+                <span class="btn-copy" ngclipboard data-clipboard-text="{{block.nonce}}"><img class="clippy" width="13" src="../img/clippy.svg" alt="Copy to clipboard"></span>
                 <span>{{block.nonce}}</span>
               </div>
             </td>
@@ -142,7 +142,7 @@
             <td><strong>Solution</strong></td>
             <td class="text-right text-muted">
               <div class="ellipsis">
-                <span class="btn-copy" clip-copy="block.solution"></span>
+                <span class="btn-copy" ngclipboard data-clipboard-text="{{block.solution}}"><img class="clippy" width="13" src="../img/clippy.svg" alt="Copy to clipboard"></span>
                 <span>{{block.solution}}</span>
               </div>
             </td>

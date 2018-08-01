@@ -563,7 +563,7 @@ dd {
     }
 
     .container {
-        width: 750px
+        width: 800px
     }
 }
 
@@ -678,13 +678,13 @@ pre code {
 
 @media (min-width: 992px) {
     .container {
-        width:970px
+        width:1000px
     }
 }
 
 @media (min-width: 1200px) {
     .container {
-        width:1170px
+        width: 1250px
     }
 }
 
@@ -6088,6 +6088,9 @@ button.close {
     .hidden-print {
         display: none!important
     }
+    .label {
+        border: 1px solid #000
+    }
 }
 
 body,html {
@@ -6164,8 +6167,6 @@ body,html {
 }
 
 #wrap {
-    background-image: url(/img/background.png);
-    background-size: 70%;
     z-index: 4;
     position: static;
     height: auto;
@@ -6251,7 +6252,9 @@ body,html {
     border-color: #7087b7f7;
     background-color: #012d88f7;
     z-index: 4;
-    position: fixed
+    position: fixed;
+    background-image: url('../../img/background.png');
+    background-size: 100%
 }
 
 .navbar-default .navbar-nav>li>a {
@@ -6516,8 +6519,9 @@ body,html {
 #footer {
     height: 51px;
     color: #fbfbfb;
-    background-color: #012d88e3;
-    z-index: 0
+    z-index: 0;
+    background-image: url('../../img/background.png');
+    background-size: 100%
 }
 
 #footer a.insight {
@@ -6832,39 +6836,71 @@ body,html {
     background-position: center center
 }
 
-#powered a.btctalk {
-    background-image: url(../img/bitcointalk.png)
+#powered a.bitcore {
+    background-image: url(../img/logo.svg);
+    background-size: 80px;
+    width: 30%;
 }
 
-#powered a.discord {
-    background-image: url(../img/discord.png)
+#powered a.nodejs {
+    background-image: url(../img/nodejs.png);
+    background-size: 80px;
+    width: 30%;
 }
 
-#powered a.ravencoin {
-    background-image: url(../img/github.png)
+#powered a.angularjs {
+    background-image: url(../img/angularjs.png);
+    background-size: 50px;
+    width: 20%;
+}
+
+#powered a.leveldb {
+    background-image: url(../img/leveldb.png);
+    background-size: 50px;
+    width: 20%;
 }
 
 #powered a.twitter {
-    background-image: url(../img/twitter.png)
+    width: 25%;
+    background-size: 45px;
+    background-image: url(../img/rsz_twitterlogo.png);
 }
 
-#powered a.btctalk:hover {
-    background-image: url(../img/bitcointalk.png);
+#powered a.reddit {
+    width: 25%;
+    background-size: 45px;
+    background-image: url(../img/rsz_redditlogo.png);
+}
+
+#powered a.youtube {
+    width: 25%;
+    background-size: 45px;
+    background-image: url(../img/rsz_ytlogo.png);
+}
+
+#powered a.discord {
+    width: 25%;
+    background-size: 45px;
+    background-image: url(../img/rsz_discordlogo.png);
+}
+
+#powered a.twitter:hover {
+    background-image: url(../img/rsz_twitterlogo.png);
+    filter: drop-shadow(0px 0 3px #000)
+}
+
+#powered a.reddit:hover {
+    background-image: url(../img/rsz_redditlogo.png);
+    filter: drop-shadow(0px 0 3px #000)
+}
+
+#powered a.youtube:hover {
+    background-image: url(../img/rsz_ytlogo.png);
     filter: drop-shadow(0px 0 3px #000)
 }
 
 #powered a.discord:hover {
-    background-image: url(../img/discord.png);
-    filter: drop-shadow(0px 0 3px #000)
-}
-
-#powered a.ravencoin:hover {
-    background-image: url(../img/github.png);
-    filter: drop-shadow(0px 0 3px #000)
-}
-
-#powered a.twitter:hover {
-    background-image: url(../img/twitter.png);
+    background-image: url(../img/rsz_discordlogo.png);
     filter: drop-shadow(0px 0 3px #000)
 }
 
