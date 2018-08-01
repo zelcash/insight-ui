@@ -151,7 +151,7 @@
 					</tr>
 					<tr>
 						<td translate>Current Network Hashrate</td>
-						<td class="text-left">{{ SC.networkhashps / 1000000000000 | numeraljs : '0,0.000' }} TH/s</td>
+						<td class="text-left">{{ SC.networkhashps / 1000 | numeraljs : '0,0.000' }} kH/s</td>
 						<td class="text-right"><a href="stats/nethash/60" class="btn-copy" translate>View Chart</a></td>
 					</tr>
 				</tbody>

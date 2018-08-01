@@ -6519,8 +6519,9 @@ body,html {
 #footer {
     height: 51px;
     color: #fbfbfb;
-    background-color: #012d88e3;
-    z-index: 0
+    z-index: 0;
+    background-image: url('../../img/background.png');
+    background-size: 10%
 }
 
 #footer a.insight {
