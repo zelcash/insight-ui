@@ -6861,25 +6861,25 @@ body,html {
 
 #powered a.twitter {
     width: 25%;
-    background-size: 80px;
+    background-size: 45px;
     background-image: url(../img/rsz_twitterlogo.png);
 }
 
 #powered a.reddit {
     width: 25%;
-    background-size: 80px;
+    background-size: 45px;
     background-image: url(../img/rsz_redditlogo.png);
 }
 
 #powered a.youtube {
     width: 25%;
-    background-size: 80px;
+    background-size: 45px;
     background-image: url(../img/rsz_ytlogo.png);
 }
 
 #powered a.discord {
     width: 25%;
-    background-size: 80px;
+    background-size: 45px;
     background-image: url(../img/rsz_discordlogo.png);
 }
 
