@@ -82,6 +82,25 @@
           <td><strong>LockTime</strong></td>
           <td class="text-muted text-right">{{tx.locktime}}</td>
         </tr>
+        <tr data-ng-show="tx.version">
+          <td><strong>Version</strong></td>
+          <td class="text-muted text-right">{{tx.version}}</td>
+        </tr>
+        <tr data-ng-show="tx.fOverwintered">
+          <td><strong>Overwintered</strong></td>
+          <td class="text-muted text-right">{{tx.fOverwintered}}</td>
+        </tr>
+        <tr data-ng-show="tx.fOverwintered">
+          <td><strong>VersionGroupId</strong></td>
+          <td data-ng-show="tx.fOverwintered==true" class="text-muted text-right">
+          0x{{tx.nVersionGroupId.toString(16).padStart(8, "0")}}
+          </td>
+          <td data-ng-show="tx.fOverwintered==false" class="text-muted text-right">N/A</td>
+        </tr>
+        <tr data-ng-show="tx.fOverwintered">
+          <td><strong>Expiry Height</strong></td>
+          <td class="text-muted text-right">{{tx.nExpiryHeight}}</td>
+        </tr>
         <tr data-ng-show="tx.isCoinBase">
           <td><strong>Coinbase</strong></td>
           <td class="text-muted text-right">

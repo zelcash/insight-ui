@@ -21,6 +21,60 @@
 </div>
 <div class="row line-mid">
   <div class="col-md-12">
+    <div class="row" data-ng-if="!tx.bindingSig && (!tx.vjoinsplit || tx.vjoinsplit.length==0)">
+      <div class="col-md-12 transaction-vin-vout">
+        <div class="ellipsis">
+          <span translate>No Shielded Spends and Outputs</span>
+        </div>
+      </div>
+    </div>
+    <div class="row" data-ng-if="(tx.spendDescs && tx.spendDescs.length > 0) || (tx.outputDescs && tx.outputDescs.length > 0)">
+      <div class="panel panel-default">
+        <div class="panel-body transaction-vin-vout">
+          <div class="col-md-3 col-xs-12">
+            <div data-ng-if="tx.valueBalance < 0">
+              <div class="pull-right btc-value">
+                {{$root.currency.getConvertion(-tx.valueBalance)}}
+              </div>
+              <div class="ellipsis">
+                <span>Public input</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-1 col-xs-12">
+            <div class="hidden-xs hidden-sm text-center">
+              <span class="glyphicon glyphicon-chevron-right text-muted"></span>
+            </div>
+            <div class="hidden-md hidden-lg text-center">
+              <span class="glyphicon glyphicon-chevron-down text-muted"></span>
+            </div>
+          </div>
+          <div class="col-md-4 col-xs-12">
+            <div class="ellipsis text-center">
+              <span>Shielded Spends ({{tx.spendDescs.length}}) --> Shielded Outputs ({{tx.outputDescs.length}})</span>
+            </div>
+          </div>
+          <div class="col-md-1 col-xs-12">
+            <div class="hidden-xs hidden-sm text-center">
+              <span class="glyphicon glyphicon-chevron-right text-muted"></span>
+            </div>
+            <div class="hidden-md hidden-lg text-center">
+              <span class="glyphicon glyphicon-chevron-down text-muted"></span>
+            </div>
+          </div>
+          <div class="col-md-3 col-xs-12">
+            <div data-ng-if="tx.valueBalance > 0">
+              <div class="pull-right btc-value">
+                {{$root.currency.getConvertion(tx.valueBalance)}}
+              </div>
+              <div class="ellipsis">
+                <span>Public output</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="row" data-ng-if="!tx.vjoinsplit || tx.vjoinsplit.length == 0">
       <div class="col-md-12 transaction-vin-vout">
         <div class="ellipsis">

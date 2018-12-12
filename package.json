@@ -1,12 +1,11 @@
 {
   "name": "insight-ui",
   "description": "An open-source frontend for the Insight API. The Insight API provides you with a convenient, powerful and simple way to query and broadcast data on the zelcash network and build your own services with it.",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "repository": "git://github.com/TheTrunk/insight-ui.git",
   "contributors": [
     {
-      "name": "Under",
-      "email": ""
+      "name": "Under"
     },
     {
       "name": "Matias Alejo Garcia",
@@ -35,6 +34,10 @@
     {
       "name": "Tadeas Kmenta",
       "email": "tadeas.kmenta@zel.cash"
+    },
+    {
+      "name": "Simon Liu",
+      "email": "simon@z.cash"
     }
   ],
   "scripts": {
