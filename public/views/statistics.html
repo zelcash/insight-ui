@@ -2,12 +2,12 @@
 <div class="box" ng-controller="StatisticsController as SC" ng-init="SC.get24HoursStats()">
 	<div class="page-header">
 		<h1>
-          <span translate>Zcash Statistics for the last 24 hours</span>
+          <span translate>Hush Statistics for the last 24 hours</span>
         </h1>
 	</div>
 	<div class="col-xs-12 col-md-122 col-gray hidden-xs hidden-sm">
 		<div class="section__heading text-center">
-			<h2 class="section__title" translate>Zcash Pools Stats</h2>
+			<h2 class="section__title" translate>Hush Pools Stats</h2>
 		</div>
 		<div class="section-charts">
 			<h2>
@@ -71,12 +71,12 @@
 							<td class="text-right"><span>{{ (SC.statsTotal24.time_between_blocks / 60) | numeraljs : '0.[00]' }}</span>&nbsp;<span translate> minutes</span></td>
 						</tr>
 						<tr>
-							<td translate>Zcash Mined:</td>
+							<td translate>Hush Mined:</td>
 							<td class="text-right">{{ $root.currency.getConvertion(SC.statsTotal24.mined_currency_amount / 100000000) }}</td>
 						</tr>
 						<tr>
 							<td translate>Total Circulating Supply:</td>
-							<td class="text-right">{{ SC.totalsupply | numeraljs : '0,0' }} ZEC&nbsp;<a href="/charts" class="btn-copy" translate>View Chart</a></td>
+							<td class="text-right">{{ SC.totalsupply | numeraljs : '0,0' }} HUSH&nbsp;<a href="/charts" class="btn-copy" translate>View Chart</a></td>
 						</tr>
 					</tbody>
 				</table>
@@ -95,7 +95,7 @@
 						</tr>
 						<tr>
 							<td translate>Market Price (BTC):</td>
-							<td class="text-right">{{ SC.marketBtcPrice }} BTC&nbsp;<a href="https://coinlib.io/coin/ZEC/Zcash" target="_blank" class="btn-copy" translate>Live</a></td>
+							<td class="text-right">{{ SC.marketBtcPrice }} BTC&nbsp;<a href="https://coinlib.io/coin/HUSH/Hush" target="_blank" class="btn-copy" translate>Live</a></td>
 						</tr>
 						<tr>
 							<td translate>Trade Volume:</td>

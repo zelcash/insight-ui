@@ -29,7 +29,7 @@ function($scope, $routeParams, StatisticsByDaysTransactions, StatisticsByDaysOut
 
 		self.chartText = {
 			fees: gettextCatalog.getString('The daily average of fees paid to miners per transaction.'),
-			transactions: gettextCatalog.getString('The number of daily confirmed ZEC transactions.'),
+			transactions: gettextCatalog.getString('The number of daily confirmed HUSH transactions.'),
 			outputs: gettextCatalog.getString('The total value of all transaction outputs per day (includes coins returned to the sender as change).'),
 			difficulty: gettextCatalog.getString('A relative measure of how difficult it is to find a new block. The difficulty is adjusted periodically as a function of how much hashing power has been deployed by the network of miners.'),
 			nethash: gettextCatalog.getString('The daily average Global Network Hashrate.')
@@ -84,11 +84,11 @@ function($scope, $routeParams, StatisticsByDaysTransactions, StatisticsByDaysOut
 
 		    MarketsInfo.get({}, function(response) {
             if (response) {
-				self.marketPrice = response.price;
+				self.marketPrice = response.price_usd;
 				self.marketBtcPrice = response.price_btc;
-				self.marketCap = response.price * 32433500;
-				self.volume = response.total_volume_24h;
-				self.percent = response.delta_24h;
+				self.marketCap = response.market_cap_usd;
+				self.volume = response["24h_volume_usd"];
+				self.percent = response.percent_change_24h;
             }
         });
 		MiningInfo.get({}, function(response) {

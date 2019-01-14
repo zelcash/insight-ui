@@ -634,8 +634,8 @@ msgid "The message is verifiably from {{verification.address}}."
 msgstr "Le message est vérifiable depuis {{verification.address}}."
 
 #: public/views/dummy-translations.html
-msgid "The number of daily confirmed ZEC transactions."
-msgstr "Le nombre de transactions quotidiennes ZEC confirmées."
+msgid "The number of daily confirmed HUSH transactions."
+msgstr "Le nombre de transactions quotidiennes HUSH confirmées."
 
 #: public/views/dummy-translations.html
 msgid ""
