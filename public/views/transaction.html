@@ -16,7 +16,7 @@
         </span>
         <span data-ng-show="!tx.confirmations"
           class="txvalues txvalues-danger" translate>Unconfirmed Transaction!</span>
-        <span class="txvalues txvalues-primary">{{$root.currency.getConvertion(tx.valueOut) || tx.valueOut + ' HUSH' }}</span>
+        <span class="txvalues txvalues-primary">{{$root.currency.getConvertion(tx.valueOut) || tx.valueOut + ' CMM' }}</span>
       </div>
     </div>
     <div class="hide_snavbar">
@@ -58,7 +58,7 @@
         </tr>
         <tr data-ng-show="tx.fees">
           <td><strong translate>Fee Rate</strong></td>
-          <td class="text-muted text-right">{{ ((tx.fees * 1000) / tx.size) | numeraljs : '0.00000000'}} HUSH per kB</td>
+          <td class="text-muted text-right">{{ ((tx.fees * 1000) / tx.size) | numeraljs : '0.00000000'}} CMM per kB</td>
         </tr>
         <tr>
           <td><strong translate>Received Time</strong></td>
