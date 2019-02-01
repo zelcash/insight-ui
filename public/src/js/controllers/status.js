@@ -61,4 +61,13 @@ angular.module('insight.status').controller('StatusController',
 		$scope.peers = res.peerInfo;
         });
     };
+    $scope.getZelnodes = function() {
+      $scope.loading = true;
+
+	  ZelNodes.get({},
+        function(res) {
+		$scope.loading = false;
+		$scope.zelnodes = res.zelNodes;
+        });
+    };
   });
