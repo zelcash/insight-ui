@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('insight.status').controller('StatusController',
-  function ($scope, $routeParams, $location, Global, Status, Sync, Peers, getSocket) {
+  function ($scope, $routeParams, $location, Global, Status, Sync, Peers, ZelNodes, getSocket) {
     $scope.global = Global;
     $scope.loading = false;
     $scope.getStatus = function (q) {

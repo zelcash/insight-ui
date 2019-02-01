@@ -4,16 +4,18 @@
 	<div class="col-xs-12 col-md-122 col-gray">
 		<div class="heading margin1 heading-width-900">
 			<h1 class="text-center">
-				<span translate>Connected ZelNodes:</span>
+				<span translate>All ZelNodes:</span>
 			</h1>
 		</div>
 		<table class="table table-hover table-striped">
 			<thead>
 			  <tr>
-				<th translate> Address</th>
+				<th translate>IP Address</th>
 				<th class="text-right" translate>Protocol</th>
 				<th class="text-right" translate>Version</th>
+				<th class="text-right" translate>Status</th>
 				<th class="text-right" translate>Tier</th>
+				<th class="text-right" translate>ZEL Address</th>
 			  </tr>
 			</thead>
 			<tbody>
@@ -23,8 +25,10 @@
 			<tr class="fader" data-ng-repeat='node in zelnodes'>
 			  <td>{{node.ipaddress}}</a></td>
 			  <td class="text-right">{{node.network}}</td>
-			  <td class="text-right">{{node.version}}</td>
-			  <td class="text-right">{{node.tier}}</td>
+				<td class="text-right">{{node.version}}</td>
+				<td class="text-right">{{node.status}}</td>
+				<td class="text-right">{{node.tier}}</td>
+				<td class="text-right">{{node.addr}}</td>
 			</tr>
 			</tbody>
 		</table>
