@@ -15,7 +15,7 @@
       <span ng-if="address.addrStr == 't1TnJpeX9unpQR2rNpMX3GTCkDWbTRiaLpm'"> Core Team 4 <span style="font-weight:bold">Locked</span></span>
       </div>
       <div class="col-md-4">
-        <span class="txvalues txvalues-primary"><strong translate>Final Balance</strong> {{$root.currency.getConvertion(address.balance) || address.balance + ' ZEC' }}</span>
+        <span class="txvalues txvalues-primary"><strong translate>Final Balance</strong> {{$root.currency.getConvertion(address.balance) || address.balance + ' ZCL' }}</span>
       </div>
     </div>
     <div class="hide_snavbar">
@@ -25,7 +25,7 @@
       </button>
     </div>
   </div>
-  <h1><span translate>Address</span> <small data-ng-show="address.addrStr">{{$root.currency.getConvertion(address.balance) || address.balance + ' ZEC'}}</small></h1>
+  <h1><span translate>Address</span> <small data-ng-show="address.addrStr">{{$root.currency.getConvertion(address.balance) || address.balance + ' ZCL'}}</small></h1>
   <div class="text-muted" data-ng-if="!address.addrStr">
     <span translate>Loading Address Information</span> <span class="loader-gif"></span>
   </div>
@@ -50,15 +50,15 @@
           <tbody>
           <tr>
             <td><strong translate>Total Received</strong></td>
-            <td class="ellipsis text-right">{{$root.currency.getConvertion(address.totalReceived) || address.totalReceived + ' ZEC'}}</td>
+            <td class="ellipsis text-right">{{$root.currency.getConvertion(address.totalReceived) || address.totalReceived + ' ZCL'}}</td>
           </tr>
           <tr>
             <td><strong translate>Total Sent</strong></td>
-            <td class="ellipsis text-right">{{$root.currency.getConvertion(address.totalSent) || address.totalSent + ' ZEC'}}</td>
+            <td class="ellipsis text-right">{{$root.currency.getConvertion(address.totalSent) || address.totalSent + ' ZCL'}}</td>
           </tr>
           <tr>
             <td><strong translate>Final Balance</strong></td>
-            <td class="ellipsis text-right">{{$root.currency.getConvertion(address.balance) || address.balance + ' ZEC'}}</td>
+            <td class="ellipsis text-right">{{$root.currency.getConvertion(address.balance) || address.balance + ' ZCL'}}</td>
           </tr>
           <tr>
             <td><strong translate>No. Transactions</strong></td>
