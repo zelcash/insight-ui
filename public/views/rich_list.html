@@ -2,7 +2,7 @@
 <div class="box" ng-controller="ChartsController as CC" ng-init="CC.init()">
 	<div class="col-xs-122 col-md-122 col-gray">
 		<div class="heading">
-			<h2 class="heading__title" translate>Zclassic Distribution</h2>
+			<h2 class="heading__title" translate>Safecoin Distribution</h2>
 		</div>
 		<div class="section section-addressesRicher">
 			<div class="section__heading">
@@ -42,10 +42,10 @@
 							<th translate>% coins</th>
 						</tr>
 						<tr ng-repeat="interval in CC.balanceIntervals">
-							<td>{{ interval.min | numeraljs : '0,0[.][00000000]'}} - {{ interval.max | numeraljs : '0,0[.][00000000]'}} <small>(ZCL)</small></td>
+							<td>{{ interval.min | numeraljs : '0,0[.][00000000]'}} - {{ interval.max | numeraljs : '0,0[.][00000000]'}} <small>(SAFE)</small></td>
 							<td>{{ interval.count | numeraljs : '0,0' }}</td>
 							<td>{{ interval.addressesPercent | numeraljs : '0,0[.][00]'}}%</td>
-							<td>{{ interval.sum | numeraljs : '0,0[.][00000000]' }} <small>(ZCL)</small></td>
+							<td>{{ interval.sum | numeraljs : '0,0[.][00000000]' }} <small>(SAFE)</small></td>
 							<td>${{ interval.sum * CC.marketsInfo.price | numeraljs : '0,0[.][00]' }} <small>(USD)</small></td>
 							<td>{{ interval.coinsPercent | numeraljs : '0,0[.][00]' }}%</td>
 						</tr>
@@ -81,7 +81,7 @@
 						<td ng-if="item.address == 't1LumiTr49ctV18J2X4dGvKsnVF4Xx9MTeB'"><a href="/address/{{ item.address }}" class="link mark">Core Team 3 <span style="font-weight:bold">Locked</span></a></td>
 						<td ng-if="item.address == 't1TnJpeX9unpQR2rNpMX3GTCkDWbTRiaLpm'"><a href="/address/{{ item.address }}" class="link mark">Core Team 4 <span style="font-weight:bold">Locked</span></a></td>
 						<td ng-if="item.address != 't1TnJpeX9unpQR2rNpMX3GTCkDWbTRiaLpm' && item.address != 't1TnJpeX9unpQR2rNpMX3GTCkDWbTRiaLpm' && item.address != 't1LumiTr49ctV18J2X4dGvKsnVF4Xx9MTeB' && item.address != 't1TRUNKQMx1DVzym4d2Ay5E1dudEcHiyk9C' && item.address != 't1S5LnCxPgkwLpZ1qNCt1DanLFfJC5XEcb9' && item.address != 't1MCAMKMpnQWHsKNjPxquWSwiHCtqYPAZWx' && item.address != 't1XWTigDqS5Dy9McwQc752ShtZV1ffTMJB3' && item.address != 't1W3DXSzNbXPWF7ghEU3xcqjLfBAKJGcmN4'"><a href="/address/{{ item.address }}" class="link mark">{{ item.address }}</a></td>   
-						<td>{{ item.balance | numeraljs : '0,0[.][00000000]' }} ZCL</td>
+						<td>{{ item.balance | numeraljs : '0,0[.][00000000]' }} SAFE</td>
 						<td>{{ item.blocks_mined ? item.blocks_mined : 0 }}</td>
 					</tr>
 				</tbody>

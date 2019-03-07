@@ -627,8 +627,8 @@ msgid "The message is verifiably from {{verification.address}}."
 msgstr "メッセージは{{verification.address}}により検証されました。"
 
 #: public/views/dummy-translations.html
-msgid "The number of daily confirmed ZCL transactions."
-msgstr "毎日確認されたZCLトランザクションの数。"
+msgid "The number of daily confirmed SAFE transactions."
+msgstr "毎日確認されたSAFEトランザクションの数。"
 
 #: public/views/dummy-translations.html
 msgid ""
