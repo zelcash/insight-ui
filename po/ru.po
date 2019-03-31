@@ -632,8 +632,8 @@ msgid "The message is verifiably from {{verification.address}}."
 msgstr "Сообщение проверяется с {{verify.address}}."
 
 #: public/views/dummy-translations.html
-msgid "The number of daily confirmed ZCL transactions."
-msgstr "Количество ежедневных подтвержденных транзакций ZCL."
+msgid "The number of daily confirmed BTCZ transactions."
+msgstr "Количество ежедневных подтвержденных транзакций BTCZ."
 
 #: public/views/dummy-translations.html
 msgid ""
