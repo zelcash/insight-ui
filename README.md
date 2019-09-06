@@ -1,6 +1,6 @@
 # Insight UI
 
-A Ravencoin blockchain explorer web application service for [Bitcore Node Zelcash](https://github.com/TheTrunk/bitore-node-zelcash) using the [Insight API](https://github.com/TheTrunk/insight-api).
+A Ravencoin blockchain explorer web application service for [Bitcore Node Zelcash](https://github.com/zelcash/bitore-node-zelcash) using the [Insight API](https://github.com/zelcash/insight-api).
 
 
 ## Development
@@ -52,11 +52,11 @@ compile***.
 
 ## Note
 
-For more details about the [Insight API](https://github.com/TheTrunk/insight-api) configuration and end-points, go to [Insight API GitHub repository](https://github.com/TheTrunk/insight-api).
+For more details about the [Insight API](https://github.com/zelcash/insight-api) configuration and end-points, go to [Insight API GitHub repository](https://github.com/zelcash/insight-api).
 
 ## Contribute
 
-Contributions and suggestions are welcomed at the [Insight UI GitHub repository](https://github.com/TheTrunk/insight-ui).
+Contributions and suggestions are welcomed at the [Insight UI GitHub repository](https://github.com/zelcash/insight-ui).
 
 
 ## License
