@@ -64,7 +64,7 @@
     "grunt-angular-gettext": "0.2.15",
     "grunt-cli": "0.1.11",
     "grunt-contrib-concat": "0.3.0",
-    "grunt-contrib-jshint": "0.8.0",
+    "grunt-contrib-jshint": "2.0.0",
     "grunt-contrib-uglify": "0.3.2",
     "grunt-contrib-watch": "*",
     "grunt-css": "0.5.4",
