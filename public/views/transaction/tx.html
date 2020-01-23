@@ -468,43 +468,61 @@
   </div>
 </div>
 
-<div class="row" data-ng-if="tx.version = 5">
-  <div class="col-md-12">
-    <div class="ellipsis">
-      <span translate>Type</span>: {{tx.type}}
-    </div>
-    <div class="ellipsis">
-      <span translate>Collateral</span>: <a class="text-muted"
-        href="tx/{{tx.collateralOutputHash}}">{{tx.collateralOutputHash}}</a>
-    </div>
-    <div class="ellipsis">
-      <span translate>Signature</span>: {{tx.sig}}
-    </div>
-    <div class="ellipsis">
-      <span translate>Signature Time</span>: <time>{{tx.sigTime * 1000 | date:'medium'}}</time>
-    </div>
-    <div class="ellipsis" data-ng-if="tx.nType = 2">
-      <span translate>Collateral Public Key</span>: {{tx.collateralPubKey}}
-    </div>
-    <div class="ellipsis" data-ng-if="tx.nType = 2">
-      <span translate>ZelNode Public Key</span>: {{tx.zelnodePubKey}}
-    </div>
-    <div class="ellipsis" data-ng-if="tx.nType = 2">
-      <span translate>ZelNode Network</span>: {{tx.ip}}
-    </div>
-    <div class="ellipsis" data-ng-if="tx.nType = 4">
-      <span translate>Update Type</span>: {{tx.updateType}}
-    </div>
-    <div class="ellipsis" data-ng-if="tx.nType = 4">
-      <span translate>Benchmark Tier</span>: {{tx.benchmarkTier}}
-    </div>
-    <div class="ellipsis" data-ng-if="tx.nType = 4">
-      <span translate>Benchmark Signature</span>: {{tx.benchmarkSig}}
-    </div>
-    <div class="ellipsis" data-ng-if="tx.nType = 4">
-      <span translate>Benchmark Signature Time</span>: <time>{{tx.benchmarkSigTime * 1000 | date:'medium'}}</time>
-    </div>
-  </div>
+<div class="row" data-ng-if="tx.version == 5">
+  <table class="table" style="table-layout: fixed">
+    <tbody>
+      <tr data-ng-show="tx.type">
+        <td><strong translate>Type</strong></td>
+        <td class="text-muted text-right">{{tx.type}}</td>
+      </tr>
+      <tr data-ng-show="tx.collateralOutputHash">
+        <td><strong translate>Collateral</strong></td>
+        <td class="text-muted text-right">
+          <a href="tx/{{tx.collateralOutputHash}}">{{tx.collateralOutputHash}}</a>
+        </td>
+      </tr>
+      <tr data-ng-show="tx.sig">
+        <td><strong translate>Signature</strong></td>
+        <td class="text-muted text-right">{{tx.sig}}</td>
+      </tr>
+      <tr data-ng-show="tx.sigTime">
+        <td><strong translate>Signature time</strong></td>
+        <td class="text-muted text-right">
+          <time>{{tx.sigTime * 1000 | date:'medium'}}</time>
+        </td>
+      </tr>
+      <tr data-ng-show="tx.collateralPubKey" data-ng-if="tx.nType == 2">
+        <td><strong translate>Collateral Public Key</strong></td>
+        <td class="text-muted text-right">{{tx.collateralPubKey}}</td>
+      </tr>
+      <tr data-ng-show="tx.zelnodePubKey" data-ng-if="tx.nType == 2">
+        <td><strong translate>ZelNode Public Key</strong></td>
+        <td class="text-muted text-right">{{tx.zelnodePubKey}}</td>
+      </tr>
+      <tr data-ng-show="tx.ip" data-ng-if="tx.nType == 2">
+        <td><strong translate>ZelNode Network</strong></td>
+        <td class="text-muted text-right">{{tx.ip}}</td>
+      </tr>
+      <tr data-ng-show="tx.updateType" data-ng-if="tx.nType == 4">
+        <td><strong translate>Update Type</strong></td>
+        <td class="text-muted text-right">{{tx.updateType}}</td>
+      </tr>
+      <tr data-ng-show="tx.benchmarkTier" data-ng-if="tx.nType == 4">
+        <td><strong translate>Benchmark Tier</strong></td>
+        <td class="text-muted text-right">{{tx.benchmarkTier}}</td>
+      </tr>
+      <tr data-ng-show="tx.benchmarkSig" data-ng-if="tx.nType == 4">
+        <td><strong translate>Benchmark Signature</strong></td>
+        <td class="text-muted text-right">{{tx.benchmarkSig}}</td>
+      </tr>
+      <tr data-ng-show="tx.benchmarkSigTime" data-ng-if="tx.nType == 4">
+        <td><strong translate>Benchmark Signature Time</strong></td>
+        <td class="text-muted text-right">
+          <time>{{tx.benchmarkSigTime * 1000 | date:'medium'}}</time>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </div>
 
 <div class="well well-sm bgwhite ellipsis" data-ng-if="itemsExpanded && !block.hash && tx.blockhash">
