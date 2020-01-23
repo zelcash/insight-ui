@@ -24,7 +24,7 @@
 			  <td colspan="5"><span translate>Waiting for ZelNodes...</span> <span class="loader-gif"></span></td>
 			</tr>
 			<tr class="fader" data-ng-repeat='node in zelnodes'>
-				<td class="text-right">{{node.payment_address}}</td>
+				<td>{{node.payment_address}}</td>
 				<td class="text-right">{{node.tier}}</td>
 				<td class="text-right"><a href="block-index/{{node.added_height}}">{{node.added_height}}</a></td>
 				<td class="text-right"><a href="block-index/{{node.last_paid_height}}">{{node.last_paid_height}}</td>
