@@ -491,6 +491,10 @@
           <time>{{tx.sigTime * 1000 | date:'medium'}}</time>
         </td>
       </tr>
+      <tr data-ng-show="tx.ip">
+        <td><strong translate>ZelNode Network</strong></td>
+        <td class="text-muted text-right">{{tx.ip}}</td>
+      </tr>
       <tr data-ng-show="tx.collateralPubKey" data-ng-if="tx.nType == 2">
         <td><strong translate>Collateral Public Key</strong></td>
         <td class="text-muted text-right">{{tx.collateralPubKey}}</td>
@@ -498,10 +502,6 @@
       <tr data-ng-show="tx.zelnodePubKey" data-ng-if="tx.nType == 2">
         <td><strong translate>ZelNode Public Key</strong></td>
         <td class="text-muted text-right">{{tx.zelnodePubKey}}</td>
-      </tr>
-      <tr data-ng-show="tx.ip" data-ng-if="tx.nType == 2">
-        <td><strong translate>ZelNode Network</strong></td>
-        <td class="text-muted text-right">{{tx.ip}}</td>
       </tr>
       <tr data-ng-show="tx.updateType" data-ng-if="tx.nType == 4">
         <td><strong translate>Update Type</strong></td>
