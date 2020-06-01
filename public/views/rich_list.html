@@ -72,7 +72,7 @@
 					</tr>
 					<tr ng-repeat="item in RL.items">
 						<td>{{$index + 1}}</td>
-						<td ng-if="item.address == 't1W3DXSzNbXPWF7ghEU3xcqjLfBAKJGcmN4'"><a href="/address/{{ item.address }}" class="link mark">Zel Foundation <span style="font-weight:bold">Locked</span></a></td>
+						<td ng-if="item.address == 't3c51GjrkUg7pUiS8bzNdTnW2hD25egWUih'"><a href="/address/{{ item.address }}" class="link mark">Zel Foundation <span style="font-weight:bold">Locked</span></a></td>
 						<td ng-if="item.address == 't1XWTigDqS5Dy9McwQc752ShtZV1ffTMJB3'"><a href="/address/{{ item.address }}" class="link mark">Zel Foundation <span style="font-weight:bold">Operational</span></a></td>
 						<td ng-if="item.address == 't1gZgxSEr9RcMBcUyHvkN1U2bJsz3CEV2Ve'"><a href="/address/{{ item.address }}" class="link mark">Zel Foundation <span style="font-weight:bold">Mining</span></a></td>
 						<td ng-if="item.address == 't1MCAMKMpnQWHsKNjPxquWSwiHCtqYPAZWx'"><a href="/address/{{ item.address }}" class="link mark">Founder <span style="font-weight:bold">Locked</span></a></td>
@@ -80,7 +80,7 @@
 						<td ng-if="item.address == 't1TRUNKQMx1DVzym4d2Ay5E1dudEcHiyk9C'"><a href="/address/{{ item.address }}" class="link mark">Core Team 2 <span style="font-weight:bold">Locked</span></a></td>
 						<td ng-if="item.address == 't1LumiTr49ctV18J2X4dGvKsnVF4Xx9MTeB'"><a href="/address/{{ item.address }}" class="link mark">Core Team 3 <span style="font-weight:bold">Locked</span></a></td>
 						<td ng-if="item.address == 't1TnJpeX9unpQR2rNpMX3GTCkDWbTRiaLpm'"><a href="/address/{{ item.address }}" class="link mark">Core Team 4 <span style="font-weight:bold">Locked</span></a></td>
-						<td ng-if="item.address != 't1TnJpeX9unpQR2rNpMX3GTCkDWbTRiaLpm' && item.address != 't1TnJpeX9unpQR2rNpMX3GTCkDWbTRiaLpm' && item.address != 't1LumiTr49ctV18J2X4dGvKsnVF4Xx9MTeB' && item.address != 't1TRUNKQMx1DVzym4d2Ay5E1dudEcHiyk9C' && item.address != 't1S5LnCxPgkwLpZ1qNCt1DanLFfJC5XEcb9' && item.address != 't1MCAMKMpnQWHsKNjPxquWSwiHCtqYPAZWx' && item.address != 't1XWTigDqS5Dy9McwQc752ShtZV1ffTMJB3' && item.address != 't1W3DXSzNbXPWF7ghEU3xcqjLfBAKJGcmN4'"><a href="/address/{{ item.address }}" class="link mark">{{ item.address }}</a></td>   
+						<td ng-if="item.address != 't1TnJpeX9unpQR2rNpMX3GTCkDWbTRiaLpm' && item.address != 't1TnJpeX9unpQR2rNpMX3GTCkDWbTRiaLpm' && item.address != 't1LumiTr49ctV18J2X4dGvKsnVF4Xx9MTeB' && item.address != 't1TRUNKQMx1DVzym4d2Ay5E1dudEcHiyk9C' && item.address != 't1S5LnCxPgkwLpZ1qNCt1DanLFfJC5XEcb9' && item.address != 't1MCAMKMpnQWHsKNjPxquWSwiHCtqYPAZWx' && item.address != 't1XWTigDqS5Dy9McwQc752ShtZV1ffTMJB3' && item.address != 't3c51GjrkUg7pUiS8bzNdTnW2hD25egWUih'"><a href="/address/{{ item.address }}" class="link mark">{{ item.address }}</a></td>   
 						<td>{{ item.balance | numeraljs : '0,0[.][00000000]' }} ZEL</td>
 						<td>{{ item.blocks_mined ? item.blocks_mined : 0 }}</td>
 					</tr>
