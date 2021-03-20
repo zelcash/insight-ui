@@ -19,10 +19,14 @@ angular.module('insight.status')
     function($resource) {
       return $resource(window.apiPrefix + '/status?q=getPeerInfo');
    })
-  .factory('ZelNodes',
+  .factory('FluxNodes',
    function($resource) {
      return $resource(window.apiPrefix + '/status?q=getZelNodes');
   })
+  .factory('FluxNodes',
+  function($resource) {
+    return $resource(window.apiPrefix + '/status?q=getFluxNodes');
+ })
   .factory('MiningInfo',
       function($resource) {
         return $resource(window.apiPrefix + '/status?q=getMiningInfo');

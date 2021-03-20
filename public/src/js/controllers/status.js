@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('insight.status').controller('StatusController',
-  function ($scope, $routeParams, $location, Global, Status, Sync, Peers, ZelNodes, getSocket) {
+  function ($scope, $routeParams, $location, Global, Status, Sync, Peers, FluxNodes, getSocket) {
     $scope.global = Global;
     $scope.loading = false;
     $scope.getStatus = function (q) {
@@ -61,13 +61,13 @@ angular.module('insight.status').controller('StatusController',
           $scope.peers = res.peerInfo;
         });
     };
-    $scope.getZelNodes = function () {
+    $scope.getFluxNodes = function () {
       $scope.loading = true;
 
-      ZelNodes.get({},
+      FluxNodes.get({},
         function (res) {
           $scope.loading = false;
-          $scope.zelnodes = res.zelNodes;
+          $scope.fluxnodes = res.fluxNodes;
         });
     };
   });

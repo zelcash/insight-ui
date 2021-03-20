@@ -1,6 +1,6 @@
 {
   "name": "insight-ui",
-  "description": "An open-source frontend for the Insight API. The Insight API provides you with a convenient, powerful and simple way to query and broadcast data on the zelcash network and build your own services with it.",
+  "description": "An open-source frontend for the Insight API. The Insight API provides you with a convenient, powerful and simple way to query and broadcast data on the flux network and build your own services with it.",
   "version": "1.2.2",
   "repository": "git://github.com/zelcash/insight-ui.git",
   "contributors": [
@@ -54,7 +54,8 @@
     "blockexplorer",
     "zelcash",
     "bitcore",
-    "front-end"
+    "front-end",
+    "flux"
   ],
   "bitcoreNode": "bitcore-node-zelcash",
   "dependencies": {},

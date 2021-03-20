@@ -5,9 +5,9 @@
       <div class="col-md-8 text-left">
           <h3 translate>Address</h3> {{address.addrStr}}
       <span class="btn-copy" ngclipboard data-clipboard-text="{{address.addrStr}}"><img class="clippy" width="13" src="../img/clippy.svg" alt="Copy to clipboard"></span>
-      <span ng-if="address.addrStr == 't3c51GjrkUg7pUiS8bzNdTnW2hD25egWUih'"> Zel Foundation <span style="font-weight:bold">Locked</span></span>
-			<span ng-if="address.addrStr == 't1XWTigDqS5Dy9McwQc752ShtZV1ffTMJB3'"> Zel Foundation <span style="font-weight:bold">Operational</span></span>
-			<span ng-if="address.addrStr == 't1gZgxSEr9RcMBcUyHvkN1U2bJsz3CEV2Ve'"> Zel Foundation <span style="font-weight:bold">Mining</span></span>
+      <span ng-if="address.addrStr == 't3c51GjrkUg7pUiS8bzNdTnW2hD25egWUih'"> Flux Foundation <span style="font-weight:bold">Locked</span></span>
+			<span ng-if="address.addrStr == 't1XWTigDqS5Dy9McwQc752ShtZV1ffTMJB3'"> Flux Foundation <span style="font-weight:bold">Operational</span></span>
+			<span ng-if="address.addrStr == 't1gZgxSEr9RcMBcUyHvkN1U2bJsz3CEV2Ve'"> Flux Foundation <span style="font-weight:bold">Mining</span></span>
 			<span ng-if="address.addrStr == 't1MCAMKMpnQWHsKNjPxquWSwiHCtqYPAZWx'"> Founder <span style="font-weight:bold">Locked</span></span>
 			<span ng-if="address.addrStr == 't1S5LnCxPgkwLpZ1qNCt1DanLFfJC5XEcb9'"> Core Team 1 <span style="font-weight:bold">Locked</span></span>
 			<span ng-if="address.addrStr == 't1TRUNKQMx1DVzym4d2Ay5E1dudEcHiyk9C'"> Core Team 2 <span style="font-weight:bold">Locked</span></span>
@@ -23,7 +23,7 @@
       <span ng-if="address.addrStr == 't1h69LNQGYhEzuFaxxitpAB5pZKDEwZRkXH'"> Agent Smith <span style="font-weight:bold">Whale</span></span>
       </div>
       <div class="col-md-4">
-        <span class="txvalues txvalues-primary"><strong translate>Final Balance</strong> {{$root.currency.getConvertion(address.balance) || address.balance + ' ZEL' }}</span>
+        <span class="txvalues txvalues-primary"><strong translate>Final Balance</strong> {{$root.currency.getConvertion(address.balance) || address.balance + ' FLUX' }}</span>
       </div>
     </div>
     <div class="hide_snavbar">
@@ -33,7 +33,7 @@
       </button>
     </div>
   </div>
-  <h1><span translate>Address</span> <small data-ng-show="address.addrStr">{{$root.currency.getConvertion(address.balance) || address.balance + ' ZEL'}}</small></h1>
+  <h1><span translate>Address</span> <small data-ng-show="address.addrStr">{{$root.currency.getConvertion(address.balance) || address.balance + ' FLUX'}}</small></h1>
   <div class="text-muted" data-ng-if="!address.addrStr">
     <span translate>Loading Address Information</span> <span class="loader-gif"></span>
   </div>
@@ -42,9 +42,9 @@
       <strong translate>Address</strong>
       <span class="text-muted">{{address.addrStr}}</span>
       <span class="btn-copy" ngclipboard data-clipboard-text="{{address.addrStr}}"><img class="clippy" width="13" src="../img/clippy.svg" alt="Copy to clipboard"></span>
-      <span ng-if="address.addrStr == 't3c51GjrkUg7pUiS8bzNdTnW2hD25egWUih'"> Zel Foundation <span style="font-weight:bold">Locked</span></span>
-			<span ng-if="address.addrStr == 't1XWTigDqS5Dy9McwQc752ShtZV1ffTMJB3'"> Zel Foundation <span style="font-weight:bold">Operational</span></span>
-			<span ng-if="address.addrStr == 't1gZgxSEr9RcMBcUyHvkN1U2bJsz3CEV2Ve'"> Zel Foundation <span style="font-weight:bold">Mining</span></span>
+      <span ng-if="address.addrStr == 't3c51GjrkUg7pUiS8bzNdTnW2hD25egWUih'"> Flux Foundation <span style="font-weight:bold">Locked</span></span>
+			<span ng-if="address.addrStr == 't1XWTigDqS5Dy9McwQc752ShtZV1ffTMJB3'"> Flux Foundation <span style="font-weight:bold">Operational</span></span>
+			<span ng-if="address.addrStr == 't1gZgxSEr9RcMBcUyHvkN1U2bJsz3CEV2Ve'"> Flux Foundation <span style="font-weight:bold">Mining</span></span>
 			<span ng-if="address.addrStr == 't1MCAMKMpnQWHsKNjPxquWSwiHCtqYPAZWx'"> Founder <span style="font-weight:bold">Locked</span></span>
 			<span ng-if="address.addrStr == 't1S5LnCxPgkwLpZ1qNCt1DanLFfJC5XEcb9'"> Core Team 1 <span style="font-weight:bold">Locked</span></span>
 			<span ng-if="address.addrStr == 't1TRUNKQMx1DVzym4d2Ay5E1dudEcHiyk9C'"> Core Team 2 <span style="font-weight:bold">Locked</span></span>
@@ -66,15 +66,15 @@
           <tbody>
           <tr>
             <td><strong translate>Total Received</strong></td>
-            <td class="ellipsis text-right">{{$root.currency.getConvertion(address.totalReceived) || address.totalReceived + ' ZEL'}}</td>
+            <td class="ellipsis text-right">{{$root.currency.getConvertion(address.totalReceived) || address.totalReceived + ' FLUX'}}</td>
           </tr>
           <tr>
             <td><strong translate>Total Sent</strong></td>
-            <td class="ellipsis text-right">{{$root.currency.getConvertion(address.totalSent) || address.totalSent + ' ZEL'}}</td>
+            <td class="ellipsis text-right">{{$root.currency.getConvertion(address.totalSent) || address.totalSent + ' FLUX'}}</td>
           </tr>
           <tr>
             <td><strong translate>Final Balance</strong></td>
-            <td class="ellipsis text-right">{{$root.currency.getConvertion(address.balance) || address.balance + ' ZEL'}}</td>
+            <td class="ellipsis text-right">{{$root.currency.getConvertion(address.balance) || address.balance + ' FLUX'}}</td>
           </tr>
           <tr>
             <td><strong translate>No. Transactions</strong></td>

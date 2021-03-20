@@ -2,7 +2,7 @@
 <div class="box" ng-controller="ChartsController as CC" ng-init="CC.init()">
 	<div class="col-xs-122 col-md-122 col-gray">
 		<div class="heading">
-			<h2 class="heading__title" translate>ZelCash Distribution</h2>
+			<h2 class="heading__title" translate>Flux Distribution</h2>
 		</div>
 		<div class="section section-addressesRicher">
 			<div class="section__heading">
@@ -42,10 +42,10 @@
 							<th translate>% coins</th>
 						</tr>
 						<tr ng-repeat="interval in CC.balanceIntervals">
-							<td>{{ interval.min | numeraljs : '0,0[.][00000000]'}} - {{ interval.max | numeraljs : '0,0[.][00000000]'}} <small>(ZEL)</small></td>
+							<td>{{ interval.min | numeraljs : '0,0[.][00000000]'}} - {{ interval.max | numeraljs : '0,0[.][00000000]'}} <small>(FLUX)</small></td>
 							<td>{{ interval.count | numeraljs : '0,0' }}</td>
 							<td>{{ interval.addressesPercent | numeraljs : '0,0[.][00]'}}%</td>
-							<td>{{ interval.sum | numeraljs : '0,0[.][00000000]' }} <small>(ZEL)</small></td>
+							<td>{{ interval.sum | numeraljs : '0,0[.][00000000]' }} <small>(FLUX)</small></td>
 							<td>${{ interval.sum * CC.marketsInfo.price | numeraljs : '0,0[.][00]' }} <small>(USD)</small></td>
 							<td>{{ interval.coinsPercent | numeraljs : '0,0[.][00]' }}%</td>
 						</tr>
@@ -72,9 +72,9 @@
 					</tr>
 					<tr ng-repeat="item in RL.items">
 						<td>{{$index + 1}}</td>
-						<td ng-if="item.address == 't3c51GjrkUg7pUiS8bzNdTnW2hD25egWUih'"><a href="/address/{{ item.address }}" class="link mark">Zel Foundation <span style="font-weight:bold">Locked</span></a></td>
-						<td ng-if="item.address == 't1XWTigDqS5Dy9McwQc752ShtZV1ffTMJB3'"><a href="/address/{{ item.address }}" class="link mark">Zel Foundation <span style="font-weight:bold">Operational</span></a></td>
-						<td ng-if="item.address == 't1gZgxSEr9RcMBcUyHvkN1U2bJsz3CEV2Ve'"><a href="/address/{{ item.address }}" class="link mark">Zel Foundation <span style="font-weight:bold">Mining</span></a></td>
+						<td ng-if="item.address == 't3c51GjrkUg7pUiS8bzNdTnW2hD25egWUih'"><a href="/address/{{ item.address }}" class="link mark">Flux Foundation <span style="font-weight:bold">Locked</span></a></td>
+						<td ng-if="item.address == 't1XWTigDqS5Dy9McwQc752ShtZV1ffTMJB3'"><a href="/address/{{ item.address }}" class="link mark">Flux Foundation <span style="font-weight:bold">Operational</span></a></td>
+						<td ng-if="item.address == 't1gZgxSEr9RcMBcUyHvkN1U2bJsz3CEV2Ve'"><a href="/address/{{ item.address }}" class="link mark">Flux Foundation <span style="font-weight:bold">Mining</span></a></td>
 						<td ng-if="item.address == 't1MCAMKMpnQWHsKNjPxquWSwiHCtqYPAZWx'"><a href="/address/{{ item.address }}" class="link mark">Founder <span style="font-weight:bold">Locked</span></a></td>
 						<td ng-if="item.address == 't1S5LnCxPgkwLpZ1qNCt1DanLFfJC5XEcb9'"><a href="/address/{{ item.address }}" class="link mark">Core Team 1 <span style="font-weight:bold">Locked</span></a></td>
 						<td ng-if="item.address == 't1TRUNKQMx1DVzym4d2Ay5E1dudEcHiyk9C'"><a href="/address/{{ item.address }}" class="link mark">Core Team 2 <span style="font-weight:bold">Locked</span></a></td>
@@ -95,7 +95,7 @@
 						  >
 						  <a href="/address/{{ item.address }}" class="link mark">{{ item.address }}</a>
 						</td>   
-						<td>{{ item.balance | numeraljs : '0,0[.][00000000]' }} ZEL</td>
+						<td>{{ item.balance | numeraljs : '0,0[.][00000000]' }} FLUX</td>
 						<td>{{ item.blocks_mined ? item.blocks_mined : 0 }}</td>
 					</tr>
 				</tbody>

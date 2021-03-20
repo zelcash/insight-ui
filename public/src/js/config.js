@@ -4,7 +4,7 @@ angular.module('insight')
   .constant('Constants', {
 
     CURRENCY: {
-      ZEL: 'ZEL',
+      FLUX: 'FLUX',
       USD: 'USD',
       BTC: 'BTC'
     },
@@ -14,7 +14,7 @@ angular.module('insight')
     CHART_DAYS: 14,
     NETWORK: window.current_network ? window.current_network : 'livenet',
     DEFAULT_LANGUAGE: localStorage.getItem('insight-language') || 'en',
-    DEFAULT_CURRENCY: localStorage.getItem('insight-currency') || 'ZEL'
+    DEFAULT_CURRENCY: localStorage.getItem('insight-currency') || 'FLUX'
 
   });
 //Setting up route
@@ -22,7 +22,7 @@ angular.module('insight').config(function ($routeProvider) {
   $routeProvider.
     when('/block/:blockHash', {
       templateUrl: 'views/block.html',
-      title: 'ZelCash Block '
+      title: 'Flux Block '
     }).
     when('/block-index/:blockHeight', {
       controller: 'BlocksController',
@@ -34,7 +34,7 @@ angular.module('insight').config(function ($routeProvider) {
     }).
     when('/tx/:txId/:v_type?/:v_index?', {
       templateUrl: 'views/transaction.html',
-      title: 'ZelCash Transaction '
+      title: 'Flux Transaction '
     }).
     when('/', {
       templateUrl: 'views/index.html',
@@ -42,15 +42,15 @@ angular.module('insight').config(function ($routeProvider) {
     }).
     when('/blocks', {
       templateUrl: 'views/block_list.html',
-      title: 'ZelCash Blocks solved Today'
+      title: 'Flux Blocks solved Today'
     }).
     when('/blocks-date/:blockDate/:startTimestamp?', {
       templateUrl: 'views/block_list.html',
-      title: 'ZelCash Blocks solved '
+      title: 'Flux Blocks solved '
     }).
     when('/address/:addrStr', {
       templateUrl: 'views/address.html',
-      title: 'ZelCash Address '
+      title: 'Flux Address '
     }).
     when('/charts', {
       templateUrl: 'views/charts.html',
@@ -83,9 +83,9 @@ angular.module('insight').config(function ($routeProvider) {
       templateUrl: 'views/network.html',
       title: 'Network'
     }).
-    when('/zelnodes', {
-      templateUrl: 'views/zelnodes.html',
-      title: 'ZelNodes'
+    when('/fluxnodes', {
+      templateUrl: 'views/fluxnodes.html',
+      title: 'FluxNodes'
     }).
     when('/rich-list', {
       controller: 'RichListController',

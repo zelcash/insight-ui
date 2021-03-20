@@ -92,7 +92,7 @@
           <div class="panel-body transaction-vin-vout">
             <div class="col-md-3 col-xs-12">
               <div class="pull-right btc-value">
-                {{$root.currency.getConvertion(vjs.vpub_old) || vjs.vpub_old + ' ZEL'}}
+                {{$root.currency.getConvertion(vjs.vpub_old) || vjs.vpub_old + ' FLUX'}}
               </div>
               <div class="ellipsis">
                 <span>Public input</span>
@@ -121,7 +121,7 @@
             </div>
             <div class="col-md-3 col-xs-12">
               <div class="pull-right btc-value">
-                {{$root.currency.getConvertion(vjs.vpub_new) || vjs.vpub_new + ' ZEL' }}
+                {{$root.currency.getConvertion(vjs.vpub_new) || vjs.vpub_new + ' FLUX' }}
               </div>
               <div class="ellipsis">
                 <span>Public output</span>
@@ -150,7 +150,7 @@
             <div class="panel-body">
               <div class="col-md-3 col-xs-12">
                 <div class="pull-right btc-value">
-                  {{$root.currency.getConvertion(vjs.vpub_old) || vjs.vpub_old + ' ZEL'}}
+                  {{$root.currency.getConvertion(vjs.vpub_old) || vjs.vpub_old + ' FLUX'}}
                 </div>
                 <div class="ellipsis">
                   <span translate>Public input</span>
@@ -179,7 +179,7 @@
               </div>
               <div class="col-md-3 col-xs-12">
                 <div class="pull-right btc-value">
-                  {{$root.currency.getConvertion(vjs.vpub_new) || vjs.vpub_new + ' ZEL' }}
+                  {{$root.currency.getConvertion(vjs.vpub_new) || vjs.vpub_new + ' FLUX' }}
                 </div>
                 <div class="ellipsis">
                   <span translate>Public output</span>
@@ -249,11 +249,11 @@
           data-ng-repeat="vin in tx.vinSimple| startFrom:currentInNoExpanded*sizeInNoExpanded | limitTo:sizeInNoExpanded">
           <div class="panel-body transaction-vin-vout">
             <div class="pull-right zel-value" data-ng-class="{'text-danger': $root.currentAddr == vin.addr}">
-              {{$root.currency.getConvertion(vin.value) || vin.value + ' ZEL'}}
+              {{$root.currency.getConvertion(vin.value) || vin.value + ' FLUX'}}
             </div>
             <div class="ellipsis">
               <span data-ng-show="vin.notAddr">{{vin.addr}}</span>
-              <span class="text-muted" title="Current ZelCash Address"
+              <span class="text-muted" title="Current Flux Address"
                 data-ng-show="vin.addr == $root.currentAddr">{{vin.addr}}</span>
               <a href="address/{{vin.addr}}"
                 data-ng-show="!vin.notAddr && vin.addr != $root.currentAddr">{{vin.addr}}</a>
@@ -292,7 +292,7 @@
           <div class="panel panel-default transaction-vin-vout">
             <div class="panel-body">
               <div class="pull-right zel-value">
-                {{$root.currency.getConvertion(vin.value) || vin.value + ' ZEL'}}
+                {{$root.currency.getConvertion(vin.value) || vin.value + ' FLUX'}}
               </div>
               <div class="ellipsis">
                 <a class="glyphicon glyphicon-chevron-right" href="tx/{{vin.txid}}/>/{{vin.vout}}"
@@ -374,7 +374,7 @@
           <div class="transaction-vin-vout panel panel-default">
             <div class="panel-body">
               <div class="pull-right zel-value" data-ng-class="{'text-success': $root.currentAddr == vout.addr}">
-                {{$root.currency.getConvertion(vout.value) || vout.value + ' ZEL' }}
+                {{$root.currency.getConvertion(vout.value) || vout.value + ' FLUX' }}
                 <span class="text-danger" data-ng-show="vout.isSpent" tooltip="Output is spent"
                   tooltip-placement="left">(S)</span>
                 <span class="text-success" data-ng-show="!vout.isSpent" tooltip="Output is unspent"
@@ -383,7 +383,7 @@
 
               <div class="ellipsis">
                 <span data-ng-show="vout.notAddr">{{vout.addr}}</span>
-                <span class="text-muted" title="Current ZelCash Address" data-ng-show="address == $root.currentAddr"
+                <span class="text-muted" title="Current Flux Address" data-ng-show="address == $root.currentAddr"
                   data-ng-repeat="address in vout.addr.split(',')">{{vout.addr}}</span>
                 <a href="address/{{address}}" data-ng-show="!vout.notAddr && address != $root.currentAddr"
                   data-ng-repeat="address in vout.addr.split(',')">{{address}}</a>
@@ -412,7 +412,7 @@
           <div class="panel panel-default transaction-vin-vout">
             <div class="panel-body">
               <div class="pull-right zel-value">
-                <span>{{$root.currency.getConvertion(vout.value) || vout.value + ' ZEL'}}
+                <span>{{$root.currency.getConvertion(vout.value) || vout.value + ' FLUX'}}
                   <span class="text-success" data-ng-show="!vout.spentTxId" tooltip="Output is unspent"
                     tooltip-placement="left">(U)</span>
                   <a class="glyphicon glyphicon-chevron-right" data-ng-show="vout.spentTxId"
@@ -423,7 +423,7 @@
               <div class="ellipsis">
                 <span data-ng-show="vout.notAddr"
                   data-ng-repeat="address in vout.scriptPubKey.addresses">{{address}}</span>
-                <span class="text-muted" title="Current ZelCash Address" data-ng-show="address == $root.currentAddr"
+                <span class="text-muted" title="Current Flux Address" data-ng-show="address == $root.currentAddr"
                   data-ng-repeat="address in vout.scriptPubKey.addresses">{{address}}</span>
                 <a href="address/{{address}}" data-ng-show="!vout.notAddr && address != $root.currentAddr"
                   data-ng-repeat="address in vout.scriptPubKey.addresses">{{address}}</a>
@@ -496,11 +496,11 @@
         <td class="text-muted text-right">{{tx.collateralPubKey}}</td>
       </tr>
       <tr data-ng-show="tx.zelnodePubKey" data-ng-if="tx.nType == 2">
-        <td><strong translate>ZelNode Public Key</strong></td>
+        <td><strong translate>Flux Node Public Key</strong></td>
         <td class="text-muted text-right">{{tx.zelnodePubKey}}</td>
       </tr>
       <tr data-ng-show="tx.ip" data-ng-if="tx.nType == 4">
-        <td><strong translate>ZelNode Network</strong></td>
+        <td><strong translate>Flux Node Network</strong></td>
         <td class="text-muted text-right">{{tx.ip}}</td>
       </tr>
       <tr data-ng-show="tx.updateType" data-ng-if="tx.nType == 4">
@@ -535,13 +535,13 @@
   <div class="col-xs-6 col-sm-4 col-md-4">
     <span data-ng-show="!tx.isCoinBase && !isNaN(parseFloat(tx.fees)) && tx.version != 5"
       class="txvalues txvalues-default"><span translate>Fee</span>:
-      {{$root.currency.getConvertion(tx.fees) || tx.fees + 'ZEL'}} </span>
+      {{$root.currency.getConvertion(tx.fees) || tx.fees + 'FLUX'}} </span>
   </div>
   <div class="col-xs-6 col-sm-8 col-md-88 text-right">
     <span data-ng-show="tx.confirmations" class="txvalues
       txvalues-success">{{tx.confirmations}} <span translate>Confirmations</span></span>
     <span data-ng-show="!tx.confirmations" class="txvalues txvalues-danger" translate>Unconfirmed Transaction!</span>
     <span data-ng-show="tx.version != 5"
-      class="txvalues txvalues-primary">{{$root.currency.getConvertion(tx.valueOut) || tx.valueOut + ' ZEL' }}</span>
+      class="txvalues txvalues-primary">{{$root.currency.getConvertion(tx.valueOut) || tx.valueOut + ' FLUX' }}</span>
   </div>
 </div>

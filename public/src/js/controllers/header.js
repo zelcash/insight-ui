@@ -6,9 +6,9 @@ angular.module('insight.system').controller('HeaderController',
 
     $rootScope.currency = {
       factor: 1,
-      symbol: 'ZEL',
-      realSymbol: 'ZEL',
-      netSymbol: 'ZEL'
+      symbol: 'FLUX',
+      realSymbol: 'FLUX',
+      netSymbol: 'FLUX'
     };
 
     $scope.menu = [{
@@ -27,8 +27,8 @@ angular.module('insight.system').controller('HeaderController',
       'title': 'Connections',
       'link': 'network'
     }, {
-      'title': 'ZelNodes',
-      'link': 'zelnodes'
+      'title': 'Flux Nodes',
+      'link': 'fluxnodes'
     }, {
       'title': 'Status',
       'link': 'status'

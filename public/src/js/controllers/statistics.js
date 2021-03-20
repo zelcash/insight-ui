@@ -29,7 +29,7 @@ function($scope, $routeParams, StatisticsByDaysTransactions, StatisticsByDaysOut
 
 		self.chartText = {
 			fees: gettextCatalog.getString('The daily average of fees paid to miners per transaction.'),
-			transactions: gettextCatalog.getString('The number of daily confirmed ZEL transactions.'),
+			transactions: gettextCatalog.getString('The number of daily confirmed FLUX transactions.'),
 			outputs: gettextCatalog.getString('The total value of all transaction outputs per day (includes coins returned to the sender as change).'),
 			difficulty: gettextCatalog.getString('A relative measure of how difficult it is to find a new block. The difficulty is adjusted periodically as a function of how much hashing power has been deployed by the network of miners.'),
 			nethash: gettextCatalog.getString('The daily average Global Network Hashrate.')
