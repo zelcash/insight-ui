@@ -23,7 +23,7 @@
 			<tr data-ng-show="loading">
 			  <td colspan="5"><span translate>Waiting for Flux Nodes...</span> <span class="loader-gif"></span></td>
 			</tr>
-			<tr class="fader" data-ng-repeat='node in fluxNodes'>
+			<tr class="fader" data-ng-repeat='node in fluxnodes'>
 				<td>{{node.payment_address}}</td>
 				<td class="text-right">{{node.tier}}</td>
 				<td class="text-right"><a href="block-index/{{node.added_height}}">{{node.added_height}}</a></td>
