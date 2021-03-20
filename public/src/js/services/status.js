@@ -21,12 +21,8 @@ angular.module('insight.status')
    })
   .factory('FluxNodes',
    function($resource) {
-     return $resource(window.apiPrefix + '/status?q=getZelNodes');
+     return $resource(window.apiPrefix + '/status?q=getFluxNodes');
   })
-  .factory('FluxNodes',
-  function($resource) {
-    return $resource(window.apiPrefix + '/status?q=getFluxNodes');
- })
   .factory('MiningInfo',
       function($resource) {
         return $resource(window.apiPrefix + '/status?q=getMiningInfo');
