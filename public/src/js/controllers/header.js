@@ -27,7 +27,7 @@ angular.module('insight.system').controller('HeaderController',
       'title': 'Connections',
       'link': 'network'
     }, {
-      'title': 'Flux Nodes',
+      'title': 'Nodes',
       'link': 'fluxnodes'
     }, {
       'title': 'Status',
