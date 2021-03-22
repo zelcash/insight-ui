@@ -3947,7 +3947,7 @@ select[multiple].input-group-sm>.form-control,select[multiple].input-group-sm>.i
 }
 
 .navbar-brand-logo {
-    margin-top: 10px;
+    margin-top: 5px;
     max-height: 26px;
     filter: drop-shadow(0px 0 5px #000)
 }
@@ -3971,7 +3971,7 @@ select[multiple].input-group-sm>.form-control,select[multiple].input-group-sm>.i
     }
 
     .navbar-brand-logo {
-        margin-top: 10px;
+        margin-top: 5px;
         max-height: 35px
     }
 
