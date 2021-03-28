@@ -51,12 +51,12 @@ angular.module('insight.statistics')
 	})
 	.factory('StatisticsTotalSupply', function ($resource, $window) {
 
-		return $resource($window.apiPrefix + '/statistics/circulating-supply?format=object', {
+		return $resource($window.apiPrefix + '/statistics/total-supply?format=object', {
 		});
 	})
 	.factory('StatisticsCirculatingSupply', function ($resource, $window) {
 
-		return $resource($window.apiPrefix + '/statistics/total-supply?format=object', {
+		return $resource($window.apiPrefix + '/statistics/circulating-supply?format=object', {
 		});
 	})
 	.factory('StatisticsBalanceIntervals', function ($resource, $window) {
