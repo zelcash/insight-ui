@@ -1,31 +1,31 @@
 'use strict';
 
 angular.module('insight.statistics').controller('StatisticsController',
-function($scope, $routeParams, StatisticsByDaysTransactions, StatisticsByDaysOutputs, StatisticsByDaysNetHash, StatisticsByDaysFees, StatisticsByDaysDifficulty, PoolDayChart, Statistics24Hours, Statistics1Hour, gettextCatalog, $filter, Constants, StatisticChart, MarketsInfo, MiningInfo, StatisticsTotalSupply) {
+	function ($scope, $routeParams, StatisticsByDaysTransactions, StatisticsByDaysOutputs, StatisticsByDaysNetHash, StatisticsByDaysFees, StatisticsByDaysDifficulty, PoolDayChart, Statistics24Hours, Statistics1Hour, gettextCatalog, $filter, Constants, StatisticChart, MarketsInfo, MiningInfo, StatisticsTotalSupply, StatisticsCirculatingSupply) {
 
-	var self = this,
-		factories = {
-			'transactions' : {
-				factory : StatisticsByDaysTransactions,
-				field : 'transaction_count'
-			},
-			'outputs' : {
-				factory : StatisticsByDaysOutputs,
-				field : 'sum'
-			},
-			'fees' : {
-				factory : StatisticsByDaysFees,
-				field : 'fee'
-			},
-			'difficulty' : {
-				factory : StatisticsByDaysDifficulty,
-				field : 'sum'
-			},
-			'nethash' : {
-				factory : StatisticsByDaysNetHash,
-				field : 'sum'
-			}
-		};
+		var self = this,
+			factories = {
+				'transactions': {
+					factory: StatisticsByDaysTransactions,
+					field: 'transaction_count'
+				},
+				'outputs': {
+					factory: StatisticsByDaysOutputs,
+					field: 'sum'
+				},
+				'fees': {
+					factory: StatisticsByDaysFees,
+					field: 'fee'
+				},
+				'difficulty': {
+					factory: StatisticsByDaysDifficulty,
+					field: 'sum'
+				},
+				'nethash': {
+					factory: StatisticsByDaysNetHash,
+					field: 'sum'
+				}
+			};
 
 		self.chartText = {
 			fees: gettextCatalog.getString('The daily average of fees paid to miners per transaction.'),
@@ -46,6 +46,7 @@ function($scope, $routeParams, StatisticsByDaysTransactions, StatisticsByDaysOut
 		self.difficulty = 0;
 		self.networkhashps = 0;
 		self.totalsupply = 0;
+		self.circulatingsupply = 0;
 
 
 		var statisticChart = new StatisticChart(self.chartDays);
@@ -54,53 +55,58 @@ function($scope, $routeParams, StatisticsByDaysTransactions, StatisticsByDaysOut
 		self.daysButtons = statisticChart.daysButtons;
 
 
-	$scope.$on('chart-create', function (evt, chart) {
+		$scope.$on('chart-create', function (evt, chart) {
 
-		if (chart.chart.canvas.id === 'line') {
+			if (chart.chart.canvas.id === 'line') {
 
-            statisticChart.changeChartColor(chart);
-			chart.update();
-		}
-	});
-	$scope.type = 'StackedBar';
-	self.getDifficulties = function(){
-        statisticChart.load(factories[ $routeParams.type ].factory, factories[ $routeParams.type ].field, $routeParams.type);
-	};
-
-	self.get24HoursStats = function() {
-
-		Statistics24Hours.get(function(response) {
-
-			self.statsTotal24 = response;
+				statisticChart.changeChartColor(chart);
+				chart.update();
+			}
 		});
+		$scope.type = 'StackedBar';
+		self.getDifficulties = function () {
+			statisticChart.load(factories[$routeParams.type].factory, factories[$routeParams.type].field, $routeParams.type);
+		};
 
-		var pools1hChart = new PoolDayChart();
-		self.pools1hOptions = pools1hChart.chartOptions;
-		pools1hChart.load(Statistics1Hour, 'blocks_found', 'Pools');
+		self.get24HoursStats = function () {
 
-		var pools24hChart = new PoolDayChart();
-		self.pools24hOptions = pools24hChart.chartOptions;
-		pools24hChart.load(Statistics24Hours, 'blocks_found', 'Pools');
+			Statistics24Hours.get(function (response) {
 
-		    MarketsInfo.get({}, function(response) {
-            if (response) {
-				self.marketPrice = response.price;
-				self.marketBtcPrice = response.price_btc;
-				self.marketCap = response.market_cap_usd;
-				self.volume = response.total_volume_24h;
-				self.percent = response.delta_24h;
-            }
-        });
-		MiningInfo.get({}, function(response) {
-			if (response) {
-				self.difficulty = response.miningInfo.difficulty;
-				self.networkhashps = response.miningInfo.networkhashps;
-            }
-        });
-		StatisticsTotalSupply.get({}, function(response) {
-			if (response) {
-				self.totalsupply = response.supply;
-            }
-        });
-	};
-});
+				self.statsTotal24 = response;
+			});
+
+			var pools1hChart = new PoolDayChart();
+			self.pools1hOptions = pools1hChart.chartOptions;
+			pools1hChart.load(Statistics1Hour, 'blocks_found', 'Pools');
+
+			var pools24hChart = new PoolDayChart();
+			self.pools24hOptions = pools24hChart.chartOptions;
+			pools24hChart.load(Statistics24Hours, 'blocks_found', 'Pools');
+
+			MarketsInfo.get({}, function (response) {
+				if (response) {
+					self.marketPrice = response.price;
+					self.marketBtcPrice = response.price_btc;
+					self.marketCap = response.market_cap_usd;
+					self.volume = response.total_volume_24h;
+					self.percent = response.delta_24h;
+				}
+			});
+			MiningInfo.get({}, function (response) {
+				if (response) {
+					self.difficulty = response.miningInfo.difficulty;
+					self.networkhashps = response.miningInfo.networkhashps;
+				}
+			});
+			StatisticsTotalSupply.get({}, function (response) {
+				if (response) {
+					self.totalsupply = response.supply;
+				}
+			});
+			StatisticsCirculatingSupply.get({}, function (response) {
+				if (response) {
+					self.circulatingsupply = response.circulatingSupply;
+				}
+			});
+		};
+	});
