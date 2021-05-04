@@ -2,7 +2,7 @@
   "name": "insight-ui",
   "description": "An open-source frontend for the Insight API. The Insight API provides you with a convenient, powerful and simple way to query and broadcast data on the flux network and build your own services with it.",
   "version": "1.2.2",
-  "repository": "git://github.com/zelcash/insight-ui.git",
+  "repository": "git://github.com/runonflux/insight-ui.git",
   "contributors": [
     {
       "name": "Under"
@@ -33,7 +33,7 @@
     },
     {
       "name": "Tadeas Kmenta",
-      "email": "tadeas.kmenta@zel.cash"
+      "email": "tadeas@zel.network"
     },
     {
       "name": "Simon Liu",
@@ -44,20 +44,20 @@
     "build": "bower install && grunt compile"
   },
   "bugs": {
-    "url": "https://github.com/zelcash/insight-ui/issues"
+    "url": "https://github.com/runonflux/insight-ui/issues"
   },
-  "homepage": "https://github.com/zelcash/insight-ui",
+  "homepage": "https://github.com/runonflux/insight-ui",
   "license": "MIT",
   "keywords": [
     "insight",
     "blockchain",
     "blockexplorer",
-    "zelcash",
+    "flux",
     "bitcore",
     "front-end",
     "flux"
   ],
-  "bitcoreNode": "bitcore-node-zelcash",
+  "bitcoreNode": "bitcore-node",
   "dependencies": {},
   "devDependencies": {
     "bower": "1.8.2",
